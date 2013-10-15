@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>战略性新兴产业专业知识服务系统</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+
+<link href="./css/bootstrap.min.css" rel="stylesheet" />
+<link href="./css/bootstrap-responsive.min.css" rel="stylesheet" />
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600" rel="stylesheet" />
+<link href="./css/font-awesome.css" rel="stylesheet" />
+<link href="./css/global.css" rel="stylesheet" />
+<link href="./css/base-admin-responsive.css" rel="stylesheet" />
+
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+</head>
+
+<body>
+
+<div class="container">
+
+	<div class="header">		
+			
+			<div class="nav-collapse" style="padding-top:50px;padding-right:20px;">
+			
+				<form class="navbar-search pull-right">
+					<input class="search-query" placeholder="查找" type="text">
+				</form>
+				
+			</div><!--/.nav-collapse -->	
+	
+		
+	</div>
+	
+	<div class="navbar" style="">
+    
+		<div class="navbar-inner"> <!--a class="brand" href="#">Title</a-->
+      
+			<ul class="nav">
+			
+				<li class="active"> <a href="./首页.html"> <i class="icon-home"></i> <span>首页</span> </a> </li>
+			
+				<li class="dropdown"> <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"> <i class="icon-share-alt"></i> <span>知识中心</span> <b class="caret"></b> </a>
+          
+					<ul class="dropdown-menu">
+			
+						<li><a href="./政策法规.html">政策法规</a></li>
+				
+						<li><a href="./专利标准.html">专利标准</a></li>
+				
+						<li><a href="./统计数据.html">统计数据</a></li>
+				
+					</ul>
+				
+				</li>
+			
+				<li> <a href="./产品中心.html" class="dropdown-toggle"> <i class="icon-th-large"></i> <span>产品中心</span> </a> </li>
+			
+				<li> <a href="./专家圈.html"> <i class="icon-fire"></i> <span>专家圈</span> </a> </li>
+			
+				<li> <a href="./知识搜索.html"> <i class="icon-search"></i> <span>知识搜索</span> </a> </li>
+			
+				<li> <a href="./用户平台.html"> <i class="icon-user"></i> <span>用户平台</span> </a> </li>
+		
+			</ul>
+			
+			<ul class="nav pull-right">
+			
+				<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">	登陆 </a>
+				
+					<div class="dropdown-menu menu">
+				
+						<form class="form-horizontal ">
+					
+							<div class="control-group  ">
+						
+								<div class="controls admin1">注册账号：<input id="inputEmail" placeholder="Administration" type="text" /></div>
+							
+							</div>
+
+							<div class="control-group">
+						
+								<div class="controls admin1">密   码：<input id="inputPassword" placeholder="Password" type="password" /></div>
+							
+							</div>
+
+							<div class="control-group">
+						
+								<div class="controls admin1">
+							
+									<label class="checkbox"><input type="checkbox" /> 记住密码 </label>
+							
+									<button class="btn btn-large btn-block btn-primary" type="button">登陆</button>
+
+									<!--<h3 class="text-center">or</h3>-->
+									<button class="btn btn-large btn-block btn-primary" type="submit">注册</button>
+								
+									<button class="btn btn-large btn-block btn-primary" type="submit">忘记密码</button>
+								
+								</div>
+						
+							</div>
+					
+						</form>
+				
+					</div>
+			
+				</li>
+			
+			</ul>
+			
+		</div><!-- navbar-inner -->
+		
+	</div><!-- navbar -->
+  
+  
+	<div class="row-fluid">
+  
+		<div class="span9">
+	
+			<div class="widget">
+
+				<div class="widget-content text-center" style="background:repeat scroll 0 0 #FFFFFF;">
+					
+					<form class="form-search" action="./知识搜索.html"> 
+					
+						<div class="input-append" style="width:72%;margin:10px 0 10px 0;">
+							
+							<input class="m-wrap info search-query span9" type="text" ><!--margin-right: 10px;-->
+							
+							<button class="btn btn-new" type="submit">搜&nbsp;&nbsp;&nbsp;&nbsp;索</button>
+						
+						</div>
+						
+					</form>
+
+					<div class="shortcuts"> 
+						<span class="shortcut1"> <i class="shortcut-icon">&nbsp;&nbsp;服务用户数量：1231</i> </span> 
+						<span class="shortcut1"> <i class="shortcut-icon">&nbsp;&nbsp;最新统计数据：34576</i> </span> 
+						<span class="shortcut1"> <i class="shortcut-icon">&nbsp;&nbsp;政策法规条数：45763</i> </span> 
+						<span class="shortcut1"> <i class="shortcut-icon">&nbsp;&nbsp;技术标准条数：68923</i> </span> 
+					</div>
+					
+				</div>		
+			
+			</div><!-- /widget -->
+  
+			<div class="widget" id="widCon8">
+		
+				<div class="widget-content" style="background:repeat scroll 0 0 #FFFFFF;">
+			
+					<div class="shortcuts">
+				
+						<a href="" class="shortcut" style="background:url('./img/homepage/p01.png') no-repeat scroll 0 0 #FFFFFF;height:57px;border:medium none;box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);"><span class="shortcut-label" style="font-size: 12px;font-weight:700;text-overflow: ellipsis;white-space:nowrap;color:#5B605F;"><br><br>节能环保产业</span></a>
+					
+						<a href="" class="shortcut" style="background:url('./img/homepage/p02.png') no-repeat scroll 0 0 #FFFFFF;height:57px;border:medium none;box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);"><span class="shortcut-label" style="font-size: 12px;font-weight:700;text-overflow: ellipsis;white-space:nowrap;color:#5B605F;"><br><br>新一代信息技术产业</span></a>
+					
+						<a href="" class="shortcut" style="background:url('./img/homepage/p03.png') no-repeat scroll 0 0 #FFFFFF;height:57px;border:medium none;box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);"><span class="shortcut-label" style="font-size: 12px;font-weight:700;text-overflow: ellipsis;white-space:nowrap;color:#5B605F;"><br><br>生物产业</span></a>
+					
+						<a href="" class="shortcut" style="background:url('./img/homepage/p04.png') no-repeat scroll 0 0 #FFFFFF;height:57px;border:medium none;box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);"><span class="shortcut-label" style="font-size: 12px;font-weight:700;text-overflow: ellipsis;white-space:nowrap;color:#5B605F;"><br><br>高端装备制造产业</span></a>
+					
+						<a href="" class="shortcut" style="background:url('./img/homepage/p05.png') no-repeat scroll 0 0 #FFFFFF;height:57px;border:medium none;box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);"><span class="shortcut-label" style="font-size: 12px;font-weight:700;text-overflow: ellipsis;white-space:nowrap;color:#5B605F;"><br><br>新能源产业</span></a>
+					
+						<a href="" class="shortcut" style="background:url('./img/homepage/p06.png') no-repeat scroll 0 0 #FFFFFF;height:57px;border:medium none;box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);"> <span class="shortcut-label" style="font-size: 12px;font-weight:700;text-overflow: ellipsis;white-space:nowrap;color:#5B605F;"><br><br>新材料产业</span></a>
+					
+						<a href="" class="shortcut" style="background:url('./img/homepage/p07.png') no-repeat scroll 0 0 #FFFFFF;height:57px;border:medium none;box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);"><span class="shortcut-label" style="font-size: 12px;font-weight:700;text-overflow: ellipsis;white-space:nowrap;color:#5B605F;"><br><br>新能源汽车产业</span></a>
+					
+						<a href="" class="shortcut" style="background:url('./img/homepage/p08.png') no-repeat scroll 0 0 #FFFFFF;height:57px;border:medium none;box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);"><span class="shortcut-label" style="font-size: 12px;font-weight:700;text-overflow: ellipsis;white-space:nowrap;color:#5B605F;"><br><br>其他产业</span></a>
+					
+					</div><!-- /shortcuts -->
+				
+				</div><!-- /widget-content -->
+		
+			</div><!-- /widget -->
+		
+			<div class="widget" id="iSection">
+		
+				<div class="widget-content" style="background:repeat scroll 0 0 #FFFFFF;">
+			
+					<div class="shortcuts">
+				
+						<a href="" class="shortcut" style="background:url('./img/homepage/u01.png') no-repeat scroll 0 0 #FFFFFF;height:45px;width:31%;"><span class="shortcut-label text-left">知识脉络</span><p  class="text-left" >分析知识点、领域的研究趋势及热点变迁</p></a>
+					
+						<a href="" class="shortcut " style="background:url('./img/homepage/u04.png') no-repeat scroll 0 0 #FFFFFF;height:45px;width:31%;"><span class="shortcut-label text-left">产品中心</span><p  class="text-left" >产品最新技术、标准，了解产品发展动态</p></a>
+					
+						<a href="" class="shortcut" style="background:url('./img/homepage/u07.png') no-repeat scroll 0 0 #FFFFFF;height:45px;width:31%;"><span class="shortcut-label text-left">行业地图</span><p  class="text-left" >全方位呈现产品信息，多个维度进行产品展现</p></a>
+					
+						<a href="" class="shortcut" style="background:url('./img/homepage/u02.png') no-repeat scroll 0 0 #FFFFFF;height:45px;width:31%;"><span class="shortcut-label text-left">政策法规</span><p  class="text-left" >最新政策咨询，最全面的政策法规内容</p></a>
+					
+						<a href="" class="shortcut " style="background:url('./img/homepage/u05.png') no-repeat scroll 0 0 #FFFFFF;height:45px;width:31%;"><span class="shortcut-label text-left">专利分析</span><p  class="text-left" >全方位呈现产品专利信息</p></a>
+						
+						<a href="" class="shortcut " style="background:url('./img/homepage/u08.png') no-repeat scroll 0 0 #FFFFFF;height:45px;width:31%;"><span class="shortcut-label text-left">标准分析</span><p  class="text-left" >全方位呈现产品标准信息</p></a>
+					
+						<a href="" class="shortcut" style="background:url('./img/homepage/u03.png') no-repeat scroll 0 0 #FFFFFF;height:45px;width:31%;"><span class="shortcut-label text-left">专家圈</span><p  class="text-left" >人与知识进行精彩互动的舞台</p></a>
+						
+						<a href="" class="shortcut" style="background:url('./img/homepage/u06.png') no-repeat scroll 0 0 #FFFFFF;height:45px;width:31%;"><span class="shortcut-label text-left">领军企业分析</span><p  class="text-left" >行业内领先企业介绍，分享经验</p></a>
+						
+						<a href="" class="shortcut" style="background:url('./img/homepage/u09.png') no-repeat scroll 0 0 #FFFFFF;height:45px;width:31%;"><span class="shortcut-label text-left">用户中心</span><p  class="text-left" >分析知识点、领域的研究趋势及热点变迁</p></a>
+					
+					</div><!-- /shortcuts -->
+				
+				</div><!-- /widget-content -->
+			
+			</div><!-- /widget -->
+		
+			<div class="widget">
+			
+				<div class="widget-content" style="background:repeat scroll 0 0 #FFFFFF;">
+				
+					<h3>资源更新</h3>
+				
+					<hr>
+				
+					<div class="stats">
+				
+						<div class="stat"> <span class="stat-value">2489,4626条</span>政策法规 </div><!-- /stat -->
+					
+						<div class="stat"> <span class="stat-value">266,6636条</span>中外专利 </div><!-- /stat -->
+						
+						<div class="stat"> <span class="stat-value">30,2617条</span>中外标准 </div><!-- /stat -->
+				
+					</div><!-- /stats -->
+      
+					<div class="stats">
+					
+						<div class="stat"> <span class="stat-value">1098,8334条</span> 研究报告 </div><!-- /stat -->
+					
+						<div class="stat"> <span class="stat-value">3400,0352条</span>统计数据 </div><!-- /stat -->
+					
+						<div class="stat"> <span class="stat-value">79,4293条</span>产品信息 </div><!-- /stat -->
+					
+					</div><!-- /stats -->
+				
+				</div><!-- /widget-content -->
+			
+			</div><!-- /widget -->
+		
+		</div><!-- /span9 -->
+	
+	
+		<div class="span3" style="width:24.876923076923077%;margin-left:0.764102564102564%">
+		
+			
+		
+			<div class="widget">
+    
+				<div class="widget-header" style="background: -moz-linear-gradient(left center , white, rgba(245, 245, 245, 0) 250px) repeat scroll 0 0%, -moz-linear-gradient(right center , white, rgba(245, 245, 245, 0) 250px) repeat scroll 0 0%, -moz-linear-gradient(center top , #E3E3E3, rgba(237, 237, 237, 0) 4px) repeat scroll 0 0%, -moz-linear-gradient(center top , whitesmoke, white 25px) repeat scroll 0 0 transparent;border-bottom:1px solid #ebebeb;">
+				
+					<i class="icon-book"></i>
+			
+					<h3>最新研究报告</h3>
+				
+				</div><!-- /widget-header -->
+			
+				<div class="widget-content" style="background-image: linear-gradient(#FFFFFF, #ffffff);margin: 0 0 -10px;">
+			
+					<ul class="unstyled">
+					
+						<div class="bigIcon bgIconZt">
+						
+							<ul class="unstyled">
+						
+								<li> <a href="#"><span><img src="img/bm1.jpg" alt=""></span></a><p>关于2011年中国学术统计分析报告的......<a href=""><small style="color:#0088CC;font-size:13px;text-align:right;">&nbsp;&nbsp;详细</small></a></p></li>
+							
+								<li> <a href="#"><span><img src="img/bm3.jpg" alt=""></span></a>
+								<p>关于2011年中国学术知识艺术区域化......<a href=""><small style="color:#0088CC;font-size:13px;">&nbsp;&nbsp;详细</small></a></p></li>
+							
+								<li> <a href="#"><span><img src="img/bm4.jpg" alt=""></span></a><p>关于2011年中学术搜索庞大报告论文......<a href=""><small style="color:#0088CC;font-size:13px;">&nbsp;&nbsp;详细</small></a></p></li>
+							
+							</ul>
+						
+						</div>
+					
+					</ul>
+				
+				</div><!-- /widget-content -->
+			
+			</div><!-- /widget -->
+		
+			<div class="widget">
+		
+				<div class="widget-header" style="background: -moz-linear-gradient(left center , white, rgba(245, 245, 245, 0) 250px) repeat scroll 0 0%, -moz-linear-gradient(right center , white, rgba(245, 245, 245, 0) 250px) repeat scroll 0 0%, -moz-linear-gradient(center top , #E3E3E3, rgba(237, 237, 237, 0) 4px) repeat scroll 0 0%, -moz-linear-gradient(center top , whitesmoke, white 25px) repeat scroll 0 0 transparent;border-bottom:1px solid #ebebeb;">
+			
+					<i class="icon-book"></i>
+			
+					<h3>技术前沿</h3>
+				
+				</div><!-- /widget-header -->
+			
+				<div class="widget-content"  style="background-image: linear-gradient(#FFFFFF, #ffffff);" >
+				
+					<ul class="unstyled">
+					
+						<li><p><a href="#" style="font-size:13px;"><i class="icon-play-circle"></i>美研制出按需透光的智能玻璃 </a></p></li>
+					
+						<li><p><a href="#" style="font-size:13px;"><i class="icon-play-circle"></i>美德研制出光变新塑料</a></p></li>
+					
+						<li><p><a href="#" style="font-size:13px;"><i class="icon-play-circle"></i>5个可3D打印制造的人体器官</a></p></li>
+					
+						<li><p><a href="#" style="font-size:13px;"><i class="icon-play-circle"></i>新研发无线通信技术无需电源</a></p></li>
+					
+						<li><p><a href="#" style="font-size:13px;"><i class="icon-play-circle"></i>农膜产业面临升级新课题 </a></p></li>
+					
+						<li><p><a href="#" style="font-size:13px;"><i class="icon-play-circle"></i>细菌DNA序列可作信息“存储器”</a></p></li>
+					
+						<li><p><a href="#" style="font-size:13px;"><i class="icon-play-circle"></i>塑料抗菌技术的新发展 </a></p></li>
+					
+						<li><p><a href="#" style="font-size:13px;"><i class="icon-play-circle"></i>德古赛即将推出的尼龙12产品 </a></p></li>
+					
+					</ul>
+				
+				</div><!-- /widget-content -->
+			
+			</div><!-- /widget -->
+		
+			<div class="widget">
+		
+				<div class="widget-header" style="background: -moz-linear-gradient(left center , white, rgba(245, 245, 245, 0) 250px) repeat scroll 0 0%, -moz-linear-gradient(right center , white, rgba(245, 245, 245, 0) 250px) repeat scroll 0 0%, -moz-linear-gradient(center top , #E3E3E3, rgba(237, 237, 237, 0) 4px) repeat scroll 0 0%, -moz-linear-gradient(center top , whitesmoke, white 25px) repeat scroll 0 0 transparent;border-bottom:1px solid #ebebeb;">
+				
+					<i class="icon-book"></i>
+				
+					<h3>发布文档</h3>
+			
+				</div><!-- /widget-header -->
+			
+				<div class="widget-content" style="background-image: linear-gradient(#FFFFFF, #ffffff);">
+          
+					<p>每个人都可以直接发布文档，分享自己的所知所得</p>
+			
+				</div><!-- /widget-content -->
+     
+			</div><!-- /widget -->
+    
+		</div><!-- /span3 -->
+  
+	</div><!-- /row -->
+	
+</div><!-- /container -->
+
+<div class="main">
+
+	<div class="main-inner">
+
+		<div class="extra">
+			
+			<div class="extra-inner">
+				
+				<div class="container">
+					
+					<div class="row-fluid">
+						
+						<div class="span4">
+							
+							<h4><p class="text-center">关于</p></h4>
+							
+							<ul>
+								
+								<li><a href="javascript:;"><p class="text-center">关于我们</p></a></li>
+								
+								<li><a href="javascript:;"><p class="text-center">中国工程院</p></a></li>
+								
+								<li><a href="javascript:;"><p class="text-center">清华大学</p></a></li>
+								
+								<li><a href="javascript:;"><p class="text-center">联系我们</p></a></li>
+							</ul>
+							
+						</div><!-- /span4 -->
+						
+						<div class="span4">
+							
+							<h4><p class="text-center">支持</p></h4>
+							
+							<ul>
+							
+								<li><a href="javascript:;"><p class="text-center">常见问题</p></a></li>
+								
+								<li><a href="javascript:;"><p class="text-center">提问</p></a></li>
+								
+								<li><a href="javascript:;"><p class="text-center">视频教程</p></a></li>
+								
+								<li><a href="javascript:;"><p class="text-center">发送反馈</p></a></li>
+								
+							</ul>
+							
+						</div><!-- /span4 -->
+						
+						<div class="span4">
+						
+							<h4><p class="text-center">法律</p></h4>
+							
+							<ul>
+								
+								<li><a href="javascript:;"><p class="text-center">客户隐私政策</p></a></li>
+								
+								<li><a href="javascript:;"><p class="text-center">适用条款</p></a></li>
+								
+								<li><a href="javascript:;"><p class="text-center">安全</p></a></li>
+								
+							</ul>
+							
+						</div><!-- /span4 -->
+						
+					</div><!-- /row-fluid -->
+					
+				</div><!-- /container -->
+				
+			</div><!-- /extra-inner -->
+
+		</div><!-- /extra -->
+		
+		<div class="footer">
+			
+			<div class="footer-inner">
+				
+				<div class="container">
+					
+					<div class="row-fluid">
+						
+						<div class="span12">
+							
+							<p class="text-center">&copy; 2013&nbsp;&nbsp;<a href="./首页.html">战略性新兴产业专业知识服务系统</a>.</p>
+						
+						</div><!-- /span12 -->
+						
+					</div><!-- /row-fluid -->
+					
+				</div><!-- /container -->
+				
+			</div><!-- /footer-inner -->
+
+		</div><!-- /footer -->
+		
+	</div><!-- /main-inner -->
+	
+</div><!-- /main -->
+		
+		
+<!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./js/jquery-1.7.2.min.js"></script>
+<script src="./js/bootstrap.js"></script>
+<script src="./js/base.js"></script>
+</body>
+</html>

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>战略性新兴产业专业知识服务系统</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<link href="./css/bootstrap.min.css" rel="stylesheet" />
+<link href="./css/bootstrap-responsive.min.css" rel="stylesheet" />
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600" rel="stylesheet" />
+<link href="./css/font-awesome.css" rel="stylesheet" />
+<link href="./css/global.css" rel="stylesheet" />
+<link href="./css/base-admin-demo.css" rel="stylesheet" />
+<link href="./css/base-admin-responsive.css" rel="stylesheet" />
+<script type="text/javascript" src="./js/google.jquery.min.js"></script>
+<script src="./js/raphael.js"></script>
+<script src="./js/chinamapPath.js"></script>
+<script src="./js/chinamap.js"></script>
+<link href="./css/pages/faq.css" rel="stylesheet" />
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+<style type="text/css">
+        #ChinaMap {
+            padding-right: 100px;
+            padding-left: 10px;
+            padding-bottom: 10px;
+            margin: 0px auto;
+            /*width: 100%;*/
+            padding-top: 10px;
+            position: relative;
+            text-align: center;
+        }
+
+        #tiplayer {
+            padding-right: 5px;
+            padding-left: 5px;
+            z-index: 1000;
+            min-height: 1em;
+            background: #000;
+            max-width: 250px;
+            padding-bottom: 5px;
+            font: 12px 'Microsoft YaHei',Arial,宋体,Tahoma,Sans-Serif;
+            color: #fff;
+            padding-top: 5px;
+            position: absolute;
+            text-align: left;
+            word-wrap: break-word;
+            -moz-border-radius: 3px;
+            -khtml-border-radius: 3px;
+            -webkit-border-radius: 3px;
+            border-radius: 3px;
+        }
+
+        .ToolTip {
+            padding-right: 5px;
+            padding-left: 5px;
+            z-index: 1000;
+            min-height: 1em;
+            background: #000;
+            max-width: 350px;
+            padding-bottom: 5px;
+            font: 12px 'Microsoft YaHei',Arial,宋体,Tahoma,Sans-Serif;
+            color: #fff;
+            padding-top: 5px;
+            position: absolute;
+            text-align: left;
+            word-wrap: break-word;
+            -moz-border-radius: 3px;
+            -khtml-border-radius: 3px;
+            -webkit-border-radius: 3px;
+            border-radius: 3px;
+        }
+
+        .ToolTip {
+            border-right: #c5b270 1px solid;
+            padding-right: 15px;
+            border-top: #c5b270 1px solid;
+            padding-left: 15px;
+            background: #fffbd6;
+            padding-bottom: 0px;
+            border-left: #c5b270 1px solid;
+            color: #bb861c;
+            line-height: 30px;
+            padding-top: 0px;
+            border-bottom: #c5b270 1px solid;
+            top: 30px;
+        }
+        .tabs-left .span3{background: #EAF1F7;height: 100%;}
+        /*.tabs-left ul{border:3px solid #C2D8E6;height: 100%;}*/
+      .tabs-left .active a{border: none;background: #A5C7E3;color: #3C4C59;}
+        .tabs-left .active a:hover{border: none;background: #A5C7E3;color: #3C4C59;}
+        .tabs-left li{border: none;width: 100%;}
+        .tabs-left .widget-content{margin: 35px 40px 0 40px;}
+    </style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+<div class="container">
+
+	<div class="header"></div>
+	
+	<div class="navbar">
+    
+		<div class="navbar-inner"> <!--a class="brand" href="#">Title</a-->
+      
+			<ul class="nav">
+			
+				<li> <a href="./首页.html"> <i class="icon-home"></i> <span>首页</span> </a> </li>
+			
+				<li class="dropdown"> <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"> <i class="icon-share-alt"></i> <span>知识中心</span> <b class="caret"></b> </a>
+          
+					<ul class="dropdown-menu">
+			
+						<li><a href="./政策法规.html">政策法规</a></li>
+				
+						<li><a href="./专利标准.html">专利标准</a></li>
+				
+						<li><a href="./统计数据.html">统计数据</a></li>
+				
+					</ul>
+				
+				</li>
+			
+				<li  class="active"> <a href="./产品中心.html" class="dropdown-toggle"> <i class="icon-th-large"></i> <span>产品中心</span> </a> </li>
+			
+				<li> <a href="./专家圈.html"> <i class="icon-fire"></i> <span>专家圈</span> </a> </li>
+			
+				<li> <a href="./知识搜索.html"> <i class="icon-search"></i> <span>知识搜索</span> </a> </li>
+			
+				<li> <a href="./用户平台.html"> <i class="icon-user"></i> <span>用户平台</span> </a> </li>
+		
+			</ul>
+			
+			<ul class="nav pull-right" contenteditable="true">
+			
+				<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">	登陆 </a>
+				
+					<div class="dropdown-menu  menu">
+				
+						<form class="form-horizontal ">
+					
+							<div class="control-group  ">
+						
+								<div class="controls admin1">注册账号：<input id="inputEmail" placeholder="Administration" type="text" /></div>
+							
+							</div>
+
+							<div class="control-group">
+						
+								<div class="controls admin1">密   码：<input id="inputPassword" placeholder="Password" type="password" /></div>
+							
+							</div>
+
+							<div class="control-group">
+						
+								<div class="controls admin1">
+							
+									<label class="checkbox" contenteditable="true"><input type="checkbox" /> 记住密码 </label>
+							
+									<button class="btn btn-large btn-block btn-primary" type="button">登陆</button>
+
+									<!--<h3 class="text-center">or</h3>-->
+									<button class="btn btn-large btn-block btn-primary" type="submit">注册</button>
+								
+									<button class="btn btn-large btn-block btn-primary" type="submit">忘记密码</button>
+								
+								</div>
+						
+							</div>
+					
+						</form>
+				
+					</div>
+			
+				</li>
+			
+			</ul>
+			
+		</div><!-- navbar-inner -->
+		
+	</div><!-- navbar -->
+	
+    <div class="row-fluid">
+        <div class="span12">
+          <ul class="breadcrumb">
+            <li><a href="./产品中心.html">产品中心</a> <span class="divider">/</span></li>
+            <li><a href="./产品列表.html">LED节能灯</a> <span class="divider">/</span></li>
+            <li class="active">行业地图</li>
+          </ul>
+        </div>
+        <!-- /span12 -->
+      </div>
+      <!-- /row -->
+      <div class="row-fluid">
+        <div class="span12">
+          <div class="widget">
+            <div class="widget-header"> <i class="icon-book"></i>
+              <h3>2012年中国LED产业行业地图</h3>
+            </div>
+            <!-- /widget-header -->
+            <div class="widget-content text-center tabbable tabs-left">
+              <div class="row-fluid">
+                <ul class="nav nav-pills span3 text-left">
+                  <li class="active"><a href="#tab1" data-toggle="tab" style="font-size:14px;">中国LED产业分布图</a></li>
+                  <li><a href="#tab2" data-toggle="tab" style="font-size:14px;">中国LED产业构成情况</a></li>
+                  <li><a href="#tab3" data-toggle="tab" style="font-size:14px;">中国LED照明市场规模预测</a></li>
+                  <li><a href="#tab4" data-toggle="tab" style="font-size:14px;">中国LED上市企业产值TOP10</a></li>
+                </ul>
+                <div class="tab-content span9">
+                  <div class="tab-pane active" id="tab1">
+					<a href="行业地图2.html"><img src="img/data4.png" style="width:90%"/></a>
+                    <h4 class="text-center">图1.&nbsp;&nbsp;2012年中国LED产业分布图一览</h4>
+                  </div>
+                  <div class="tab-pane" id="tab2">
+					 <img src="img/data5.png" style="width:90%"/>
+                    <h4 class="text-center">图2.&nbsp;&nbsp;中国LED产业构成情况</h4>
+                  </div>
+                  <div class="tab-pane" id="tab3">
+                    <img src="img/data2.png" style="width:90%"/> 
+                    <h4 class="text-center">图3.&nbsp;&nbsp;2010-2015中国各类LED照明应用市场规模预测</h4>
+                  </div>
+                  <div class="tab-pane" id="tab4">
+					<img src="img/data3.png" style="width:90%"/>
+                    <h4 class="text-center">图4.&nbsp;&nbsp;中国LED上市企业产值TOP10</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /widget-content -->
+          </div>
+          <!-- /widget -->
+        </div>
+        <!-- /span9 -->
+      </div>
+      <!-- /row -->
+	  
+	  <div class="row-fluid">
+        <div class="span12">
+	  
+                    <div class="widget-content" style="background: none repeat scroll 0 0 #F7F7F7;border: 1px solid #CCCCCC;">
+                      <h5>版权声明：</h5>
+                      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本文仅代表作者个人观点，与战略性新兴产业培育与发展网无关。本站对文字的原创性以及文中陈述文字和内容未核实，对文章全部或者部分内容、数据的真实性、完整性、及时性不作任何保证或承诺。请读者自行核实相关内容，并遵守相关知识产权保护规范。</p>
+                    </div>
+		</div>
+	  </div>
+    </div>
+    <!-- /container -->
+
+<div class="extra">
+  <div class="extra-inner">
+    <div class="container">
+      <div class="row-fluid">
+        <div class="span4">
+          <h4>
+            <p class="text-center">关于</p>
+          </h4>
+          <ul>
+            <li><a href="javascript:;">
+              <p class="text-center">关于我们</p>
+              </a></li>
+            <li><a href="javascript:;">
+              <p class="text-center">中国工程院</p>
+              </a></li>
+            <li><a href="javascript:;">
+              <p class="text-center">清华大学</p>
+              </a></li>
+            <li><a href="javascript:;">
+              <p class="text-center">联系我们</p>
+              </a></li>
+          </ul>
+        </div>
+        <!-- /span4 -->
+        <div class="span4">
+          <h4>
+            <p class="text-center">支持</p>
+          </h4>
+          <ul>
+            <li><a href="javascript:;">
+              <p class="text-center">常见问题</p>
+              </a></li>
+            <li><a href="javascript:;">
+              <p class="text-center">提问</p>
+              </a></li>
+            <li><a href="javascript:;">
+              <p class="text-center">视频教程</p>
+              </a></li>
+            <li><a href="javascript:;">
+              <p class="text-center">发送反馈</p>
+              </a></li>
+          </ul>
+        </div>
+        <!-- /span4 -->
+        <div class="span4">
+          <h4>
+            <p class="text-center">法律</p>
+          </h4>
+          <ul>
+            <li><a href="javascript:;">
+              <p class="text-center">客户隐私政策</p>
+              </a></li>
+            <li><a href="javascript:;">
+              <p class="text-center">适用条款</p>
+              </a></li>
+            <li><a href="javascript:;">
+              <p class="text-center">安全</p>
+              </a></li>
+          </ul>
+        </div>
+        <!-- /span4 -->
+      </div>
+      <!-- /row -->
+    </div>
+    <!-- /container -->
+  </div>
+  <!-- /extra-inner -->
+</div>
+<!-- /extra -->
+<div class="footer">
+  <div class="footer-inner">
+    <div class="container">
+      <div class="row-fluid">
+        <div class="span12">
+          <p class="text-center">&copy; 2013&nbsp;&nbsp;<a href="./首页.html">战略性新兴产业专业知识服务系统</a>.</p>
+        </div>
+        <!-- /span12 -->
+      </div>
+      <!-- /row -->
+    </div>
+    <!-- /container -->
+  </div>
+  <!-- /footer-inner -->
+</div>
+<!-- /footer -->
+<!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./js/jquery-1.7.2.min.js"></script>
+<script src="./js/bootstrap.js"></script>
+<script src="./js/base.js"></script>
+<script src="./js/faq.js"></script>
+<script>
+
+/*$(function () {
+	
+	$('.faq-list').goFaq ();
+
+});*/
+
+</script>
+</body>
+</html>

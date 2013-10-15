@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>战略性新兴产业专业知识服务系统</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<link href="./css/bootstrap.min.css" rel="stylesheet" />
+<link href="./css/bootstrap-responsive.min.css" rel="stylesheet" />
+<link href="./css/font-awesome.css" rel="stylesheet" />
+<link href="./css/global.css" rel="stylesheet" />
+<link href="./css/base-admin-demo.css" rel="stylesheet" />
+<link href="./css/base-admin-responsive.css" rel="stylesheet" />
+
+
+<link href="css/searchResult/style-metro.css" rel="stylesheet" type="text/css"/>
+<link href="css/searchResult/style-responsive.css" rel="stylesheet" type="text/css"/>
+<link href="css/searchResult/default.css" rel="stylesheet" type="text/css" id="style_color"/>
+<link href="css/searchResult/uniform.default.css" rel="stylesheet" type="text/css"/>
+<link href="css/searchResult/jquery.fileupload-ui.css" rel="stylesheet" type="text/css"/>
+	<!-- END GLOBAL MANDATORY STYLES -->
+	<!-- BEGIN PAGE LEVEL STYLES --> 
+<link rel="stylesheet" type="text/css" href="css/searchResult/datepicker.css" />
+<link href="css/searchResult/jquery.fancybox.css" rel="stylesheet" />
+<link href="css/searchResult/search.css" rel="stylesheet" type="text/css"/>
+<link href="css/searchResult/style.css" rel="stylesheet" type="text/css"/>
+
+
+<!-- Tree 2013/8/31LMR -->
+
+<!-- Tree 2013/8/31LMR/end -->
+<!-- Tree 2013/8/31ZYB/end -->
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script language="javascript">
+function sha()
+{
+ alert("可以使用！");
+}
+</script>
+
+
+</head>
+<body>
+<div class="container">
+
+	<div class="header"></div>
+	
+	<div class="navbar">
+    
+		<div class="navbar-inner"> <!--a class="brand" href="#">Title</a-->
+      
+			<ul class="nav">
+				<li> <a href="./首页.html"> <i class="icon-home"></i> <span>首页</span> </a> </li>
+			
+				<li class="dropdown"> <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"> <i class="icon-share-alt"></i> <span>知识中心</span> <b class="caret"></b> </a>
+          
+					<ul class="dropdown-menu">
+			
+						<li><a href="./政策法规.html">政策法规</a></li>
+				
+						<li><a href="./专利标准.html">专利标准</a></li>
+				
+						<li><a href="./统计数据.html">统计数据</a></li>
+					</ul>
+				</li>
+			
+				<li> <a href="./产品中心.html" class="dropdown-toggle"> <i class="icon-th-large"></i> <span>产品中心</span> </a> </li>
+			
+				<li> <a href="./专家圈.html"> <i class="icon-fire"></i> <span>专家圈</span> </a> </li>
+			
+				<li class="active"> <a href="./知识搜索.html"> <i class="icon-search"></i> <span>知识搜索</span> </a> </li>
+					<!--li class="active"> <a href="./首页.html"> <i class="icon-home"></i> <span>首页</span> </a> </li-->
+			
+				<li> <a href="./用户平台.html"> <i class="icon-user"></i> <span>用户平台</span> </a> </li>
+		
+			</ul>
+			
+			<ul class="nav pull-right">
+			
+				<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">登陆 </a>
+				
+					<div class="dropdown-menu  menu">
+				
+						<form class="form-horizontal ">
+					
+							<div class="control-group  ">
+						
+								<div class="controls admin1">注册账号：<input id="inputEmail" placeholder="Administration" type="text" /></div>
+							
+							</div>
+
+							<div class="control-group">
+						
+								<div class="controls admin1">密   码：<input id="inputPassword" placeholder="Password" type="password" /></div>
+							
+							</div>
+
+							<div class="control-group">
+						
+								<div class="controls admin1">
+							
+									<label class="checkbox"><input type="checkbox" /> 记住密码 </label>
+							
+									<button class="btn btn-large btn-block btn-primary" type="button">登陆</button>
+
+									<!--<h3 class="text-center">or</h3>-->
+									<button class="btn btn-large btn-block btn-primary" type="submit">注册</button>
+								
+									<button class="btn btn-large btn-block btn-primary" type="submit">忘记密码</button>
+								
+								</div>
+						
+							</div>
+					
+						</form>
+				
+					</div>
+			
+				</li>
+			
+			</ul>
+			
+		</div><!-- navbar-inner -->
+		
+	</div><!-- navbar -->
+	
+    <div class="row-fluid">
+        <!-- /span4 -->
+        <div class="span12">
+		
+          <div class="widget widget-box">
+		  
+             <div class="widget-header">
+			
+                <h3>知识搜索</h3>
+			  
+            </div>
+			
+            <!-- /widget-header -->
+            <div class="widget-content"  style="height:400px;">
+				<!-- BEGIN PAGE CONTENT-->
+				<div class="row-fluid" style="width:70%;margin:0 auto;padding-top:50px; ">
+					<div class="tabbable tabbable-custom tabbable-full-width" style="margin:0 auto;border: medium none;border-radius: 4px 4px 4px 4px;box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);">
+						<ul class="nav nav-tabs" style="background-color:#ffffff">
+							<!--<li class="active"><a data-toggle="tab" href="#tab_2_2">选项一</a></li>-->
+							<li class="active"><a data-toggle="tab" href="#tab_2_3">网页</a></li>
+							<li><a data-toggle="tab" href="#tab_2_5">文档</a></li>
+							<li><a data-toggle="tab" href="#tab_1_2">图片</a></li>
+							<li><a data-toggle="tab" href="#tab_1_3">音频</a></li>
+							<li><a data-toggle="tab" href="#tab_1_4">视频</a></li>
+							<li><a data-toggle="tab" href="#tab_1_5">报告</a></li>
+						</ul>
+						<div class="tab-content">
+						
+							<div id="tab_2_3" class="tab-pane active">
+								<div class="row-fluid search-forms search-default">
+									<form class="form-search" action="./样例搜索结果页.html">
+										<div class="chat-form">
+											<div class="input-cont">   
+												<input placeholder="Search..." class="m-wrap" type="text">
+											</div>
+											<button type="button" class="btn green" >
+											搜&nbsp;索 
+											</button>
+										</div>
+									</form>
+								</div>
+								
+								<div class="control-group" style="text-align:center;">
+										
+									<div class="controls">
+									
+										<label class="radio">
+												
+											<div class="radio">
+													
+												<span class=""><input name="optionsRadios1" value="option1" type="radio"></span>
+													
+											</div>
+												全部
+										</label>
+											
+										<label class="radio">
+												
+											<div class="radio">
+													
+												<span class=""><input name="optionsRadios1" value="option1" type="radio"></span>
+													
+											</div>
+												政策
+										</label>
+											
+										<label class="radio">
+											
+											<div class="radio">
+												
+												<span class="">
+													
+													<input name="optionsRadios1" value="option2" checked="" type="radio">
+														
+												</span>
+										</div>
+											
+											文献
+												
+										</label>  
+											
+										<label class="radio">
+											
+											<div class="radio">
+												
+												<span class="checked">
+														
+													<input name="optionsRadios1" value="option2" type="radio">
+														
+												</span>
+													
+											</div>
+												
+											专利
+												
+										</label>
+										
+										<label class="radio">
+											
+											<div class="radio">
+												
+												<span class="checked">
+														
+													<input name="optionsRadios1" value="option2" type="radio">
+														
+												</span>
+													
+											</div>
+												
+											标准
+												
+										</label>
+										
+										<label class="radio">
+											
+											<div class="radio">
+												
+												<span class="checked">
+														
+													<input name="optionsRadios1" value="option2" type="radio">
+														
+												</span>
+													
+											</div>
+												
+											产品库
+												
+										</label>
+											
+									</div>
+										
+								</div><!--control-group-->
+												
+							</div><!--end tab-pane-->
+							
+							
+							<div id="tab_2_5" class="tab-pane">
+								<div class="row-fluid search-forms search-default">
+									<form class="form-search" action="./样例搜索结果页.html">
+										<div class="chat-form">
+											<div class="input-cont">   
+												<input placeholder="Search..." class="m-wrap" type="text">
+											</div>
+											<button type="submit" class="btn green">
+											搜索 &nbsp; 
+											<i class="m-icon-swapright m-icon-white"></i>
+											</button>
+										</div>
+									</form>
+								</div>
+								
+								<div class="control-group" style="text-align:center;">
+										
+									<div class="controls">
+									
+										<label class="radio">
+												
+											<div class="radio">
+													
+												<span class=""><input name="optionsRadios1" value="option1" type="radio"></span>
+													
+											</div>
+												全部
+										</label>
+											
+										<label class="radio">
+												
+											<div class="radio">
+													
+												<span class=""><input name="optionsRadios1" value="option1" type="radio"></span>
+													
+											</div>
+												政策
+										</label>
+											
+										<label class="radio">
+											
+											<div class="radio">
+												
+												<span class="">
+													
+													<input name="optionsRadios1" value="option2" checked="" type="radio">
+														
+												</span>
+										</div>
+											
+											文献
+												
+										</label>  
+											
+										<label class="radio">
+											
+											<div class="radio">
+												
+												<span class="checked">
+														
+													<input name="optionsRadios1" value="option2" type="radio">
+														
+												</span>
+													
+											</div>
+												
+											专利
+												
+										</label>
+										
+										<label class="radio">
+											
+											<div class="radio">
+												
+												<span class="checked">
+														
+													<input name="optionsRadios1" value="option2" type="radio">
+														
+												</span>
+													
+											</div>
+												
+											标准
+												
+										</label>
+										
+										<label class="radio">
+											
+											<div class="radio">
+												
+												<span class="checked">
+														
+													<input name="optionsRadios1" value="option2" type="radio">
+														
+												</span>
+													
+											</div>
+												
+											产品库
+												
+										</label>
+											
+									</div>
+										
+								</div><!--control-group-->
+												
+							</div><!--end tab-pane-->
+							
+							<div id="tab_1_2" class="tab-pane">
+								<div class="row-fluid search-forms search-default">
+								<form class="form-search" action="./样例搜索结果页.html">
+										<div class="chat-form">
+											<div class="input-cont">   
+												<input placeholder="Search..." class="m-wrap" type="text">
+											</div>
+											<div style="right:80px;position: absolute;top:0;">
+												<span class="btn blue fileinput-button inline">
+													<i class="icon-plus icon-white"></i>
+													<span>选择图片...</span>
+													<input name="files[]" multiple="" type="file">
+												</span>	
+											</div>
+											<button type="button" class="btn green" onclick="javascript:window.location.href='./样例搜索结果页.html'">
+											搜索 &nbsp; 
+											<i class="m-icon-swapright m-icon-white"></i>
+											</button>
+										</div>
+									</form>
+								</div>
+								
+								<div class="control-group" style="text-align:center;">
+										
+									<div class="controls">
+									
+										<label class="radio">
+												
+											<div class="radio">
+													
+												<span class=""><input name="optionsRadios1" value="option1" type="radio"></span>
+													
+											</div>
+												全部
+										</label>
+											
+										<label class="radio">
+												
+											<div class="radio">
+													
+												<span class=""><input name="optionsRadios1" value="option1" type="radio"></span>
+													
+											</div>
+												政策
+										</label>
+											
+										<label class="radio">
+											
+											<div class="radio">
+												
+												<span class="">
+													
+													<input name="optionsRadios1" value="option2" checked="" type="radio">
+														
+												</span>
+										</div>
+											
+											文献
+												
+										</label>  
+											
+										<label class="radio">
+											
+											<div class="radio">
+												
+												<span class="checked">
+														
+													<input name="optionsRadios1" value="option2" type="radio">
+														
+												</span>
+													
+											</div>
+												
+											专利
+												
+										</label>
+										
+										<label class="radio">
+											
+											<div class="radio">
+												
+												<span class="checked">
+														
+													<input name="optionsRadios1" value="option2" type="radio">
+														
+												</span>
+													
+											</div>
+												
+											标准
+												
+										</label>
+										
+										<label class="radio">
+											
+											<div class="radio">
+												
+												<span class="checked">
+														
+													<input name="optionsRadios1" value="option2" type="radio">
+														
+												</span>
+													
+											</div>
+												
+											产品库
+												
+										</label>
+											
+									</div>
+										
+								</div><!--control-group-->
+								
+							</div>
+							<!--end tab-pane-->
+							<div id="tab_1_3" class="tab-pane">
+								<div class="row-fluid search-forms search-default">
+									<form class="form-search" action="./样例搜索结果页.html">
+										<div class="chat-form">
+											<div class="input-cont">   
+												<input placeholder="Search..." class="m-wrap" type="text">
+											</div>
+											<button type="button" class="btn green">
+											搜索 &nbsp; 
+											<i class="m-icon-swapright m-icon-white"></i>
+											</button>
+										</div>
+									</form>
+								</div>
+								
+								<div class="control-group" style="text-align:center;">
+										
+									<div class="controls">
+									
+										<label class="radio">
+												
+											<div class="radio">
+													
+												<span class=""><input name="optionsRadios1" value="option1" type="radio"></span>
+													
+											</div>
+												全部
+										</label>
+											
+										<label class="radio">
+												
+											<div class="radio">
+													
+												<span class=""><input name="optionsRadios1" value="option1" type="radio"></span>
+													
+											</div>
+												政策
+										</label>
+											
+										<label class="radio">
+											
+											<div class="radio">
+												
+												<span class="">
+													
+													<input name="optionsRadios1" value="option2" checked="" type="radio">
+														
+												</span>
+										</div>
+											
+											文献
+												
+										</label>  
+											
+										<label class="radio">
+											
+											<div class="radio">
+												
+												<span class="checked">
+														
+													<input name="optionsRadios1" value="option2" type="radio">
+														
+												</span>
+													
+											</div>
+												
+											专利
+												
+										</label>
+										
+										<label class="radio">
+											
+											<div class="radio">
+												
+												<span class="checked">
+														
+													<input name="optionsRadios1" value="option2" type="radio">
+														
+												</span>
+													
+											</div>
+												
+											标准
+												
+										</label>
+										
+										<label class="radio">
+											
+											<div class="radio">
+												
+												<span class="checked">
+														
+													<input name="optionsRadios1" value="option2" type="radio">
+														
+												</span>
+													
+											</div>
+												
+											产品库
+												
+										</label>
+											
+									</div>
+										
+								</div><!--control-group-->
+								
+							</div>
+							<!--end tab-pane-->
+							<div id="tab_1_4" class="tab-pane">
+								<div class="row-fluid search-forms search-default">
+									<form class="form-search" action="./样例搜索结果页.html">
+										<div class="chat-form">
+											<div class="input-cont">   
+												<input placeholder="Search..." class="m-wrap" type="text">
+											</div>
+											<button type="button" class="btn green">
+											搜索 &nbsp; 
+											<i class="m-icon-swapright m-icon-white"></i>
+											</button>
+										</div>
+									</form>
+								</div>
+								
+								<div class="control-group" style="text-align:center;">
+										
+									<div class="controls">
+									
+										<label class="radio">
+												
+											<div class="radio">
+													
+												<span class=""><input name="optionsRadios1" value="option1" type="radio"></span>
+													
+											</div>
+												全部
+										</label>
+											
+										<label class="radio">
+												
+											<div class="radio">
+													
+												<span class=""><input name="optionsRadios1" value="option1" type="radio"></span>
+													
+											</div>
+												政策
+										</label>
+											
+										<label class="radio">
+											
+											<div class="radio">
+												
+												<span class="">
+													
+													<input name="optionsRadios1" value="option2" checked="" type="radio">
+														
+												</span>
+										</div>
+											
+											文献
+												
+										</label>  
+											
+										<label class="radio">
+											
+											<div class="radio">
+												
+												<span class="checked">
+														
+													<input name="optionsRadios1" value="option2" type="radio">
+														
+												</span>
+													
+											</div>
+												
+											专利
+												
+										</label>
+										
+										<label class="radio">
+											
+											<div class="radio">
+												
+												<span class="checked">
+														
+													<input name="optionsRadios1" value="option2" type="radio">
+														
+												</span>
+													
+											</div>
+												
+											标准
+												
+										</label>
+										
+										<label class="radio">
+											
+											<div class="radio">
+												
+												<span class="checked">
+														
+													<input name="optionsRadios1" value="option2" type="radio">
+														
+												</span>
+													
+											</div>
+												
+											产品库
+												
+										</label>
+											
+									</div>
+										
+								</div><!--control-group-->
+								
+							</div>
+							<!--end tab-pane-->
+							<div id="tab_1_5" class="tab-pane">
+								<div class="row-fluid search-forms search-default">
+									<form class="form-search" action="./样例搜索结果页.html">
+										<div class="chat-form">
+											<div class="input-cont">   
+												<input placeholder="Search..." class="m-wrap" type="text">
+											</div>
+											<button type="button" class="btn green">
+											搜索 &nbsp; 
+											<i class="m-icon-swapright m-icon-white"></i>
+											</button>
+										</div>
+									</form>
+								</div>
+								
+								<div class="control-group" style="text-align:center;">
+										
+									<div class="controls">
+									
+										<label class="radio">
+												
+											<div class="radio">
+													
+												<span class=""><input name="optionsRadios1" value="option1" type="radio"></span>
+													
+											</div>
+												全部
+										</label>
+											
+										<label class="radio">
+												
+											<div class="radio">
+													
+												<span class=""><input name="optionsRadios1" value="option1" type="radio"></span>
+													
+											</div>
+												政策
+										</label>
+											
+										<label class="radio">
+											
+											<div class="radio">
+												
+												<span class="">
+													
+													<input name="optionsRadios1" value="option2" checked="" type="radio">
+														
+												</span>
+										</div>
+											
+											文献
+												
+										</label>  
+											
+										<label class="radio">
+											
+											<div class="radio">
+												
+												<span class="checked">
+														
+													<input name="optionsRadios1" value="option2" type="radio">
+														
+												</span>
+													
+											</div>
+												
+											专利
+												
+										</label>
+										
+										<label class="radio">
+											
+											<div class="radio">
+												
+												<span class="checked">
+														
+													<input name="optionsRadios1" value="option2" type="radio">
+														
+												</span>
+													
+											</div>
+												
+											标准
+												
+										</label>
+										
+										<label class="radio">
+											
+											<div class="radio">
+												
+												<span class="checked">
+														
+													<input name="optionsRadios1" value="option2" type="radio">
+														
+												</span>
+													
+											</div>
+												
+											产品库
+												
+										</label>
+											
+									</div>
+										
+								</div><!--control-group-->
+								
+							</div><!--end tab-pane-->
+							
+						</div><!--endtab-content-->
+						
+					</div><!--end tabbable-->  
+					
+				</div><!-- END PAGE CONTENT-->
+							
+		    </div>
+			
+          </div>
+		  
+        </div>
+		
+    </div><!-- /row-fluid -->
+
+</div><!-- /container -->
+
+<div class="main">
+
+	<div class="main-inner">
+
+		<div class="extra">
+			
+			<div class="extra-inner">
+				
+				<div class="container">
+					
+					<div class="row-fluid">
+						
+						<div class="span4">
+							
+							<h4><p class="text-center">关于</p></h4>
+							
+							<ul>
+								
+								<li><a href="javascript:;"><p class="text-center">关于我们</p></a></li>
+								
+								<li><a href="javascript:;"><p class="text-center">中国工程院</p></a></li>
+								
+								<li><a href="javascript:;"><p class="text-center">清华大学</p></a></li>
+								
+								<li><a href="javascript:;"><p class="text-center">联系我们</p></a></li>
+							</ul>
+							
+						</div><!-- /span4 -->
+						
+						<div class="span4">
+							
+							<h4><p class="text-center">支持</p></h4>
+							
+							<ul>
+							
+								<li><a href="javascript:;"><p class="text-center">常见问题</p></a></li>
+								
+								<li><a href="javascript:;"><p class="text-center">提问</p></a></li>
+								
+								<li><a href="javascript:;"><p class="text-center">视频教程</p></a></li>
+								
+								<li><a href="javascript:;"><p class="text-center">发送反馈</p></a></li>
+								
+							</ul>
+							
+						</div><!-- /span4 -->
+						
+						<div class="span4">
+						
+							<h4><p class="text-center">法律</p></h4>
+							
+							<ul>
+								
+								<li><a href="javascript:;"><p class="text-center">客户隐私政策</p></a></li>
+								
+								<li><a href="javascript:;"><p class="text-center">适用条款</p></a></li>
+								
+								<li><a href="javascript:;"><p class="text-center">安全</p></a></li>
+								
+							</ul>
+							
+						</div><!-- /span4 -->
+						
+					</div><!-- /row-fluid -->
+					
+				</div><!-- /container -->
+				
+			</div><!-- /extra-inner -->
+
+		</div><!-- /extra -->
+		
+		<div class="footer">
+			
+			<div class="footer-inner">
+				
+				<div class="container">
+					
+					<div class="row-fluid">
+						
+						<div class="span12">
+							
+							<p class="text-center">&copy; 2013&nbsp;&nbsp;<a href="./首页.html">战略性新兴产业专业知识服务系统</a>.</p>
+						
+						</div><!-- /span12 -->
+						
+					</div><!-- /row-fluid -->
+					
+				</div><!-- /container -->
+				
+			</div><!-- /footer-inner -->
+
+		</div><!-- /footer -->
+		
+	</div><!-- /main-inner -->
+	
+</div><!-- /main -->
+<!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<!-- <script src="./js/jquery-1.7.2.min.js"></script> -->
+<script src="./js/bootstrap.js"></script>
+<script src="./js/base.js"></script>
+
+	<!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
+	<!-- BEGIN CORE PLUGINS -->
+	<script src="js/searchResult/jquery-1.10.1.min.js" type="text/javascript"></script>
+	<script src="js/searchResult/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+	<!-- IMPORTANT! Load jquery-ui-1.10.1.custom.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip -->
+	<script src="js/searchResult/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>      
+	<script src="js/searchResult/bootstrap.min.js" type="text/javascript"></script>
+	<!--[if lt IE 9]>
+	<script src="js/searchResult/excanvas.min.js"></script>
+	<script src="js/searchResult/respond.min.js"></script>  
+	<![endif]-->   
+	<script src="js/searchResult/jquery.slimscroll.min.js" type="text/javascript"></script>
+	<script src="js/searchResult/jquery.blockui.min.js" type="text/javascript"></script>  
+	<script src="js/searchResult/jquery.cookie.min.js" type="text/javascript"></script>
+	<script src="js/searchResult/jquery.uniform.min.js" type="text/javascript" ></script>
+	<!-- END CORE PLUGINS -->
+	<script type="text/javascript" src="js/searchResult/bootstrap-datepicker.js"></script>
+	<script src="js/searchResult/jquery.fancybox.pack.js"></script>
+	<script src="js/searchResult/app.js"></script>
+	<script src="js/searchResult/search.js"></script>      
+	<script>
+		jQuery(document).ready(function() {    
+		   App.init();
+		   Search.init();
+		});
+	</script>
+	<!-- END JAVASCRIPTS --> 
+</body>
+</html>

@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>战略性新兴产业专业知识服务系统</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+
+<link href="./css/bootstrap.min.css" rel="stylesheet" />
+<link href="./css/bootstrap-responsive.min.css" rel="stylesheet" />
+<link href="./css/font-awesome.css" rel="stylesheet" />
+<link href="./css/global.css" rel="stylesheet" />
+<link href="./css/base-admin-responsive.css" rel="stylesheet" />
+<link href="./css/pages/faq.css" rel="stylesheet" />
+<link href="./css/datetimepicker.css" rel="stylesheet" />
+
+
+<!-- daterangepicker 2013/9/17ZYB -->
+<!-- <link href="./css/daterangepicker/daterangepicker-bs2.css" rel="stylesheet" /> -->
+<link href="./css/daterangepicker/daterangepicker-bs3.css" rel="stylesheet" />
+
+
+<!-- Tree 2013/8/31LMR -->
+<link rel="stylesheet" href="./css/zTreeStyle/zTreeStyle.css" type="text/css">
+<script type="text/javascript" src="./js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="./js/zTreeJs/jquery.ztree.core-3.5.min.js"></script>
+<script type="text/javascript" src="./js/zTreeJs/jquery.ztree.excheck-3.5.min.js"></script>
+
+<!-- daterangepicker 2013/9/17ZYB -->
+<script type="text/javascript" src="./js/daterangepicker/moment.min.js"></script>
+<script type="text/javascript" src="./js/daterangepicker/daterangepicker.js"></script>
+<script type="text/javascript" src="./js/daterangepicker/moment.js"></script>
+
+
+<script type="text/javascript" src="./js/bootstrap-datetimepicker.zh-CN.js"></script>
+<script type="text/javascript" src="./js/bootstrap-datetimepicker.min.js"></script>
+
+<!-- step 2013/9/17 LMR-->
+
+<style type="text/css">
+#step_visualization {
+
+	margin : 2em;
+}
+
+#visualization_first{
+	background-color : #ffffdd;
+}
+
+#visualization_finland{
+	background-color : #ffff99;
+}
+
+#visualization_confirmation{
+	background-color : #ffff44;
+}
+			
+.visualization {
+	border-style : solid;
+	font-size: 0.8em;
+  	font-weight: bold;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+#filters{
+	display: none;
+}
+.tagit-choice{
+	background: #dedede;
+}
+</style>
+<link type="text/css" rel="stylesheet" href="css/zhengce/zcfg.css" />
+<script type="text/javascript" src="js/zhengce/jquery.form.js"></script>
+<script type="text/javascript" src="js/zhengce/jquery.validate.js"></script>
+<script type="text/javascript" src="js/zhengce/bbq.js"></script>
+<script type="text/javascript" src="js/zhengce/jquery-ui-1.8.5.custom.min.js"></script>
+<script type="text/javascript" src="js/zhengce/jquery.form.wizard.js"></script>
+<script type="text/javascript" src="js/zhengce/fcbklistselection.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$("#demoForm").formwizard({ 
+	 	formPluginEnabled: true,
+	 	validationEnabled: true,
+	 	focusFirstInput : true,
+	 	formOptions :{
+			success: function(data){$("#status").fadeTo(500,1,function(){ $(this).html("You are now registered!").fadeTo(5000, 0); })},
+			beforeSubmit: function(data){$("#data").html("data sent to the server: " + $.param(data));},
+			dataType: 'json',
+			resetForm: true
+	 	}	
+	 }
+	);
+
+	// function for appending step visualization
+	function addVisualization(id){
+		$("#step_visualization").append("<span class=\"visualization\" id=\"visualization_" + id + "\">" + id + "</span> ")
+	}
+	// initial call to addVisualization (for visualizing the first step)
+	addVisualization($("#demoForm").formwizard("state").firstStep);
+
+	// bind a callback to the step_shown event
+	$("#demoForm").bind("step_shown", function(event, data){
+		$("#step_visualization").html(""); 
+		
+		if(data.isBackNavigation || !data.isFirstStep){
+			var direction = (data.isBackNavigation)?"back":"forward";
+			// $("#step_visualization").append("<div>Moving "+ direction +"</div>");
+		}
+		$.each(data.activatedSteps, function(){
+			addVisualization(this)
+		});
+		
+	})
+
+});
+</script>
+<!-- step LMR /end -->
+
+<SCRIPT type="text/javascript">
+		var setting = {
+			check: {
+				enable: true
+			},		
+			chkboxType:{
+				"Y" : "ps", 
+				"N" : "ps" 
+			},
+			view: {
+				showIcon: false,
+			},
+			data: {
+				simpleData: {
+					enable: true
+				}
+			}
+		};
+
+		var zNodes =[
+			{ id:1, pId:0, name:"法律法规", open:true},//根节点
+			
+			{ id:1701, pId:1, name:"证监会",},
+			{ id:1702, pId:1, name:"上交所" },
+			{ id:1703, pId:1, name:"深交所"},
+			{ id:1704, pId:1, name:"银监会"},
+			{ id:1705, pId:1, name:"保监会"},
+			{ id:1706, pId:1, name:"电监会"},
+			{ id:1707, pId:1, name:"发改委"},
+			{ id:1708, pId:1, name:"人民银行"},
+			{ id:1709, pId:1, name:"人大常委"},
+			{ id:1710, pId:1, name:"国务院"},
+			{ id:1711, pId:1, name:"国资院"},
+			
+			{ id:11, pId:1, name:"部", open:false},
+			{ id:1101, pId:11, name:"商务部"},
+			{ id:1102, pId:11, name:"财务部"},
+			{ id:1103, pId:11, name:"科技部"},
+			{ id:1103, pId:11, name:"公信部"},
+			{ id:1103, pId:11, name:"国土资源部"},
+			{ id:1103, pId:11, name:"环境保护部"},
+			{ id:1103, pId:11, name:"交通运输部"},
+			
+			{ id:12, pId:1, name:"署", open:false},
+			{ id:121, pId:12, name:"审计署"},
+			{ id:122, pId:12, name:"海关总署"},
+			{ id:122, pId:12, name:"新闻出版总署"},
+			
+			{ id:13, pId:1, name:"局", open:false},
+			{ id:131, pId:13, name:"国税局"},
+			{ id:132, pId:13, name:"外汇管理局"},
+			{ id:133, pId:13, name:"工商管理总局"},
+			{ id:134, pId:13, name:"统计局"},
+			{ id:134, pId:13, name:"广播总局"},
+			{ id:134, pId:13, name:"体育总局"},
+			
+			{ id:14, pId:1, name:"北京", open:false},
+			{ id:141, pId:14, name:"北京政府"},
+			{ id:142, pId:14, name:"北京市财政局"},
+			
+			{ id:15, pId:1, name:"上海", open:false},
+			{ id:151, pId:15, name:"上海政府"},
+			{ id:152, pId:15, name:"上海地税局"},
+			{ id:153, pId:15, name:"上海期货交易所"},
+			{ id:154, pId:15, name:"上海发改委"},
+			{ id:143, pId:14, name:"上海城建交通委"},
+			{ id:144, pId:14, name:"上海交通管理局"},
+			
+			{ id:16, pId:1, name:"深圳", open:false},
+			{ id:161, pId:16, name:"深圳政府"},
+			{ id:162, pId:16, name:"深圳地税局"},
+			{ id:163, pId:16, name:"深圳房屋租赁办"},
+	
+			
+		];
+		
+
+				var zNodes2 =[
+		
+			{ id:1, pId:0, name:"作者", open:true},
+			{ id:11, pId:1, name:"1"},
+			{ id:12, pId:1, name:"2"},
+			{ id:13, pId:1, name:"3"},
+			{ id:14, pId:1, name:"4"},
+			{ id:15, pId:1, name:"5"},
+			{ id:16, pId:1, name:"6"},
+			{ id:17, pId:1, name:"7"},
+			{ id:18, pId:1, name:"8"},
+			
+		];
+
+		$(document).ready(function(){
+			var ccc=$("#treeDemo"),
+			ddd=$("#treeInfoClass");
+			$.fn.zTree.init($("#treeDemo"), setting, zNodes);
+			$.fn.zTree.init($("#treeInfoClass"), setting, zNodes2);
+		});
+
+		//输入提示
+		$(document).ready(function(){
+			$('#prependedInput').typeahead(
+				{
+					source:["1111","222","333","444","aaa","555"], 
+					items:8,
+					minLength:1,
+
+				}
+			);
+		});
+		//日期
+		$(document).ready(function() {
+		  $('input[name="daterange"]').daterangepicker();
+		});
+	</SCRIPT>
+	<!--可视化文本编辑器 -->
+	<script src="tinymce/tinymce.min.js"></script>
+	<script>
+        tinymce.init({
+        	selector:'#home .widget-content span',
+        	//下面的注释掉即为显示编辑器，删除注释为点击文本出现编辑器
+	    	inline: true,
+		    plugins: [
+		        "advlist autolink lists link image charmap print preview anchor",
+		        "searchreplace visualblocks code fullscreen",
+		        "insertdatetime media table contextmenu paste"
+		    ],
+		    toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image"
+        });
+	</script>
+	<!-- /可视化文本编辑器 -->
+	<!-- tag -->
+	<script src="js/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/tag-it.js" type="text/javascript" charset="utf-8"></script>
+	
+	<link href="css/jquery.tagit.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript">
+    $(document).ready(function() {
+        $("#myTags").tagit();
+    });
+	</script>
+	<!-- /tag -->
+<!-- Tree 2013/8/31LMR/end -->
+<!-- Tree 2013/8/31ZYB/end -->
+<!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+	<div class="container">
+	<div class="header"></div>
+	
+	<div class="navbar">
+    
+		<div class="navbar-inner"> <!--a class="brand" href="#">Title</a-->
+      
+			<ul class="nav">
+			
+				<li> <a href="./首页.html"> <i class="icon-home"></i> <span>首页</span> </a> </li>
+			
+				<li class="dropdown"> <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"> <i class="icon-share-alt"></i> <span>知识中心</span> <b class="caret"></b> </a>
+          
+					<ul class="dropdown-menu">
+			
+						<li><a href="./政策法规.html">政策法规</a></li>
+				
+						<li><a href="./专利标准.html">专利标准</a></li>
+				
+						<li><a href="./统计数据.html">统计数据</a></li>
+				
+					</ul>
+				
+				</li>
+			
+				<li> <a href="./产品中心.html" class="dropdown-toggle"> <i class="icon-th-large"></i> <span>产品中心</span> </a> </li>
+			
+				<li> <a href="./专家圈.html"> <i class="icon-fire"></i> <span>专家圈</span> </a> </li>
+			
+				<li> <a href="./知识搜索.html"> <i class="icon-search"></i> <span>知识搜索</span> </a> </li>
+			
+				<li class="active"> <a href="./用户平台.html"> <i class="icon-user"></i> <span>用户平台</span> </a> </li>
+		
+			</ul>
+			
+			<ul class="nav pull-right">
+			
+				<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">	登陆 </a>
+				
+					<div class="dropdown-menu  menu">
+				
+						<form class="form-horizontal ">
+					
+							<div class="control-group  ">
+						
+								<div class="controls admin1">注册账号：<input id="inputEmail" placeholder="Administration" type="text" /></div>
+							
+							</div>
+
+							<div class="control-group">
+						
+								<div class="controls admin1">密   码：<input id="inputPassword" placeholder="Password" type="password" /></div>
+							
+							</div>
+
+							<div class="control-group">
+						
+								<div class="controls admin1">
+							
+									<label class="checkbox"><input type="checkbox" /> 记住密码 </label>
+							
+									<button class="btn btn-large btn-block btn-primary" type="button">登陆</button>
+
+									<!--<h3 class="text-center">or</h3>-->
+									<button class="btn btn-large btn-block btn-primary" type="submit">注册</button>
+								
+									<button class="btn btn-large btn-block btn-primary" type="submit">忘记密码</button>
+								
+								</div>
+						
+							</div>
+					
+						</form>
+				
+					</div>
+			
+				</li>
+			
+			</ul>
+			
+		</div><!-- navbar-inner -->
+		
+	</div><!-- navbar -->
+    <div class="row-fluid">
+	
+        <div class="span12">
+		
+          <ul class="breadcrumb">
+		  
+            <li><a href="./用户中心.html">用户中心</a> <span class="divider">/</span></li>
+			
+            <li class="active">产业趋势分析报告 </li>
+			
+          </ul>
+		  
+		</div><!-- /span12 -->
+		
+    </div><!-- /row -->
+	<!-- /row -->
+    <div class="row-fluid">
+	    <div class="widget">
+		    <div class="widget-header"> <i class="icon-pushpin"></i>
+		      <h3>产业趋势分析报告</h3>
+		    </div>
+		    <!-- /widget-header -->
+	    	<div class="widget-content">	
+				<div id="demoWrapper">
+					<h3>一、生成报告——政策篇</h3>
+					<ul>
+					<li>选择您要加入到报告中的数据</li>
+					</ul>
+					<hr />
+					<form id="demoForm" method="post" action="./创建报告.html" class="bbq">
+						<div id="fieldWrapper">
+<span id="confirmation" class="step">
+								<span class="row-fluid">
+									<div class="span2">
+										<!-- <div data-spy="affix"> -->
+											<ul class="nav nav-list" data-target=".navbar" >
+											<li class="nav-header">目录</li>
+											<li class="active"><a href="创建报告.html">政策</a></li>
+											<li><a href="#">行业</a></li>
+											<li><a href="#">市场</a></li>
+											<li><a href="#">趋势</a></li>
+											<li><a href="#">新技术</a></li>
+										</ul>
+										<!-- </div> -->
+										
+									</div>
+									<div class="span10">
+										    <ul class="nav nav-tabs">
+										      <li class="active"><a href="#home" data-toggle="tab">产业趋势分析报告——政策篇</a></li>
+										      <li><a href="#profile" data-toggle="tab"></a></li>
+										    </ul>
+										    <div id="myTabContent" class="tab-content form-horizontal">
+										      <div class="tab-pane control-group active in" data-spy="scroll" data-target=".navbar" id="home">
+													<div class="widget">
+														<h4>第一章&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;政策篇</h4><a class="close" data-dismiss="alert">&times;</a>
+													</div>
+													<div class="widget">
+														<h4>1.1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;国外政策</h4><a class="close" data-dismiss="alert">&times;</a>
+													</div>
+													<div class="widget">
+														<h4>美国</h4><a class="close" data-dismiss="alert">&times;</a>
+														<div class="widget-content">	
+															<span class="span12" style="overflow: hidden;"></span>
+														</div>
+													</div>
+													<div class="widget">
+														<h4>日本</h4><a class="close" data-dismiss="alert">&times;</a>
+														<div class="widget-content">
+														<span class="span12" style="overflow: hidden;"></span>	
+														</div>
+													</div>
+													<div class="widget">
+														<h4>欧盟</h4><a class="close" data-dismiss="alert">&times;</a>
+														<div class="widget-content">	
+															<span class="span12" style="overflow: hidden;"></span>
+														</div>
+													</div>
+													<div class="widget">
+														<h4>韩国</h4><a class="close" data-dismiss="alert">&times;</a>
+														<div class="widget-content">	
+															<span class="span12" style="overflow: hidden;"></span>
+														</div>
+													</div>
+													<div class="widget">
+														<h4>1.2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;国内政策</h4><a class="close" data-dismiss="alert">&times;</a>
+														<div class="widget-content">	
+															<span class="span12" style="overflow: hidden;">
+													</div>
+													<div class="widget">
+														<h4>国家</h4><a class="close" data-dismiss="alert">&times;</a>
+														<div class="widget-content">
+														<span cols="" name="p" class="span12" style="overflow: hidden;"></p>	
+														</div>
+													</div>
+													<div class="widget">
+														<h4>地方</h4><a class="close" data-dismiss="alert">&times;</a>
+														<div class="widget-content">
+														<span cols="" name="p" class="span12" style="overflow: hidden;"></p>	
+														</div>
+													</div>
+				    
+										      </div>
+										      <div class="tab-pane fade" id="profile">
+										    
+										        <label>新密码</label>
+										        <input type="password" class="input-xlarge">
+										        <div>
+										            <button class="btn btn-primary">更新</button>
+										        </div>
+										    
+										      </div>
+										  </div>
+
+
+									</div>
+								</span>
+								
+							</span>
+							
+						</span>
+						</div>
+						<div id="demoNavigation">
+							<input class="btn btn-primary" id="next" value="下一步" type="button" onclick="javascript:location.href='./创建报告.html'" />
+						</div>
+					</form>
+					<hr />
+					
+					<p id="data"></p>
+				</div>
+			</div>
+			<!-- /widget-content -->
+		</div>
+		<!-- /widget -->
+	</div>
+
+</div>
+<!-- /container -->
+<div class="extra">
+  <div class="extra-inner">
+    <div class="container">
+      <div class="row-fluid">
+        <div class="span4">
+          <h4>
+            <p class="text-center">关于</p>
+          </h4>
+          <ul>
+            <li><a href="javascript:;">
+              <p class="text-center">关于我们</p>
+              </a></li>
+            <li><a href="javascript:;">
+              <p class="text-center">中国工程院</p>
+              </a></li>
+            <li><a href="javascript:;">
+              <p class="text-center">清华大学</p>
+              </a></li>
+            <li><a href="javascript:;">
+              <p class="text-center">联系我们</p>
+              </a></li>
+          </ul>
+        </div>
+        <!-- /span4 -->
+        <div class="span4">
+          <h4>
+            <p class="text-center">支持</p>
+          </h4>
+          <ul>
+            <li><a href="javascript:;">
+              <p class="text-center">常见问题</p>
+              </a></li>
+            <li><a href="javascript:;">
+              <p class="text-center">提问</p>
+              </a></li>
+            <li><a href="javascript:;">
+              <p class="text-center">视频教程</p>
+              </a></li>
+            <li><a href="javascript:;">
+              <p class="text-center">发送反馈</p>
+              </a></li>
+          </ul>
+        </div>
+        <!-- /span4 -->
+        <div class="span4">
+          <h4>
+            <p class="text-center">法律</p>
+          </h4>
+          <ul>
+            <li><a href="javascript:;">
+              <p class="text-center">客户隐私政策</p>
+              </a></li>
+            <li><a href="javascript:;">
+              <p class="text-center">适用条款</p>
+              </a></li>
+            <li><a href="javascript:;">
+              <p class="text-center">安全</p>
+              </a></li>
+          </ul>
+        </div>
+        <!-- /span4 -->
+      </div>
+      <!-- /row-fluid -->
+    </div>
+    <!-- /container -->
+  </div>
+  <!-- /extra-inner -->
+</div>
+<!-- /extra -->
+<div class="footer">
+  <div class="footer-inner">
+    <div class="container">
+      <div class="row-fluid">
+        <div class="span12">
+          <p class="text-center">&copy; 2013&nbsp;&nbsp;<a href="./首页.html">战略性新兴产业专业知识服务系统</a>.</p>
+        </div>
+        <!-- /span12 -->
+      </div>
+      <!-- /row-fluid -->
+    </div>
+    <!-- /container -->
+  </div>
+  <!-- /footer-inner -->
+</div>
+<!-- /footer -->
+
+<script src="./js/bootstrap.js"></script>
+<script src="./js/base.js"></script>
+<script src="./js/faq.js"></script>
+<script>
+
+/*$(function () {
+	
+	$('.faq-list').goFaq ();
+
+});*/
+
+</script>
+</body>
+</html>

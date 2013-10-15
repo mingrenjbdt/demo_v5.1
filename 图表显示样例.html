@@ -1,0 +1,241 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<script src="js/tu/jquery.min.js"></script>
+	<script src="js/tu/highcharts.js"></script>
+	<script src="js/tu/full.js"></script>
+	<link rel="stylesheet" media="screen" href="css/tu/full.css">
+	<link rel="stylesheet" media="screen" href="css/tu/style.css">
+</head>
+<body>
+
+<div id="data"></div>
+
+
+<fieldset id="form" style="margin: 20px 0; padding: 0;">
+	<legend>生成图表</legend>
+	<table>
+		<tr>
+			<td>类型:</td>
+			<td>
+				<select name="type">
+					<option value="spline">曲线图</option>
+					<option value="line">折线图</option>
+					<option value="column">柱状图(竖柱)</option>
+					<option value="bar" selected="selected">条形图(横条)</option>
+					<option value="pie">饼图</option>
+					<option value="area">面积图</option>
+					<option value="scatter">XY 散点图</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td>标题:</td>
+			<td>
+				<input type="text" name="title" value="标题" style="width: 200px;" />
+			</td>
+		</tr>
+		<tr>
+			<td>Y轴:</td>
+			<td>
+				<input type="text" name="ytitle" value="Y轴" style="width: 200px;" />
+			</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><button>生成图表</button></td>
+		</tr>
+	</table>
+</fieldset>
+
+
+<div id="charts" style="width: 99%; margin: 0; padding: 0;"></div>
+
+
+<script type="text/javascript">
+<!--
+var data = [
+	["X轴", "发明专利", "实用新型专利", "外观专利", "著作权专利"],
+	["a", 12, 3, 1, 15],
+	["b", 21, 21, 3, 12],
+	["c", 23, 31, 9, 10],
+	["d", 23, 31, 9, 13]
+];
+
+
+$(function(){
+	$(document).ready(function() {
+		var table = $('#data').handsontable({
+			minRows: 4,
+			minCols: 4,
+			minSpareRows: 1,
+			minSpareCols: 1,
+			rowHeaders: true,
+			colHeaders: true,
+			data: data
+		}).data('handsontable');
+
+		$('button').click(function(){
+			var datagrid = table.getData();
+			var type = $('select[name=type]').val();
+			var title = $('input[name=title]').val();
+			var ytitle = $('input[name=ytitle]').val();
+			show_chart(type, title, ytitle, datagrid);
+			return false;
+		}).click();
+	});
+});
+
+function show_chart(type, title, ytitle, datagrid){
+	var series = [];
+	var xlabels = [];
+	var xtitle = datagrid[0][0];
+
+	for(i=1; i<datagrid[0].length-1; i++){
+		var y = datagrid[0][i];
+		if(y == '' || y == null){
+			break;
+		}
+		series.push({
+			name: y,
+			data: []
+		});
+	}
+	for(i=1; i<datagrid.length-1; i++){
+		var x = datagrid[i][0];
+		if(x == '' || x == null){
+			break;
+		}
+		xlabels.push(x);
+		for(j=1; j<datagrid[i].length-1; j++){
+			if(datagrid[0][j].length == 0){
+				continue;
+			}
+			var y = parseFloat(datagrid[i][j]);
+			if(!isNaN(y)){
+				series[j-1].data.push([x, y]);
+			}else{
+				series[j-1].data.push([x, null]);
+			}
+		}
+	}
+	var tmp = [];
+	for(i=0; i<series.length; i++){
+		if(series[i].data.length > 0){
+			tmp.push(series[i]);
+		//	alert(series[i].data);
+		}
+	}
+	series = tmp;
+	//alert(xlabels);
+	//alert(series[0].data);
+
+	$('#charts').html('');
+	var charts = new Highcharts.Chart({
+		chart: {
+			renderTo: 'charts',
+			type: type
+		},
+		title: {
+			text: title
+		},
+		subtitle: {
+			text: ''
+		},
+		xAxis: {
+			title: {
+				text: xtitle,
+				style: {
+					color: '#666',
+					"font-size": '120%'
+				}
+			},
+			categories: xlabels,
+			min: 0, //
+			//minRange: 1,
+			minPadding: 1, //
+			labels: {
+				formatter: function() {
+					return this.value + '';
+				}
+			}
+		},
+		yAxis: {
+			title: {
+				text: ytitle,
+				style: {
+					color: '#666',
+					"font-size": '120%'
+				}
+			},
+			labels: {
+				formatter: function() {
+					return this.value;
+				}
+			}
+		},
+		tooltip: {
+			enabled: true,
+			formatter: function() {
+				return this.series.name + ': '+this.y +''; //
+			}
+		},
+		plotOptions: {
+			series:{
+				connectNulls: true
+			},
+			line: {
+				dataLabels: {
+					enabled: true
+				},
+				enableMouseTracking: true
+			},
+			spline: {
+				dataLabels: {
+					enabled: true
+				}
+			},
+			bar: {
+				dataLabels: {
+					enabled: true
+				}
+			},
+			column: {
+				dataLabels: {
+					enabled: true
+				}
+			},
+			area: {
+				dataLabels: {
+					enabled: true
+				}
+			},
+			pie: {
+				allowPointSelect: true,
+				showInLegend: true,
+				dataLabels: {
+					enabled: true,
+					formatter: function() {
+						var p = this.percentage + '';
+						var pos = p.indexOf('.');
+						if(pos != -1){
+							p = p.substr(0, pos + 2);
+						}
+						return '<b>'+ this.point.name +'</b>: ' + p +' %';
+					}
+				}
+			}
+		},
+		series: series
+	});
+}
+
+//-->
+</script>
+
+
+
+
+</body>
+</html>

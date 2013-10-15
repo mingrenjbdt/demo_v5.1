@@ -1,0 +1,33 @@
+@charset "utf-8";
+/* CSS Document */
+
+.tb_bor{ overflow:hidden;width:805px;}
+.tb{background:#fff; position:relative; overflow:hidden;}
+.tb_left{width:150px; float:left;position:relative; overflow:hidden;border-top:1px solid #bdd2ec;}
+.tb_right{width:650px; float:left; overflow:hidden;overflow:auto;position:relative; display:inline;border-left:1px solid #bdd2ec; overflow:hidden; overflow-x:auto;}
+#tb_a{height:100px; position:absolute;top: 0px;left:0;width:150px; background:#fff;height:90px;}
+#tb_b{height:100px;position: absolute;top: 0px;left:0;background:#fff;height:90px;}
+
+#tb_b span{ display:block; background:url(images/t021.gif) no-repeat; width:129px;line-height:30px;height:30px;margin:0 10px; text-align:center;}
+#tb_b span input{ vertical-align:middle;margin:5px 0;}
+#tb_b i{display:block;height:30px;border-right:1px solid #bdd2ec;width:250px;font-weight:normal;line-height:30px;margin-top:0px;}
+#tb_b em{display:block;height:30px;border-bottom:1px solid #bdd2ec;border-right:1px solid #bdd2ec;font-weight:normal;line-height:30px;margin-top:0px; margin-left:0px; text-align:center;}
+
+.tb_a_list table tr th {width:150px; background:#f1f5fc;border-top:1px solid #bdd2ec;border-bottom:1px solid #bdd2ec; text-align:center;}
+.tb_a_list table tr th i{ display:block;height:30px;border-top:1px solid #bdd2ec;border-right:1px solid #bdd2ec;width:150px;font-weight:normal;line-height:30px;margin-top:28px; float:left;}
+
+.tb_b_list table tr td span{ display:block;height:30px;line-height:30px; border-bottom:1px dashed #ccc;text-align:center;}
+.tb_b_list,.tb_b_list1{margin-top:90px;}
+.tb_b_list table tr td:hover{background:#ffdcd8;}
+
+#tb_a table{width:150px;}
+#tb_a span{ display:block; width:120px;line-height:30px;height:30px;margin:0 10px; text-align:center;}
+
+.tb_a_list #tb_a table tr th {width:auto; background:#f1f5fc;border-top:1px solid #bdd2ec;border-bottom:1px solid #bdd2ec; text-align:center;height:60px;line-height:60px; text-align:center;}
+
+.tb_b_list1 tr th i{margin:0;line-height:60px;height:60px;}
+.tb_b_list1 table tr td span{ display:block;height:30px;line-height:30px; border-bottom:1px dashed #ccc;text-align:center;}
+.tb_b_list1 {background:#f1f5fc;}
+
+.tb_b_list2 table tr td span{ display:block;height:30px;line-height:30px; border-bottom:1px dashed #ccc;text-align:center;width:150px;}
+.tb_b_list2 {background:#f1f5fc;}

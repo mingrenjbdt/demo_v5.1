@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>战略性新兴产业专业知识服务系统</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<link href="./css/bootstrap.min.css" rel="stylesheet" />
+<link href="./css/bootstrap-responsive.min.css" rel="stylesheet" />
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600" rel="stylesheet" />
+<link href="./css/font-awesome.css" rel="stylesheet" />
+<link href="./css/global.css" rel="stylesheet" />
+<link href="./css/base-admin-responsive.css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="css/wenku/basecss_30bcdd15.css" />
+<link rel="stylesheet" type="text/css" href="css/wenku/framework_3375814c.css" />
+<link rel="stylesheet" type="text/css" href="css/wenku/module_07574303.css" />
+<link rel="stylesheet" type="text/css" href="css/wenku/index_63a3cee6.css" />
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+<div class="container">
+	<div class="header"></div>
+	<div class="navbar">
+	  <div class="navbar-inner">
+		<ul class="nav">
+		  <li class="active active2"> <a href="./首页.html"> <i class="icon-home"></i> <span>首页</span> </a> </li>
+		  <li class="dropdown"> <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"> <i class="icon-share-alt"></i> <span>知识中心</span> <b class="caret"></b> </a>
+			<ul class="dropdown-menu">
+			  <li><a href="./政策法规.html">政策法规</a></li>
+			  <li><a href="./专利标准.html">专利标准</a></li>
+			  <li><a href="./统计数据.html">统计数据</a></li>
+			</ul>
+		  </li>
+		  <li> <a href="./产品中心.html" class="dropdown-toggle"> <i class="icon-th-large"></i> <span>产品中心</span> </a> </li>
+		  <li> <a href="./专家圈.html"> <i class="icon-fire"></i> <span>专家圈</span> </a> </li>
+		  <li> <a href="./知识搜索.html"> <i class="icon-search"></i> <span>知识搜索</span> </a> </li>
+		  <li> <a href="./用户平台.html"> <i class="icon-user"></i> <span>用户平台</span> </a> </li>
+		
+			</ul>
+			<ul class="nav pull-right">		
+				<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">账号登陆 </a>
+				<div class="dropdown-menu  menu">
+					<form class="form-horizontal ">
+						<div class="control-group  ">
+							<div class="controls admin1">注册账号：<input id="inputEmail" placeholder="Administration" type="text" /></div>
+						</div>
+
+						<div class="control-group">
+							<div class="controls admin1">密   码：<input id="inputPassword" placeholder="Password" type="password" /></div>
+						</div>
+
+						<div class="control-group">
+							<div class="controls admin1"><label class="checkbox"><input type="checkbox" /> 记住密码 </label><button class="btn btn-large btn-block btn-primary" type="button">登陆</button>
+
+							<!--<h3 class="text-center">or</h3>-->
+							<button class="btn btn-large btn-block btn-primary" type="submit">注册</button><button class="btn btn-large btn-block btn-primary" type="submit">忘记密码</button>
+						</div>
+					</div>
+				</form>
+			</div>
+			</li>
+		</ul>
+	  </div>
+	</div>
+	<div class="navbar">
+	  <div class="navbar-inner">
+		  <div class="nav-collapse collapse navbar-responsive-collapse">
+			<ul class="nav">
+			  <li class="active"><a href="#">主页</a></li>
+			  <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">分类频道 <i class="icon-chevron-down"></i></a>
+				<ul class="dropdown-menu">
+					<li><a href="#" >自然</a></li>
+					<li><a href="#" >文化</a></li>
+					<li><a href="#" >地理</a></li>
+					<li><a href="#" >历史</a></li>
+					<li><a href="#" >生活</a></li>
+					<li><a href="#" >社会</a></li>
+					<li><a href="#" >艺术</a></li>
+					<li><a href="#" >人物</a></li>
+					<li><a href="#" >经济</a></li>
+					<li><a href="#" >科技</a></li>
+					<li><a href="#" >体育</a></li>
+				</ul>
+			  <li><a href="#">注册用户</a></li>
+			  <li><a href="#">数据字典</a></li>
+			  <li><a href="#">合作单位</a></li>
+			  <li><a href="#">数字博物馆</a></li>
+			  <li><a href="#">掌上</a></li>
+			  <li><a href="#">优秀词条</a></li>
+			  <li class="divider-vertical"></li>
+			  <form class="navbar-form pull-left">
+				  <input type="text" class="span2">
+				  <button type="submit" class="btn">搜索</button>
+				</form>
+			  </li>
+			</ul>
+		  </div>
+		  <!-- /.nav-collapse -->
+	  </div>
+	  <!-- /navbar-inner -->
+	</div>
+	<div  class="grid container">
+	  <div class="g69 main">
+		<div class="g-row ">
+		  <div class="recommendations slider-container box-index ">
+			<div class="clearfix title">
+			  <h3>每日推荐</h3>
+			  <a href="#" class="more nslog:6503" >更多</a></div>
+			<div class="btn-carousel nslog-area:6502" ><a href="#"  class="left arrow-left" id="btn_prev"></a>
+			  <div id="slide_dot" class="dot"></div>
+			  <a href="#"  class="right arrow-right" id="btn_next"></a></div>
+			<div class="slider-list articles clearfix" id="mrtj">
+			  <div class="slider-item f-l item">
+				<div class="clearfix article">
+				  <div class="pic "><a href="#" class="nslog:6501"><img style="width:270px; height:146px;" src="img/wenku/1.jpg" />
+					<div class="img-border"></div>
+					</a></div>
+				  <div class="content">
+					<h4><a href="#" class="nslog:6500">5个可3D打印制造的人体器官</a></h4>
+					<p>目前，3D打印如火如荼，人们用3D打印方法制造出的产品也千奇百怪，包罗万象，比如飞机零件、食物等。但3D打印似乎并不就此满足，现已将目光瞄准了人体器官。美国《大众科学》网站在近日的报道中，为我们梳理了5个可以通过3D打印制造完成的人体器官。&nbsp;<a href="#" class="more3 nslog:6500">阅读全文</a></p>
+				  </div>
+				</div>
+			  </div>
+			  <div class="slider-item f-l item">
+				<div class="clearfix article">
+				  <div class="pic"><a href="#" class="nslog:6501"><img src="img/wenku/87509d2d672e5c3bfba20f0685c49577.jpg" width="270" height="146"/>
+					<div class="img-border"></div>
+					</a></div>
+				  <div class="content">
+					<h4><a href="#" class="nslog:6500">天眼猫</a></h4>
+					<p>8月30日，<a href="#">内江</a>一市民家中的猫产下3只小猫，其中一只猫长相奇异，没有猫鼻子，只有额头正中间长有一只眼睛。猫主人说这只猫看起来挺可爱，没过多久却<a href="#">夭折</a>了。宠物医院医生称，该猫长相奇特可能是属于<a href="#">基因变异</a>所致，没有鼻子可能是夭折的原因。猫主人表示，小猫的尸体将被制成标本保存。&nbsp;<a href="#" class="more3 nslog:6500">阅读全文</a></p>
+				  </div>
+				</div>
+			  </div>
+			  <div class="slider-item f-l item">
+				<div class="clearfix article">
+				  <div class="pic"><a href="#" class="nslog:6501"><img src="img/wenku/get 4.jpg" width="270" height="146"/>
+					<div class="img-border"></div>
+					</a></div>
+				  <div class="content">
+					<h4><a href="#" class="nslog:6500"><img title="优秀词条" class="ex-icon" src="img/wenku/ex_icon.gif" width="22" height="25" />优秀词条：罗布泊</a></h4>
+					<p>罗布泊，中国新疆维吾尔自治区东南部湖泊。海拔780公尺左右，位于塔里木盆地的最低处。蒙古语罗布泊即多水汇入之湖。古代称泑泽、盐泽、蒲昌海等。公元330年以前湖水较多，西北侧的楼兰城为著名的咽喉。为中国第二大咸水湖。现仅为大片盐壳。&nbsp;<a href="#" class="more3 nslog:6500">阅读全文</a>|<a href="#" target="_blank">更多优秀词条</a>|<a href="#" target="_blank">优秀词条候选</a></p>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		<div class="g-row">
+		  <div class="g20 ">
+			<div class="hot-entry  nslog-area:6508">
+			  <h3>热门信息榜</h3>
+			  <ol>
+				<li class="num1"><span>1</span><a href="#">美研究显示记忆力衰退或可逆</a></li>
+				<li class="num2"><span>2</span><a href="#">中国页岩气的发展和影响</a></li>
+				<li class="num3"><span>3</span><a href="#">污染控制方案纳入环评</a></li>
+				<li class="num4"><span>4</span><a href="#">广州生物院发现控制脑疟B细胞</a></li>
+				<li class="num5"><span>5</span><a href="#">新能源和智能电网产业迎机遇</a></li>
+				<li class="num6"><span>6</span><a href="#">我国纯电动车技术与国外接近</a></li>
+				<li class="num7"><span>7</span><a href="#">亚洲风电市场增长强劲</a></li>
+				<li class="num8"><span>8</span><a href="#">液态金属：神奇材料焕发新生机</a></li>
+				<li class="num9"><span>9</span><a href="#">城市云计算中心需更注重信息安全</a></li>
+				<li class="num10"><span>10</span><a href="#">国内首批4G手机获入网许可</a></li>
+			  </ol>
+			</div>
+		  </div>
+		  <div class="g45 g-a4 ">
+			<div class="hot-concerns ">
+			  <div class="clearfix title">
+				<h3>热点关注</h3>
+				<a href="#" class="more nslog:6542" >更多</a></div>
+			  <ul class="clearfix">
+				<li>
+				  <div class="clearfix article">
+					<div class="pic nslog:6504"><a href="#"><img src="img/wenku/get 3.jpg" width="120" height="90"/>
+					  <div class="img-border"></div>
+					  </a></div>
+					<div class="g32 g-a1 content">
+					  <h4><a href="#" class="nslog:6505">新一轮电改方案草拟工作步伐加速</a></h4>
+					  <p class="nslog-area:6506">据传，国家能源局已着手酝酿新一轮电力改革方案，并将提交发改委。</p>
+					  <div class="related nslog-area:6507">相关词条：<a href="#" target="_blank">电力</a><span class="dot">·</span><a href="#" target="_blank">节能</a><span class="dot">·</span><a href="#" target="_blank">购电</a></div>
+					</div>
+					<span class="line-pad"></span></div>
+				</li>
+				<li>
+				  <div class="clearfix article">
+					<div class="pic nslog:6504"><a href="#"><img src="img/wenku/6842305b6d5b23fd58c3ffdeca4c9766.jpg" width="120" height="90"/>
+					  <div class="img-border"></div>
+					  </a></div>
+					<div class="g32 g-a1 content">
+					  <h4><a href="#" class="nslog:6505">拥堵费</a></h4>
+					  <p class="nslog-area:6506">在交通拥挤时段对部分区域道路使用者收取的一定费用。9月1日北京环保局要求征收交通拥堵费。</p>
+					  <div class="related nslog-area:6507">相关词条：<a href="#" target="_blank">新加坡</a><span class="dot">·</span><a href="#" target="_blank">曼哈顿</a><span class="dot">·</span><a href="#" target="_blank">斯德哥尔摩</a></div>
+					</div>
+					<span class="line-pad"></span></div>
+				</li>
+			  </ul>
+			</div>
+			<script>window.PDC && PDC.first_screen && PDC.first_screen();</script>
+		  </div>
+		</div>
+		<div class="g-row">
+		  <div class="banner nslog:6543"><a href="#" target="_blank"><img src="img/wenku/harbin690X90.jpg" width="690" height="90"/></a></div>
+		</div>
+		<div class="g-row">
+		  <div class="g20">
+			<div class="historic-days " id="days">
+			  <div class="clearfix title">
+				<h3>历史上的今天</h3>
+				<a href="#" class="more nslog:6546">更多</a></div>
+			  <div class="date"><a  href="#" class="left nslog:6513"></a><span class="today">loading</span><a  href="#" class="right nslog:6513"></a></div>
+			  <div class="pic">
+				<div class="img-border"></div>
+				<a class="toL nslog:6552" href="#"><img src="img/wenku/blank.gif" width="200" height="150"/></a>
+				<p class="shadow"></p>
+				<p class="nslog-area:6515">loading</p>
+			  </div>
+			  <ul class="nslog-area:6515">
+				loading
+			  </ul>
+			</div>
+			<!-- <script type="text/javascript">F.use("/static/widget/index/index/historic/historic.js")</script>-->
+		  </div>
+		  <div class="g45 g-a4">
+			<div class="baike-characters area  ">
+			  <div class="clearfix title">
+				<h3>人物</h3>
+				<a href="#" class="more nslog:6547" >更多</a></div>
+			  <div class="clearfix article">
+				<div class="pic"><a href="#" class="nslog:6510"><img src="img/wenku/panyunhe.jpg" width="77" height="110"/>
+				  <div class="img-border"></div>
+				  </a></div>
+				<div class="g32 g-a1 content">
+				  <h4><a href="#" class="nslog:6509">潘云鹤</a></h4>
+				  <p class="nslog-area:6512">曾担任浙江大学校长。2006年至今担任中国工程院常务副院长；第十二届全国政协常委、外事委员会...</p>
+				  <div class="related nslog:6511">相关词条：<a href="#" target="_blank">智慧城市</a><span class="dot">·</span><a href="#" target="_blank">中国工程院院士</a><span class="dot">·</span><a href="#" target="_blank">经济</a></div>
+				</div>
+			  </div>
+			  <ul class="nslog-area:6512">
+				<li><a href="#" onClick="nslog(this.href,116)">邬贺铨</a>：中国工程院原副院长，光纤传送网与宽带信息网专家。<a href="#" class="detail"  onclick="nslog(this.href,117)">详情</a></li>
+				<li><a href="#" onClick="nslog(this.href,116)">徐匡迪</a>：国际著名的钢铁冶金专家，曾先后获得过六项国家...<a href="#" class="detail"  onclick="nslog(this.href,117)">详情</a></li>
+				<li><a href="#" onClick="nslog(this.href,116)">周济</a>：机械工程专家，中国工程院院士，中共党员。<a href="#" class="detail"  onclick="nslog(this.href,117)">详情</a></li>
+				<li><a href="#" onClick="nslog(this.href,116)">干勇</a>：冶金专家，钢铁研究总院高级工程师、院长,兼任中国...<a href="#" class="detail"  onclick="nslog(this.href,117)">详情</a></li>
+				<li><a href="#" onClick="nslog(this.href,116)">朱高峰</a>：中国工程院院士，我国邮电系统著名专家。朱高峰院...<a href="#" class="detail"  onclick="nslog(this.href,117)">详情</a></li>
+				<li><a href="#" onClick="nslog(this.href,116)">屠海令</a>：博士学位，教授级高级工程师，博士生导师，中国工...<a href="#" class="detail"  onclick="nslog(this.href,117)">详情</a></li>
+			  </ul>
+			</div>
+		  </div>
+		</div>
+		<div class="g-row">
+		  <div class="banner nslog:6544"><a href="#" target="_blank"><img src="img/wenku/xx.jpg" width="690" height="90"/></a></div>
+		</div>
+		<div class="g-row ">
+		  <div class="classification clearfix  ">
+			<div class="nature-geog">
+			  <div class="clearfix title nslog-area:6518">
+				<h3 class="">分类</h3>
+				<h4><a href="#">自然</a>·<a href="#">地理</a></h4>
+			  </div>
+			  <div class="news-list">
+				<div class="clearfix article">
+				  <div class="pic"><a href="#" class="nslog:6520" ><img src="img/wenku/12668eb9fd6f4cf7f68dbc74d1167ade.jpg" width="110" height="83"/>
+					<div class="img-border"></div>
+					</a></div>
+				  <div class="content">
+					<h4><a class="nslog:6522" href="#">鹿蛾</a></h4>
+					<p>鹿蛾科小至中等大蛾类，外形似斑蛾或黄蜂，但飞翔力弱。</p>
+					<div class="related nslog-area:6521">相关词条：<a href="#" target="_blank">鹿蛾科</a><span class="dot">·</span><a href="#" target="_blank">元宝枫细蛾</a></div>
+				  </div>
+				</div>
+				<ul class="nslog:6522">
+				  <li><a href="#" >海珠桥</a>：2013年9月1日修复后正式恢复通车<a href="#" class="detail" >详情</a></li>
+				  <li><a href="#" >阿塔卡马沙漠</a>：世界上最干旱地区之一<a href="#" class="detail" >详情</a></li>
+				  <li><a href="#" >叶尾壁虎</a>：自然界的伪装大师，可变成多种颜色<a href="#" class="detail" >详情</a></li>
+				</ul>
+			  </div>
+			</div>
+			<div class="culture-art">
+			  <div class="clearfix title nslog-area:6518">
+				<h3 class="">分类</h3>
+				<h4><a href="#">文化</a>·<a href="#">艺术</a></h4>
+			  </div>
+			  <div class="news-list">
+				<div class="clearfix article">
+				  <div class="pic"><a href="#" class="nslog:6520" ><img src="img/wenku/47c4ae3a99de0df824d120cb0effd1d7.png" width="110" height="83"/>
+					<div class="img-border"></div>
+					</a></div>
+				  <div class="content">
+					<h4><a class="nslog:6522" href="#">开笔礼</a></h4>
+					<p>古时，“开笔礼”是极为隆重的典礼，被称为人生四大礼之一。</p>
+					<div class="related nslog-area:6521">相关词条：<a href="#" target="_blank">礼书</a><span class="dot">·</span><a href="#" target="_blank">成人礼</a></div>
+				  </div>
+				</div>
+				<ul class="nslog:6522">
+				  <li><a href="#" >香港小姐</a>：2013年竞选决赛中陈凯琳夺冠<a href="#" class="detail" >详情</a></li>
+				  <li><a href="#" >波尔卡</a>：舞者们常站成一个圆圈半步半步地跳<a href="#" class="detail" >详情</a></li>
+				  <li><a href="#" >威尼斯国际电影节</a>：于2013年8月29日在威尼斯开幕<a href="#" class="detail" >详情</a></li>
+				</ul>
+			  </div>
+			</div>
+			<div class="science-technology">
+			  <div class="clearfix title nslog-area:6518">
+				<h3 class="">分类</h3>
+				<h4><a href="#">科学</a>·<a href="/keji">技术</h4>
+			  </div>
+			  <div class="news-list">
+				<div class="clearfix article">
+				  <div class="pic"><a href="#" class="nslog:6520" ><img src="img/wenku/368034df66382c978fadc4e18c4730c6.jpg" width="110" height="83"/>
+					<div class="img-border"></div>
+					</a></div>
+				  <div class="content">
+					<h4><a class="nslog:6522" href="#">uup</a></h4>
+					<p>一种人工合成的放射性化学元素，属于弱金属之一。</p>
+					<div class="related nslog-area:6521">相关词条：<a href="#" target="_blank">弱金属</a><span class="dot">·</span><a href="#" target="_blank">稳定岛</a></div>
+				  </div>
+				</div>
+				<ul class="nslog:6522">
+				  <li><a href="#" >液氨泄漏报警器</a>：由探测器与报警控制主机构成<a href="#" class="detail" >详情</a></li>
+				  <li><a href="#" >PLU码</a>：进口农产品上所贴标签上4-5位的数字<a href="#" class="detail" >详情</a></li>
+				  <li><a href="#" >嫦娥三号卫星</a>：将于2013年年底择机发射<a href="#" class="detail" >详情</a></li>
+				</ul>
+			  </div>
+			</div>
+			<div class="society-life">
+			  <div class="clearfix title nslog-area:6518">
+				<h3 class="">分类</h3>
+				<h4><a href="#">社会</a>·<a href="#">生活</a></h4>
+			  </div>
+			  <div class="news-list">
+				<div class="clearfix article">
+				  <div class="pic"><a href="#" class="nslog:6520" ><img src="img/wenku/0db7030dcbd9b4a99d60e748f040b646.jpg" width="110" height="83"/>
+					<div class="img-border"></div>
+					</a></div>
+				  <div class="content">
+					<h4><a class="nslog:6522" href="#">啃椅族</a></h4>
+					<p>在快餐店内买杯饮料一坐大半天的学生或情侣，指快餐店里的长座客。</p>
+					<div class="related nslog-area:6521">相关词条：<a href="#" target="_blank">啃老族</a><span class="dot">·</span><a href="#" target="_blank">尼特族</a></div>
+				  </div>
+				</div>
+				<ul class="nslog:6522">
+				  <li><a href="#" >麦难民</a>：因无法支付房租而在麦当劳蹭住的人<a href="#" class="detail" >详情</a></li>
+				  <li><a href="#" >开学综合症</a>：学生不适应新学期的病态表现<a href="#" class="detail" >详情</a></li>
+				  <li><a href="#" >中国最适宜退休城市榜单</a>：杭州成为最适宜退休城市<a href="#" class="detail" >详情</a></li>
+				</ul>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		<div class="g-row ">
+		  <div class="pictures area ">
+			<div class="clearfix title">
+			  <h3>每日图片</h3>
+			</div>
+			<div class="items clearfix nslog-area:6516" id="mrtpScroll">
+			  <div class="item"><a href="#" class=""><img src="img/wenku/6059ef5004e4f933a83c7929d65d7f21.png" width="155" height="117"/>
+				<div class="img-border"></div>
+				</a><span class="shadow"></span><span class="name"><a href="#">鳄鱼残忍吞食海龟 </a></span></div>
+			  <div class="item"><a href="#" class=""><img src="img/wenku/17a017e4587bba037e59dce2b95f221b.png" width="155" height="117"/>
+				<div class="img-border"></div>
+				</a><span class="shadow"></span><span class="name"><a href="#">美女与致命鲨鱼同游</a></span></div>
+			  <div class="item"><a href="#" class=""><img src="img/wenku/18727ac9b1301e07885276d946b551cb.jpg" width="155" height="117"/>
+				<div class="img-border"></div>
+				</a><span class="shadow"></span><span class="name"><a href="#">埃及白沙漠</a></span></div>
+			  <div class="item"><a href="#" class=""><img src="img/wenku/17cd4da75d1ca699ed80750e35ad51f1.png" width="155" height="117"/>
+				<div class="img-border"></div>
+				</a><span class="shadow"></span><span class="name"><a href="#">俄罗斯国际航展开幕</a></span></div>
+			</div>
+		  </div>
+		</div>
+		<div class="g-row">
+		  <div class="category-navigation clearfix nslog-area:6523 ">
+			<h3>分类导航</h3>
+			<ul>
+			  <li class="column">
+				<h4><a  href="#">人物</a></h4>
+				<h5><a href="#">动漫人物</a></h5>
+				<span class="line"></span>
+				<h5><a href="#">歌手</a></h5>
+				<span class="line"></span>
+				<h5><a href="#">运动员</a></h5>
+				<span class="line"></span>
+				<h5><a href="#">古代嫔妃</a></h5>
+				<span class="line"></span>
+				<h5><a href="#">演员</a></h5>
+				<h5 class="more"><a href="#">&gt;&gt;</a></h5>
+			  </li>
+			  <li>
+				<h4><a href="#">文化</a></h4>
+				<h5><a href="#">考古</a></h5>
+				<span class="line"></span>
+				<h5><a href="#">网络用语</a></h5>
+				<span class="line"></span>
+				<h5><a href="#">世界名著</a></h5>
+				<span class="line"></span>
+				<h5><a href="#">诗词</a></h5>
+				<span class="line"></span>
+				<h5><a href="#">神话</a></h5>
+				<h5 class="more"><a href="#">&gt;&gt;</a></h5>
+			  </li>
+			</ul>
+			<ul class="even">
+			  <li class="column">
+				<h4><a href="#">技术</a></h4>
+				<h5><a href="#">土木工程</a></h5>
+				<span class="line"></span>
+				<h5><a href="#">移动通信</a></h5>
+				<span class="line"></span>
+				<h5><a href="#">CPU</a></h5>
+				<span class="line"></span>
+				<h5><a href="#">MP3</a></h5>
+				<span class="line"></span>
+				<h5><a href="#">电脑病毒</a></h5>
+				<h5 class="more"><a href="#">&gt;&gt;</a></h5>
+			  </li>
+			  <li>
+				<h4><a href="#">历史</a></h4>
+				<h5><a href="#">侏罗纪</a></h5>
+				<span class="line"></span>
+				<h5><a href="#">清朝</a></h5>
+				<span class="line"></span>
+				<h5><a href="#">明朝</a></h5>
+				<span class="line"></span>
+				<h5><a href="#">洋务运动</a></h5>
+				<span class="line"></span>
+				<h5><a href="#">先秦</a></h5>
+				<h5 class="more"><a href="#">&gt;&gt;</a></h5>
+			  </li>
+			</ul>
+			<ul>
+			  <li class="column">
+				<h4><a href="#">艺术</a></h4>
+				<h5><a href="#">纪念碑</a></h5>
+				<span class="line"></span>
+				<h5><a href="#">戏剧</a></h5>
+				<span class="line"></span>
+				<h5><a href="#">音乐</a></h5>
+				<span class="line"></span>
+				<h5><a href="#">绘画</a></h5>
+				<span class="line"></span>
+				<h5><a href="#">雕塑</a></h5>
+				<span class="line"></span>
+				<h5><a href="#">建筑</a></h5>
+				<h5 class="more"><a href="#">&gt;&gt;</a></h5>
+			  </li>
+			  <li>
+				<h4><a href="#">生活</a></h4>
+				<h5><a href="#">影视</a></h5>
+				<span class="line"></span>
+				<h5><a href="#">动漫</a></h5>
+				<span class="line"></span>
+				<h5><a href="#">游戏</a></h5>
+				<span class="line"></span>
+				<h5><a href="#">服饰</a></h5>
+				<span class="line"></span>
+				<h5><a href="#">美容</a></h5>
+				<span class="line"></span>
+				<h5><a href="#">烹饪</a></h5>
+				<h5 class="more"><a href="#">&gt;&gt;</a></h5>
+			  </li>
+			</ul>
+			<ul class="even">
+			  <li class="column">
+				<h4><a href="#">地理</a></h4>
+				<h5><a href="#">大陆架</a></h5>
+				<span class="line"></span>
+				<h5><a href="#">国家</a></h5>
+				<span class="line"></span>
+				<h5><a href="#">地质</a></h5>
+				<span class="line"></span>
+				<h5><a href="#">岛屿</a></h5>
+				<span class="line"></span>
+				<h5><a href="#">山脉</a></h5>
+				<span class="line"></span>
+				<h5><a href="#">河流</a></h5>
+				<h5 class="more"><a href="#">&gt;&gt;</a></h5>
+			  </li>
+			  <li>
+				<h4><a href="#">社会</a></h4>
+				<h5><a href="#">外交</a></h5>
+				<span class="line"></span>
+				<h5><a href="#">军事</a></h5>
+				<span class="line"></span>
+				<h5><a href="#">民俗</a></h5>
+				<span class="line"></span>
+				<h5><a href="#">交通</a></h5>
+				<span class="line"></span>
+				<h5><a href="#">法律</a></h5>
+				<span class="line"></span>
+				<h5><a href="#">企业</a></h5>
+				<h5 class="more"><a href="#">&gt;&gt;</a></h5>
+			  </li>
+			</ul>
+			<ul>
+			  <li class="column">
+				<h4><a href="#">体育</a></h4>
+				<h5><a href="#">冰雪运动</a></h5>
+				<span class="line"></span>
+				<h5><a href="#">极限运动</a></h5>
+				<span class="line"></span>
+				<h5><a href="#">电子竞技</a></h5>
+				<span class="line"></span>
+				<h5><a href="#">篮球</a></h5>
+				<span class="line"></span>
+				<h5><a href="#">足球</a></h5>
+				<h5 class="more"><a href="#">&gt;&gt;</a></h5>
+			  </li>
+			  <li>
+				<h4><a href="#">自然</a></h4>
+				<h5><a href="#">地震</a></h5>
+				<span class="line"></span>
+				<h5><a href="#">气象</a></h5>
+				<span class="line"></span>
+				<h5><a href="#">天文</a></h5>
+				<span class="line"></span>
+				<h5><a href="#">花卉</a></h5>
+				<span class="line"></span>
+				<h5><a href="#">恐龙</a></h5>
+				<span class="line"></span>
+				<h5><a href="#">细菌</a></h5>
+				<h5 class="more"><a href="#">&gt;&gt;</a></h5>
+			  </li>
+			</ul>
+			<ul class="even">
+			  <li class="column">
+				<h4><a href="#">科学</a></h4>
+				<h5><a href="#">生物</a></h5>
+				<span class="line"></span>
+				<h5><a href="#">遗传学</a></h5>
+				<span class="line"></span>
+				<h5><a href="#">医学</a></h5>
+				<span class="line"></span>
+				<h5><a href="#">化学</a></h5>
+				<span class="line"></span>
+				<h5><a href="#">物理</a></h5>
+				<span class="line"></span>
+				<h5><a href="#">数学</a></h5>
+				<h5 class="more"><a href="#">&gt;&gt;</a></h5>
+			  </li>
+			  <li>
+				<h4><a href="#">经济</a></h4>
+				<h5><a href="#">投资</a></h5>
+				<span class="line"></span>
+				<h5><a href="#">保险</a></h5>
+				<span class="line"></span>
+				<h5><a href="#">银行</a></h5>
+				<span class="line"></span>
+				<h5><a href="#">期货</a></h5>
+				<span class="line"></span>
+				<h5><a href="#">基金</a></h5>
+				<span class="line"></span>
+				<h5><a href="#">股票</a></h5>
+				<h5 class="more"><a href="#">&gt;&gt;</a></h5>
+			  </li>
+			</ul>
+		  </div>
+		</div>
+	  </div>
+	  <div class="g25 g-a4">
+		<div class=" btn-entry clearfix"><a href="#" class="create-entry nslog:6540 btn-small btn-info">创建词条</a><a href="#" class="perfect-entry nslog:6541">完善词条</a></div>
+		<div id="new-publicizing" class="d-n">
+		  <div class="publicizing-implementation-min ">
+			<div class="slogan"><img alt="" src="img/wenku/lg1_5bfc02d3.png"></div>
+			<p>百度是<span>人人可编辑</span>的全书</p>
+			<div class="user clearfix"><em>已有</em>
+			  <div class="users" id="totalEditUser1"></div>
+			  <em class="user-pos">用户</em></div>
+			<div class="lemma clearfix"><em>贡献</em>
+			  <div class="entry" id="totalLemma1"></div>
+			  <em class="lemma-pos">词条</em></div>
+			<div class="btn-entry-new clearfix"><a href="#" class="create nslog:6553">创建词条</a><a href="#" class="perfect nslog:6554">完善词条</a></div>
+			<!--         <script type="text/javascript">F.use(["js/wenku/base.js","js/wenku/publicizing_min.js"],function(baidu,publicizing_min){baidu(document).ready(function(){ publicizing_min.init()})});</script> -->
+		  </div>
+		</div>
+		<div class="notice clearfix  ">
+		  <div class="clearfix title">
+			<h3>公告区</h3>
+			<a href="#" class="more" target="_blank">更多</a></div>
+		  <ul>
+			<li><a href="#">陕西酝酿出台煤炭扶持政策</a></li>
+			<li><a href="#">常州光伏产品出口美国大增占80%！ 欧盟仅占5%</a></li>
+			<li><a href="#">近期光伏产业链各环节均有所回暖</a></li>
+			<li><a href="#">全球规模最大薄膜太阳能电站建成</a></li>
+			<li><a href="#">国家能源局"三定"方案获批</a></li>
+		  </ul>
+		</div>
+		<div class="academic-council clearfix ">
+		  <div class="clearfix title">
+			<h3>学术委员会</h3>
+			<a href="#" class="more nslog:6525" target="_blank">更多</a></div>
+		  <div class="member clearfix">
+			<div class="pic"><a href="#" class="nslog:6524"><img src="img/wenku/14ddc9843a770adc524692b43acd2a43.jpg" width="55" height="55"/>
+			  <div class="img-border"></div>
+			  </a></div>
+			<div class="g-a1 content">
+			  <h4><a href="#" class="more nslog:6524">丁大卫</a></h4>
+			  <p>国际著名金融专家、教...</p>
+			</div>
+		  </div>
+		  <ul>
+			<li>专业领域：金融学</li>
+			<li>审定词条：<span class="num">134</span>个</li>
+		  </ul>
+		  <a href="#" class="apply nslog:6526">我要申请</a>
+		  <div class="statistics">学术委员会已有<span class="num">12</span>个领域专家<span class="num">643</span>位</div>
+		</div>
+		<div class="baike-star ">
+		  <div class="g-row title">
+			<h3><img src="img/wenku/get 2.jpg" style="width:17px; height:17px;"/> 今日之星</h3>
+			<a href="#" class="more nslog:6548" target="_blank">更多</a></div>
+		  <div class="g-row member">
+			<div class="pic"><a href="#" class="nslog:6527"><img src="img/wenku/0bd162d9f2d3572c3fab510d8b13632763d0c392.jpg" width="55" height="55"/>
+			  <div class="img-border"></div>
+			  </a></div>
+			<div class="g-a1 content">
+			  <h4><a href="#" class="nslog:6527">yangzhemin12</a></h4>
+			  <p>太子少师十级</p>
+			</div>
+		  </div>
+		  <ul class="g-row">
+			<li class="column ">创建文章：<span class="num">1042</span></li>
+			<li>编辑字典：<span class="num">14571</span></li>
+			<li class="column">初级优质：<span class="num">35</span></li>
+			<li>中级优质：<span class="num">23</span></li>
+		  </ul>
+		</div>
+		<div class="teamapply clearfix ">
+		  <div>
+			<h3><a href="#" class="nslog:6549">先锋蝌蚪团</a></h3>
+			<p>已有<span class="num">110</span>位成员</p>
+			<a href="#" class="apply nslog:6529">我要申请</a></div>
+		</div>
+		<div class="teamapply clearfix box-extend">
+		  <div>
+			<h3><a href="#" class="nslog:6550">战略知识先锋</a></h3>
+			<p>已有<span class="num">8047</span>位成员</p>
+			<a href="#" class="apply nslog:6526">我要申请</a></div>
+		</div>
+		<div class="teamapply clearfix box-extend">
+		  <div>
+			<h3><a href="#" class="nslog:7402">资深编修院</a></h3>
+			<p>已有<span class="num">116</span>位成员</p>
+			<a href="#" class="apply nslog:999999">我要申请</a></div>
+		</div>
+		<div class="billboard clearfix " id="billboard">
+		  <div class="clearfix title">
+			<h3>用户排行榜</h3>
+			<a href="#" class="more nslog:6551" target="_blank">更多</a></div>
+		  <div class="clearfix lastweek tabs"><a href="#" class="cur">上周贡献榜</a><a href="#" class="no-cur">上周优质版本</a></div>
+		  <div class="tab-content">
+			<ol class="nslog-area:6531">
+			  <li class="clearfix num1"><span class="ranking">1</span><a href="#">markzmj</a>&nbsp;&nbsp;<span class="score">1570</span></li>
+			  <li class="clearfix num2"><span class="ranking">2</span><a href="#">QQBIDUOK28</a><span class="score">1534</span></li>
+			  <li class="clearfix num3"><span class="ranking">3</span><a href="#">gzyfzlvip</a><span class="score">1533</span></li>
+			  <li class="clearfix num4"><span class="ranking">4</span><a href="#">ktdh123</a><span class="score">1518</span></li>
+			  <li class="clearfix num5"><span class="ranking">5</span><a href="#">无形雨</a><span class="score">1514</span></li>
+			</ol>
+			<ol class="d-n nslog-area:6532">
+			  <li class="clearfix num1"><span class="ranking">1</span><a href="#">东篱小菊</a><span class="score">9</span></li>
+			  <li class="clearfix num2"><span class="ranking">2</span><a href="#">朝阳山人</a><span class="score">4</span></li>
+			  <li class="clearfix num3"><span class="ranking">3</span><a href="#">d15055037840</a><span class="score">1</span></li>
+			  <li class="clearfix num4"><span class="ranking">4</span><a href="#">辰猫暮雪</a><span class="score">1</span></li>
+			  <li class="clearfix num5"><span class="ranking">5</span><a href="#">水幽草0x0</a><span class="score">1</span></li>
+			</ol>
+		  </div>
+		  <a href="#" class="all nslog:6534" target="_blank">查看总贡献榜</a></div>
+		<!--     <script type="text/javascript">F.use('/static/widget/index/index/billboard/billboard.js');</script> -->
+		<div class="g-row ad-side nslog:nslog:6545   "><a href="#"><img src="img/wenku/c943c57ef68d4e8f86cbadffc1fee77f.png" width="210" height="70"/></a></div>
+		<div class="g-row ad-side nslog:nslog:6545  ad-side-last "><a href="#"><img src="img/wenku/20130828/20130828145957_43797.jpg" width="210" height="70"/></a></div>
+		<div class="collaboration clearfix">
+		  <div class="title clearfix">
+			<h3>合作平台</h3>
+			<a href="#" class="more" target="_blank">更多</a></div>
+		  <p>目前已有<span class="num"><a href="#">154</a></span>家合作机构</p>
+		  <ul>
+			<li>
+			  <div class="row1"><a href="#" class="nslog:6535">权威编辑</a>
+				<p>编辑所属领域词条,获得权威展示</p>
+			  </div>
+			</li>
+			<li>
+			  <div class="row2"><a href="#" class="nslog:6536">项目共建</a>
+				<p>共建创新项目,共享项目成果</p>
+			  </div>
+			</li>
+			<li>
+			  <div class="row3"><a href="#" class="nslog:6537">资源合作</a>
+				<p>优质资源共融合,提升知识影响力</p>
+			  </div>
+			</li>
+			<li>
+			  <div class="row4"><a href="#" class="nslog:6538">API输出</a>
+				<p>引入内容,平台联手共赢</p>
+			  </div>
+			</li>
+			<li class="row5">
+			  <div class="row5"><a href="#" class="nslog:6539">活动合作</a>
+				<p>联合发起各种活动,增强宣传力度</p>
+			  </div>
+			</li>
+		  </ul>
+		</div>
+		<!--     <script type="text/javascript">F.use("js/wenku/collaboration.js");</script> -->
+	  </div>
+	</div>
+</div><!-- /container -->
+<div class="extra">
+  <div class="extra-inner">
+    <div class="container">
+      <div class="row-fluid">
+        <div class="span4">
+          <h4>
+            <p class="text-center">关于</p>
+          </h4>
+          <ul>
+            <li><a href="javascript:;">
+              <p class="text-center">关于我们</p>
+              </a></li>
+            <li><a href="javascript:;">
+              <p class="text-center">中国工程院</p>
+              </a></li>
+            <li><a href="javascript:;">
+              <p class="text-center">清华大学</p>
+              </a></li>
+            <li><a href="javascript:;">
+              <p class="text-center">联系我们</p>
+              </a></li>
+          </ul>
+        </div>
+        <!-- /span4 -->
+        <div class="span4">
+          <h4>
+            <p class="text-center">支持</p>
+          </h4>
+          <ul>
+            <li><a href="javascript:;">
+              <p class="text-center">常见问题</p>
+              </a></li>
+            <li><a href="javascript:;">
+              <p class="text-center">提问</p>
+              </a></li>
+            <li><a href="javascript:;">
+              <p class="text-center">视频教程</p>
+              </a></li>
+            <li><a href="javascript:;">
+              <p class="text-center">发送反馈</p>
+              </a></li>
+          </ul>
+        </div>
+        <!-- /span4 -->
+        <div class="span4">
+          <h4>
+            <p class="text-center">法律</p>
+          </h4>
+          <ul>
+            <li><a href="javascript:;">
+              <p class="text-center">客户隐私政策</p>
+              </a></li>
+            <li><a href="javascript:;">
+              <p class="text-center">适用条款</p>
+              </a></li>
+            <li><a href="javascript:;">
+              <p class="text-center">安全</p>
+              </a></li>
+          </ul>
+        </div>
+        <!-- /span4 -->
+      </div>
+      <!-- /row -->
+    </div>
+    <!-- /container -->
+  </div>
+  <!-- /extra-inner -->
+</div>
+<!-- /extra -->
+<div class="footer">
+  <div class="footer-inner">
+    <div class="container">
+      <div class="row-fluid">
+        <div class="span12">
+          <p class="text-center">&copy; 2013&nbsp;&nbsp;<a href="./首页.html">战略性新兴产业专业知识服务系统</a>.</p>
+        </div>
+        <!-- /span12 -->
+      </div>
+      <!-- /row -->
+    </div>
+    <!-- /container -->
+  </div>
+  <!-- /footer-inner -->
+</div>
+<!-- /footer -->
+<!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./js/jquery-1.7.2.min.js"></script>
+<script src="./js/bootstrap.js"></script>
+<script src="./js/base.js"></script>
+</body>
+</html>

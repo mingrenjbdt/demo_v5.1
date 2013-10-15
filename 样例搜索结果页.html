@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>战略性新兴产业专业知识服务系统</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<link href="./css/bootstrap.min.css" rel="stylesheet" />
+<link href="./css/bootstrap-responsive.min.css" rel="stylesheet" />
+<link href="./css/font-awesome.css" rel="stylesheet" />
+<link href="./css/global.css" rel="stylesheet" />
+<link href="./css/base-admin-demo.css" rel="stylesheet" />
+<link href="./css/base-admin-responsive.css" rel="stylesheet" />
+<link href="./css/pages/faq.css" rel="stylesheet" />
+
+
+<link href="css/searchResult/style-metro.css" rel="stylesheet" type="text/css"/>
+<link href="css/searchResult/style.css" rel="stylesheet" type="text/css"/>
+<link href="css/searchResult/style-responsive.css" rel="stylesheet" type="text/css"/>
+<link href="css/searchResult/default.css" rel="stylesheet" type="text/css" id="style_color"/>
+<link href="css/searchResult/uniform.default.css" rel="stylesheet" type="text/css"/>
+	<!-- END GLOBAL MANDATORY STYLES -->
+	<!-- BEGIN PAGE LEVEL STYLES --> 
+<link rel="stylesheet" type="text/css" href="css/searchResult/datepicker.css" />
+<link href="css/searchResult/jquery.fancybox.css" rel="stylesheet" />
+<link href="css/searchResult/search.css" rel="stylesheet" type="text/css"/>
+<link href="css/searchResult/style.css" rel="stylesheet" type="text/css"/>
+
+
+<!-- Tree 2013/8/31LMR -->
+<link rel="stylesheet" href="./css/zTreeStyle/zTreeStyle.css" type="text/css">
+<script type="text/javascript" src="./js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="./js/zTreeJs/jquery.ztree.core-3.5.min.js"></script>
+<script type="text/javascript" src="./js/zTreeJs/jquery.ztree.excheck-3.5.min.js"></script>
+<!--
+	<script type="text/javascript" src="../../../js/jquery.ztree.exedit-3.5.js"></script>
+	-->
+<SCRIPT type="text/javascript">
+		var setting = {
+			check: {
+				enable: true
+			},		
+			chkboxType:{
+				"Y" : "ps", 
+				"N" : "ps" 
+			},
+			view: {
+				showIcon: false,
+			},
+			data: {
+				simpleData: {
+					enable: true
+				}
+			}
+		};
+
+		var zNodes =[
+			{ id:1, pId:0, name:"所有产业分类", open:true},
+			{ id:11, pId:1, name:"节能环保产业", open:false},
+			{ id:111, pId:11, name:"高效节能产业"},
+			{ id:112, pId:11, name:"先进环保产业"},
+			{ id:113, pId:11, name:"资源循环利用产业"},
+			
+			{ id:12, pId:1, name:"新一代信息技术产业", open:false},
+			{ id:121, pId:12, name:"下一代信息网络产业"},
+			{ id:122, pId:12, name:"电子核心基础产业"},
+			{ id:122, pId:12, name:"高端软件和新兴信息服务产业"},
+			
+			{ id:13, pId:1, name:"生物产业", open:false},
+			{ id:131, pId:13, name:"生物医药产业"},
+			{ id:132, pId:13, name:"生物医学工程产业"},
+			{ id:133, pId:13, name:"生物农业产业"},
+			{ id:134, pId:13, name:"生物制造产业"},
+			
+			{ id:14, pId:1, name:"高端装备制造产业", open:false},
+			{ id:141, pId:14, name:"航空装备产业"},
+			{ id:142, pId:14, name:"卫星及应用产业"},
+			{ id:143, pId:14, name:"轨道交通装备产业"},
+			{ id:144, pId:14, name:"海洋工程装备产业"},
+			{ id:145, pId:14, name:"智能制造装备产业"},
+			
+			{ id:15, pId:1, name:"新能源产业", open:false},
+			{ id:151, pId:15, name:"核电技术产业"},
+			{ id:152, pId:15, name:"风能产业"},
+			{ id:153, pId:15, name:"太阳能产业"},
+			{ id:154, pId:15, name:"生物质能产业"},
+			
+			{ id:16, pId:1, name:"新材料产业", open:false},
+			{ id:161, pId:16, name:"新型功能材料产业"},
+			{ id:162, pId:16, name:"先进结构材料产业"},
+			{ id:163, pId:16, name:"高性能复合材料产业"},
+						
+			{ id:17, pId:1, name:"新能源汽车产业", open:false},
+			{ id:171, pId:17, name:"纯电动汽车和插电式混合动力汽车"},
+		];
+
+			var zNodes2 =[
+		
+			{ id:1, pId:0, name:"所有信息分类", open:true},
+			{ id:11, pId:1, name:"政策法规    (5)"},
+			{ id:12, pId:1, name:"技术前沿    (8)"},
+			{ id:13, pId:1, name:"领域要闻    (20)"},
+			{ id:14, pId:1, name:"高端视点    (36)"},
+			{ id:15, pId:1, name:"项目公告    (17)"},
+			{ id:16, pId:1, name:"研究报告    (25)"},
+			{ id:17, pId:1, name:"企业咨询    (12)"},
+			{ id:18, pId:1, name:"论坛通知    (6)"},
+			
+		];
+
+		$(document).ready(function(){
+			var ccc=$("#treeDemo"),
+			ddd=$("#treeInfoClass");
+			$.fn.zTree.init($("#treeDemo"), setting, zNodes);
+			$.fn.zTree.init($("#treeInfoClass"), setting, zNodes2);
+		});
+
+		//输入提示
+		$(document).ready(function(){
+			$('#prependedInput').typeahead(
+				{
+					source:["1111","222","333","444","aaa","555"], 
+					items:8,
+					minLength:1,
+
+				}
+			);
+		});
+	</SCRIPT>
+<!-- Tree 2013/8/31LMR/end -->
+<!-- Tree 2013/8/31ZYB/end -->
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+<div class="container">
+
+	<div class="header"></div>
+	
+	<div class="navbar">
+    
+		<div class="navbar-inner"> <!--a class="brand" href="#">Title</a-->
+      
+			<ul class="nav">
+				<li> <a href="./首页.html"> <i class="icon-home"></i> <span>首页</span> </a> </li>
+			
+				<li class="dropdown"> <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"> <i class="icon-share-alt"></i> <span>知识中心</span> <b class="caret"></b> </a>
+          
+					<ul class="dropdown-menu">
+			
+						<li><a href="./政策法规.html">政策法规</a></li>
+				
+						<li><a href="./专利标准.html">专利标准</a></li>
+				
+						<li><a href="./统计数据.html">统计数据</a></li>
+				
+					</ul>
+				
+				</li>
+			
+				<li> <a href="./产品中心.html" class="dropdown-toggle"> <i class="icon-th-large"></i> <span>产品中心</span> </a> </li>
+			
+				<li> <a href="./专家圈.html"> <i class="icon-fire"></i> <span>专家圈</span> </a> </li>
+			
+				<li class="active"> <a href="./知识搜索.html"> <i class="icon-search"></i> <span>知识搜索</span> </a> </li>
+			
+				<li> <a href="./用户平台.html"> <i class="icon-user"></i> <span>用户平台</span> </a> </li>
+		
+			</ul>
+			<ul class="nav pull-right">
+				
+				
+				<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">账号登陆 </a>
+				<div class="dropdown-menu  menu">
+				<form class="form-horizontal ">
+				<div class="control-group  ">
+				<div class="controls admin1">注册账号：<input id="inputEmail" placeholder="Administration" type="text" /></div>
+				</div>
+
+				<div class="control-group">
+				<div class="controls admin1">密   码：<input id="inputPassword" placeholder="Password" type="password" /></div>
+				</div>
+
+				<div class="control-group">
+				<div class="controls admin1"><label class="checkbox"><input type="checkbox" /> 记住密码 </label><button class="btn btn-large btn-block btn-primary" type="button">登陆</button>
+
+				<!--<h3 class="text-center">or</h3>-->
+				<button class="btn btn-large btn-block btn-primary" type="submit">注册</button><button class="btn btn-large btn-block btn-primary" type="submit">忘记密码</button></div>
+				</div>
+				</form>
+				</div>
+				</li>
+			</ul>
+
+			
+		</div><!-- navbar-inner -->
+		
+	</div><!-- navbar -->
+	
+    <div class="row-fluid">
+        <!-- /span4 -->
+        <div class="span12">
+		
+          <div class="widget widget-box">
+		  
+            <div class="widget-header">
+			
+              <h3>搜索结果</h3>
+			  <div class="row-fluid search-forms search-default">
+									<form class="form-search" action="#">
+										<div class="chat-form">
+											<div class="input-cont">   
+												<input placeholder="Search..." class="m-wrap" type="text">
+											</div>
+											<button type="button" class="btn green">Search &nbsp; <i class="m-icon-swapright m-icon-white"></i></button>
+										</div>
+									</form>
+								</div>
+			  
+            </div>
+			
+            <!-- /widget-header -->
+            <div class="widget-content">
+			
+              <div class="row-fluid">
+				
+				<hr>
+				
+				<div class="row-fluid">
+				
+					
+					<div class="tabbable tabbable-custom tabbable-full-width">
+						<ul class="nav nav-tabs">
+							<!--<li class=""><a data-toggle="tab" href="#tab_2_2">地图搜索</a></li>-->
+							<li class="active"><a data-toggle="tab" href="#tab_2_5">图库</a></li>
+							<li><a data-toggle="tab" href="#tab_2_3">文档</a></li>
+							<!--<li class=""><a data-toggle="tab" href="#tab_1_2">网页</a></li>-->
+							<li class=""><a data-toggle="tab" href="#tab_1_3">视频</a></li>
+							<li class=""><a data-toggle="tab" href="#tab_1_4">音频</a></li>
+							<!--<li class=""><a data-toggle="tab" href="#tab_1_5">报告</a></li>-->
+						</ul>
+						<div class="tab-content">
+							<!--<div id="tab_2_2" class="tab-pane">
+								<!--end row-fluid-->
+								<!--<div class="space40"></div>
+								<div class="row-fluid">
+									<div class="row-fluid margin-bottom-20">
+										<div class="span6 booking-blocks">
+											<div class="pull-left booking-img">
+												<img src="img/product/image4.jpg" alt="">
+												<ul class="unstyled">
+													<li><i class="icon-money"></i> From $126</li>
+													<li><i class="icon-map-marker"></i> Tioman, Malaysia</li>
+												</ul>
+											</div>
+											<div style="overflow:hidden;">
+												<h2><a href="#"><strong>标题：</strong></a></h2>
+												<ul class="unstyled inline">
+													<li><i class="icon-star"></i></li>
+													<li><i class="icon-star"></i></li>
+													<li><i class="icon-star"></i></li>
+													<li><i class="icon-star"></i></li>
+													<li><i class="icon-star-empty"></i></li>
+												</ul>
+												<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum. <a href="#">read more</a></p>
+											</div>
+										</div>
+										<div class="span6 booking-blocks">
+											<div class="pull-left booking-img">
+												<img src="img/product/image5.jpg" alt="">
+												<ul class="unstyled">
+													<li><i class="icon-money"></i> From $157</li>
+													<li><i class="icon-map-marker"></i> London, UK</li>
+												</ul>
+											</div>
+											<div style="overflow:hidden;">
+												<h2><a href="#"><strong>标题：</strong></a></h2>
+												<ul class="unstyled inline">
+													<li><i class="icon-star"></i></li>
+													<li><i class="icon-star"></i></li>
+													<li><i class="icon-star"></i></li>
+													<li><i class="icon-star"></i></li>
+													<li><i class="icon-star"></i></li>
+												</ul>
+												<p>Lorem ipsum dolor sit eos et accusamus et iusto odio amet, consectetur adipiscing elit. Ut non libero magna. Sed et quam lacus usce condimentum eleifend enim a sunt in culpa qui officia feugiat. Pellentesque dolores et quas molestias viverra vehicula sem ut volutpat. Integer sed arcu. <a href="#">read more</a></p>
+											</div>
+										</div>
+									</div>
+									<div class="row-fluid margin-bottom-20">
+										<div class="span6 booking-blocks">
+											<div class="pull-left booking-img">
+												<img src="img/product/image2.jpg" alt="">
+												<ul class="unstyled">
+													<li><i class="icon-money"></i> From $126</li>
+													<li><i class="icon-map-marker"></i> Tioman, Malaysia</li>
+												</ul>
+											</div>
+											<div style="overflow:hidden;">
+												<h2><a href="#"><strong>标题：</strong></a></h2>
+												<ul class="unstyled inline">
+													<li><i class="icon-star"></i></li>
+													<li><i class="icon-star"></i></li>
+													<li><i class="icon-star"></i></li>
+													<li><i class="icon-star"></i></li>
+													<li><i class="icon-star-empty"></i></li>
+												</ul>
+												<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum. <a href="#">read more</a></p>
+											</div>
+										</div>
+										<div class="span6 booking-blocks">
+											<div class="pull-left booking-img">
+												<img src="img/product/image3.jpg" alt="">
+												<ul class="unstyled">
+													<li><i class="icon-money"></i> From $157</li>
+													<li><i class="icon-map-marker"></i> London, UK</li>
+												</ul>
+											</div>
+											<div style="overflow:hidden;">
+												<h2><a href="#"><strong>标题：</strong></a></h2>
+												<ul class="unstyled inline">
+													<li><i class="icon-star"></i></li>
+													<li><i class="icon-star"></i></li>
+													<li><i class="icon-star"></i></li>
+													<li><i class="icon-star"></i></li>
+													<li><i class="icon-star"></i></li>
+												</ul>
+												<p>Lorem ipsum dolor sit eos et accusamus et iusto odio amet, consectetur adipiscing elit. Ut non libero magna. Sed et quam lacus usce condimentum eleifend enim a sunt in culpa qui officia feugiat. Pellentesque dolores et quas molestias viverra vehicula sem ut volutpat. Integer sed arcu. <a href="#">read more</a></p>
+											</div>
+										</div>
+									</div>
+									<div class="row-fluid margin-bottom-20">
+										<div class="span6 booking-blocks">
+											<div class="pull-left booking-img">
+												<img src="img/product/image5.jpg" alt="">
+												<ul class="unstyled">
+													<li><i class="icon-money"></i> From $126</li>
+													<li><i class="icon-map-marker"></i> Tioman, Malaysia</li>
+												</ul>
+											</div>
+											<div style="overflow:hidden;">
+												<h2><a href="#"><strong>标题：</strong></a></h2>
+												<ul class="unstyled inline">
+													<li><i class="icon-star"></i></li>
+													<li><i class="icon-star"></i></li>
+													<li><i class="icon-star"></i></li>
+													<li><i class="icon-star"></i></li>
+													<li><i class="icon-star-empty"></i></li>
+												</ul>
+												<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum. <a href="#">read more</a></p>
+											</div>
+										</div>
+										<div class="span6 booking-blocks">
+											<div class="pull-left booking-img">
+												<img src="img/product/image4.jpg" alt="">
+												<ul class="unstyled">
+													<li><i class="icon-money"></i> From $157</li>
+													<li><i class="icon-map-marker"></i> London, UK</li>
+												</ul>
+											</div>
+											<div style="overflow:hidden;">
+												<h2><a href="#"><strong>标题：</strong></a></h2>
+												<ul class="unstyled inline">
+													<li><i class="icon-star"></i></li>
+													<li><i class="icon-star"></i></li>
+													<li><i class="icon-star"></i></li>
+													<li><i class="icon-star"></i></li>
+													<li><i class="icon-star"></i></li>
+												</ul>
+												<p>Lorem ipsum dolor sit eos et accusamus et iusto odio amet, consectetur adipiscing elit. Ut non libero magna. Sed et quam lacus usce condimentum eleifend enim a sunt in culpa qui officia feugiat. Pellentesque dolores et quas molestias viverra vehicula sem ut volutpat. Integer sed arcu. <a href="#">read more</a></p>
+											</div>
+										</div>
+									</div>
+									<div class="row-fluid margin-bottom-20">
+										<div class="span6 booking-blocks">
+											<div class="pull-left booking-img">
+												<img src="img/product/image4.jpg" alt="">
+												<ul class="unstyled">
+													<li><i class="icon-money"></i> From $126</li>
+													<li><i class="icon-map-marker"></i> Tioman, Malaysia</li>
+												</ul>
+											</div>
+											<div style="overflow:hidden;">
+												<h2><a href="#"><strong>标题：</strong></a></h2>
+												<ul class="unstyled inline">
+													<li><i class="icon-star"></i></li>
+													<li><i class="icon-star"></i></li>
+													<li><i class="icon-star"></i></li>
+													<li><i class="icon-star"></i></li>
+													<li><i class="icon-star-empty"></i></li>
+												</ul>
+												<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum. <a href="#">read more</a></p>
+											</div>
+										</div>
+										<div class="span6 booking-blocks">
+											<div class="pull-left booking-img">
+												<img src="img/product/image5.jpg" alt="">
+												<ul class="unstyled">
+													<li><i class="icon-money"></i> From $157</li>
+													<li><i class="icon-map-marker"></i> London, UK</li>
+												</ul>
+											</div>
+											<div style="overflow:hidden;">
+												<h2><a href="#"><strong>标题：</strong></a></h2>
+												<ul class="unstyled inline">
+													<li><i class="icon-star"></i></li>
+													<li><i class="icon-star"></i></li>
+													<li><i class="icon-star"></i></li>
+													<li><i class="icon-star"></i></li>
+													<li><i class="icon-star"></i></li>
+												</ul>
+												<p>Lorem ipsum dolor sit eos et accusamus et iusto odio amet, consectetur adipiscing elit. Ut non libero magna. Sed et quam lacus usce condimentum eleifend enim a sunt in culpa qui officia feugiat. Pellentesque dolores et quas molestias viverra vehicula sem ut volutpat. Integer sed arcu. <a href="#">read more</a></p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="spac40"></div>
+								<div class="pagination pagination-centered">
+									<ul>
+										<li><a href="#">Prev</a></li>
+										<li><a href="#">1</a></li>
+										<li><a href="#">2</a></li>
+										<li class="active"><a href="#">3</a></li>
+										<li><a href="#">4</a></li>
+										<li><a href="#">5</a></li>
+										<li><a href="#">Next</a></li>
+									</ul>
+								</div>
+							</div>
+							<!--end tab-pane-->
+							
+							<!--end tab-pane-->
+							<div id="tab_2_5" class="tab-pane active">
+								<div class="row-fluid search-images">
+									<ul class="thumbnails">
+										<li class="span3">
+											<a class="fancybox-button" data-rel="fancybox-button" title="请修改产品title" href="img/product/11.jpg">
+											<img src="img/product/11.jpg" alt="">
+											</a>
+											<span style="font-size:16px;">产品名称：</span><a href="产品列表.html">LED灯</a>
+										</li>
+										
+										<li class="span3">
+											<a class="fancybox-button" data-rel="fancybox-button" title="请修改产品title" href="img/product/12.jpg">
+											<img src="img/product/12.jpg" alt="">
+											</a>
+											<span style="font-size:16px;">产品名称：</span><a href="产品列表.html">LED灯</a>
+										</li>
+										<li class="span3">
+											<a class="fancybox-button" data-rel="fancybox-button" title="请修改产品title" href="img/product/24.jpg">
+											<img src="img/product/24.jpg" alt="">
+											</a>
+											<span style="font-size:16px;">产品名称：</span><a href="产品列表.html">LED灯</a>
+										</li>
+										<li class="span3">
+											<a class="fancybox-button" data-rel="fancybox-button" title="请修改产品title" href="img/product/14.jpg">
+											<img src="img/product/14.jpg" alt="">
+											</a>
+											<span style="font-size:16px;">产品名称：</span><a href="产品列表.html">LED灯</a>
+										</li>
+									</ul>
+									<ul class="thumbnails">
+										<li class="span3">
+											<a class="fancybox-button" data-rel="fancybox-button" title="请修改产品title" href="img/product/15.jpg">
+											<img src="img/product/15.jpg" alt="">
+											</a>
+											<span style="font-size:16px;">产品名称：</span><a href="产品列表.html">LED灯</a>
+										</li>
+										<li class="span3">
+											<a class="fancybox-button" data-rel="fancybox-button" title="请修改产品title" href="img/product/16.jpg">
+											<img src="img/product/16.jpg" alt="">
+											</a>
+											<span style="font-size:16px;">产品名称：</span><a href="产品列表.html">LED灯</a>
+										</li>
+										<li class="span3">
+											<a class="fancybox-button" data-rel="fancybox-button" title="请修改产品title" href="img/product/17.jpg">
+											<img src="img/product/17.jpg" alt="">
+											</a>
+											<span style="font-size:16px;">产品名称：</span><a href="产品列表.html">LED灯</a>
+										</li>
+										<li class="span3">
+											<a class="fancybox-button" data-rel="fancybox-button" title="请修改产品title" href="img/product/18.jpg">
+											<img src="img/product/18.jpg" alt="">
+											</a>
+											<span style="font-size:16px;">产品名称：</span><a href="产品列表.html">LED灯</a>
+										</li>
+									</ul>
+									<ul class="thumbnails">
+										<li class="span3">
+											<a class="fancybox-button" data-rel="fancybox-button" title="请修改产品title" href="img/product/19.jpg">
+											<img src="img/product/19.jpg" alt="">
+											</a>
+											<span style="font-size:16px;">产品名称：</span><a href="产品列表.html">LED灯</a>
+										</li>
+										<li class="span3">
+											<a class="fancybox-button" data-rel="fancybox-button" title="请修改产品title" href="img/product/20.jpg">
+											<img src="img/product/20.jpg" alt="">
+											</a>
+											<span style="font-size:16px;">产品名称：</span><a href="产品列表.html">LED灯</a>
+										</li>
+										<li class="span3">
+											<a class="fancybox-button" data-rel="fancybox-button" title="请修改产品title" href="img/product/21.jpg">
+											<img src="img/product/21.jpg" alt="">
+											</a>
+											<span style="font-size:16px;">产品名称：</span><a href="产品列表.html">LED灯</a>
+										</li>
+										<li class="span3">
+											<a class="fancybox-button" data-rel="fancybox-button" title="请修改产品title" href="img/product/23.jpg">
+											<img src="img/product/23.jpg" alt="">
+											</a>
+											<span style="font-size:16px;">产品名称：</span><a href="产品列表.html">LED灯</a>
+										</li>
+										
+									</ul>
+								</div>
+								<div class="spac40"></div>
+								<div class="pagination pagination-right">
+									<ul>
+										<li><a href="#">Prev</a></li>
+										<li><a href="#">1</a></li>
+										<li><a href="#">2</a></li>
+										<li class="active"><a href="#">3</a></li>
+										<li><a href="#">4</a></li>
+										<li><a href="#">5</a></li>
+										<li><a href="#">Next</a></li>
+									</ul>
+								</div>
+							</div>
+							<!--end tab-pane-->
+							
+							<div id="tab_2_3" class="tab-pane">
+								<!--end row-fluid-->
+								<div class="space40"></div>
+								<div class="row-fluid">
+									<div class="booking-blocks">
+										<div class="pull-left booking-img">
+											<img src="img/product/1.jpg" alt="">
+											<!--ul class="unstyled">
+												<li><i class="icon-money"></i> 大小：64k</li>
+												<li><i class="icon-map-marker"></i> 关键词：低碳经济； LED； 节能灯具； 应用； 技术方向</li>
+											</ul-->
+										</div>
+										<div style="overflow:hidden;">
+											<h2><Strong></Strong><a href="./产品列表.html"><Strong>低碳经济下的LED节能灯应用及技术研发方向分析</Strong></a></h2>
+											<br>
+											<ul class="unstyled inline"><strong>作者：</strong>孙建国</ul><br>
+											<ul class="unstyled inline"><strong>Author:</strong>Sun Jianguo</ul><br>                  
+											<ul class="unstyled inline"><strong>日期：</strong>2013年9月17日</ul></ul><br>
+											<ul class="unstyled inline"><strong>机构：</strong>南京汉德森科技股份有限公司</ul></ul><br>
+											<p><strong>摘要：</strong>在当前全球能源短缺的忧虑再度升高,供电日趋紧张的背景下,世界各国均不约而同地开始了新型照明光源的探索。以发光二极管(LED)为光源的LED节能灯具凭借节能、环保、寿命长的特点逐渐开始占据市场,来替代白炽灯泡、灯泡型荧光灯等传统灯泡,近来更是备受关注,并且有望在普通家庭中广泛使用。本文将从LED节能灯具应用前景及技术研发方向上进行宏观和微观分析,阐述LED节能灯具研发的特点,研发中需要解决的主要问题,以便于在室内照明领域的应用设计提供新的思路和突破口... <a href="#">更多</a></p>
+										
+										    <ul class="unstyled inline"><strong>关键词：</strong>低碳经济； LED； 节能灯具； 应用； 技术方向</ul><br>
+											<ul class="unstyled inline"><strong>被引频次：</strong>1</ul><br>                  
+											<ul class="unstyled inline"><strong>下载频次：</strong>234</ul></ul><br>
+											</div>
+											
+										
+									</div>
+								</div>
+								<hr>
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								<div class="row-fluid">
+									<div class="booking-blocks">
+										<div class="pull-left booking-img">
+											<img src="img/product/2.jpg" alt="">
+											<ul class="unstyled">
+												<!--li><i class="icon-money"></i> 大小：64k</li>
+												<li><i class="icon-map-marker"></i> 关键词：关键词1，关键词2</li-->
+											</ul>
+										</div>
+										<div style="overflow:hidden;">
+											<h2><Strong></Strong><a href="./产品列表.html"><Strong>基于生产LED节能灯的通信网络研究</Strong></a></h2>
+											<br>
+											<ul class="unstyled inline"><strong>作者：</strong>赵伟； 鲁照权；</ul><br>
+											<ul class="unstyled inline"><strong>Author:</strong>ZHAO Wei,LU Zhao-quan</ul><br>                  
+											<ul class="unstyled inline"><strong>日期：</strong>2013年9月17日</ul></ul><br>
+											<ul class="unstyled inline"><strong>机构：</strong>合肥工业大学电气与自动化工程学院 </ul></ul><br>
+											<p><strong>摘要：</strong>通信网络对于控制系统的性能有着至关重要的影响,针对LED节能灯生产现场,介绍了基于EtherNet/IP和ControlNet两层通信网络构架的监控系统,其中信息层采用工业以太网(EtherNet/IP)、控制层采用ControlNet现场总线,整体网络使用通用工业协议和生产者/消费者(Produce/Consumer)的通信模式,极大的提高了网络带宽,使其监控系统更加有效地传输数据信息。详细阐述了通信网络的结构、网络的硬件构成、网络组态过程、软件的编程设置等。实际投产应用表明,该通信网络有效地。... <a href="#">更多</a></p>
+										
+										    <ul class="unstyled inline"><strong>关键词：</strong>工业以太网； 监控系统； 网络通信； </ul><br>
+											
+											</div>
+									</div>
+								</div>
+								
+								
+								
+								
+								<hr>
+								
+								
+								
+								
+								
+								
+
+								<div class="row-fluid">
+									<div class="booking-blocks">
+										<div class="pull-left booking-img">
+											<img src="img/product/03.jpg" alt="">
+											<ul class="unstyled">
+												<!--li><i class="icon-money"></i> 大小：64k</li>
+												<li><i class="icon-map-marker"></i> 关键词：关键词1，关键词2</li-->
+											</ul>
+										</div>
+										
+										
+										
+										<div style="overflow:hidden;">
+											<h2><Strong></Strong><a href="./产品列表.html"><Strong>大功率LED绿色节能灯的应用</Strong></a></h2>
+											<br>
+											<ul class="unstyled inline"><strong>作者：</strong>李国钧； </ul><br>
+											<ul class="unstyled inline"><strong>Author:</strong>Li Guojun</ul><br>                  
+											<ul class="unstyled inline"><strong>日期：</strong>2013年9月17日</ul></ul><br>
+											<ul class="unstyled inline"><strong>机构：</strong>陕西重型汽车有限公司汽车总装配厂；  </ul></ul><br>
+											<p><strong>摘要：</strong>简单介绍了大功率LED绿色节能灯特点,阐述了我厂整车装配联合厂房实施灯光照明改造,采用大功率LED节能灯,对该灯进行选型和配置,并对应用产生的能耗及其节能效果进行预测分析。</p>
+										
+										    <ul class="unstyled inline"><strong>关键词：</strong>发光二极管； 显色指数； 光衰； 平均寿命； 照度； </ul><br>
+											</div>
+											
+											
+									</div>
+								</div>
+								<hr>
+								<div class="row-fluid">
+									<div class="booking-blocks">
+										<div class="pull-left booking-img">
+											<img src="img/product/04.jpg" alt="">
+											<!--ul class="unstyled">
+												<li><i class="icon-money"></i> 大小：64k</li>
+												<li><i class="icon-map-marker"></i> 关键词：关键词1，关键词2</li>
+											</ul-->
+										</div>
+										<div style="overflow:hidden;">
+											<h2><Strong></Strong><a href="./产品列表.html"><Strong>人工驱动的超级电容充电型LED家用照明系统</Strong></a></h2>
+											<br>
+											<ul class="unstyled inline"><strong>作者：</strong>徐国栋；邓月光 </ul><br>
+											<ul class="unstyled inline"><strong>Author:</strong>Xu Guodong;Deng Yueguang</ul><br>                  
+											<ul class="unstyled inline"><strong>日期：</strong>2013年9月17日</ul></ul><br>
+											<ul class="unstyled inline"><strong>机构：</strong>中国科学院理化技术研究所；  </ul></ul><br>
+											<p><strong>摘要：</strong>在对比阀控密封铅酸蓄电池、超级电容充放电性能的基础上，提出并实现了一种基于超级电容充电及LED的人工驱动型家用照明系统。该系统以超级电容为供电电源，以手摇发电机为充电电源。实验测试表明，此家用照明系统使用65W功率的手摇发电机为27V/24F的超级电容模组充电需时约4.67min，而其放电可使4W(24V，0.169A)LED节能灯连续正常工作约24min。该系统具有使用寿命长、保护环境、成本低等优点，在当前能源十分紧缺的情况下有望推广成为一种重要的绿色化家用电器。... <a href="#">更多</a></p>
+										
+										    <ul class="unstyled inline"><strong>关键词：</strong>家用照明系统，人工动力，手摇发电机 </ul><br>
+											</div>
+									</div>
+								</div>
+								<hr>
+								<div class="spac40"></div>
+								<div class="pagination pagination-centered">
+									<ul>
+										<li><a href="#">Prev</a></li>
+										<li><a href="#">1</a></li>
+										<li><a href="#">2</a></li>
+										<li class="active"><a href="#">3</a></li>
+										<li><a href="#">4</a></li>
+										<li><a href="#">5</a></li>
+										<li><a href="#">Next</a></li>
+									</ul>
+								</div>
+							</div>
+							
+							<!--<div id="tab_1_2" class="tab-pane">
+								
+								<div class="row-fluid portfolio-block">
+									<div class="span12 portfolio-text">
+									
+										<div class="portfolio-text-info">
+											<h5><strong>机构：</strong><a href="#">证监会</a></h5>
+											<h5><strong>标题：</strong>公开募集证券投资基金参与国债期货交易指引</h5>
+											<h5><strong>日期：</strong>2013年9月3日</h5>
+											<h5><strong>附件：</strong><a href="">《公开募集证券投资基金参与国债期货交易指引》.doc</a></h5>
+											<h5><strong>内容：</strong>第一条  为规范公开募集证券投资基金(以下简称基金)参与国债期货交易的行为,防范投资风险,保护基金份额持有人的合法权益,根据《证券投资基金法》、《期货交易管理条例》、《证券投资基金运作管理办法》等法律法规,制定本指引......<a href="#">更多</a></h5>
+											
+										</div><hr>
+											<div class="portfolio-text-info">
+											<h5><strong>机构：</strong><a href="#">证监会</a></h5>
+											<h5><strong>标题：</strong>公开募集证券投资基金参与国债期货交易指引</h5>
+											<h5><strong>日期：</strong>2013年9月3日</h5>
+											<h5><strong>附件：</strong><a href="">《公开募集证券投资基金参与国债期货交易指引》.doc</a></h5>
+											<h5><strong>内容：</strong>第一条  为规范公开募集证券投资基金(以下简称基金)参与国债期货交易的行为,防范投资风险,保护基金份额持有人的合法权益,根据《证券投资基金法》、《期货交易管理条例》、《证券投资基金运作管理办法》等法律法规,制定本指引......<a href="#">更多</a></h5>
+											
+										</div><hr>
+											<div class="portfolio-text-info">
+											<h5><strong>机构：</strong><a href="#">证监会</a></h5>
+											<h5><strong>标题：</strong>公开募集证券投资基金参与国债期货交易指引</h5>
+											<h5><strong>日期：</strong>2013年9月3日</h5>
+											<h5><strong>附件：</strong><a href="">《公开募集证券投资基金参与国债期货交易指引》.doc</a></h5>
+											<h5><strong>内容：</strong>第一条  为规范公开募集证券投资基金(以下简称基金)参与国债期货交易的行为,防范投资风险,保护基金份额持有人的合法权益,根据《证券投资基金法》、《期货交易管理条例》、《证券投资基金运作管理办法》等法律法规,制定本指引......<a href="#">更多</a></h5>
+											
+										</div><hr>
+											<div class="portfolio-text-info">
+											<h5><strong>机构：</strong><a href="#">证监会</a></h5>
+											<h5><strong>标题：</strong>公开募集证券投资基金参与国债期货交易指引</h5>
+											<h5><strong>日期：</strong>2013年9月3日</h5>
+											<h5><strong>附件：</strong><a href="">《公开募集证券投资基金参与国债期货交易指引》.doc</a></h5>
+											<h5><strong>内容：</strong>第一条  为规范公开募集证券投资基金(以下简称基金)参与国债期货交易的行为,防范投资风险,保护基金份额持有人的合法权益,根据《证券投资基金法》、《期货交易管理条例》、《证券投资基金运作管理办法》等法律法规,制定本指引......<a href="#">更多</a></h5>
+											
+										</div><hr>
+											<div class="portfolio-text-info">
+											<h5><strong>机构：</strong><a href="#">证监会</a></h5>
+											<h5><strong>标题：</strong>公开募集证券投资基金参与国债期货交易指引</h5>
+											<h5><strong>日期：</strong>2013年9月3日</h5>
+											<h5><strong>附件：</strong><a href="">《公开募集证券投资基金参与国债期货交易指引》.doc</a></h5>
+											<h5><strong>内容：</strong>第一条  为规范公开募集证券投资基金(以下简称基金)参与国债期货交易的行为,防范投资风险,保护基金份额持有人的合法权益,根据《证券投资基金法》、《期货交易管理条例》、《证券投资基金运作管理办法》等法律法规,制定本指引......<a href="#">更多</a></h5>
+											
+										</div><hr>
+
+									</div>
+								
+								</div>
+								
+								<div class="space5"></div>
+								<div class="pagination pagination-right">
+									<ul>
+										<li><a href="#">Prev</a></li>
+										<li><a href="#">1</a></li>
+										<li><a href="#">2</a></li>
+										<li class="active"><a href="#">3</a></li>
+										<li><a href="#">4</a></li>
+										<li><a href="#">5</a></li>
+										<li><a href="#">Next</a></li>
+									</ul>
+								</div>
+							</div>
+							<!--end tab-pane-->
+							<div id="tab_1_3" class="tab-pane">
+						
+								<div class="search-classic">
+									
+									<img src="img/video/4.jpg" alt="">
+									<br>
+									<img src="img/video/4.jpg" alt="">
+									
+								</div>
+								<div>
+								<!--ul>
+										<li><a href="#">http://v.ku6.com/show/Rl6BvnxKRuN9h3oc6mfXiA...html</a></li>
+										<li><a href="#">http://www.tudou.com/programs/view/tsf9ff_MqF4/</a></li>
+										<li><a href="#">http://play.v.qq.com/play?vid=7W4uou2e8gI</a></li>
+										
+										<li><a href="#">http://play.v.qq.com/play?vid=7OpoRIpiLB5</a></li>
+										<li><a href="#">http://video.sina.com.cn/v/b/47092722-1982813013.html</a></li>
+										<li><a href="#">http://v.ku6.com/show/Rl6BvnxKRuN9h3oc6mfXiA...html</a></li>
+										<li><a href="#">http://www.tudou.com/programs/view/tsf9ff_MqF4/</a></li>
+										<li><a href="#">http://play.v.qq.com/play?vid=7W4uou2e8gI</a></li>
+										
+										<li><a href="#">http://play.v.qq.com/play?vid=7OpoRIpiLB5</a></li>
+										<li><a href="#">http://video.sina.com.cn/v/b/47092722-1982813013.html</a></li>
+									
+									</ul-->
+								</div>
+			
+
+							
+								<div class="space5"></div>
+								<div class="pagination pagination-centered">
+									<ul>
+										<li><a href="#">Prev</a></li>
+										<li><a href="#">1</a></li>
+										<li><a href="#">2</a></li>
+										<li class="active"><a href="#">3</a></li>
+										<li><a href="#">4</a></li>
+										<li><a href="#">5</a></li>
+										<li><a href="#">Next</a></li>
+									</ul>
+								</div>
+							</div>
+							<!--end tab-pane-->
+							<div id="tab_1_4" class="tab-pane">
+								<!--end row-fluid-->
+								<div class="space40"></div>
+								<div class="row-fluid">
+									<div class="row-fluid margin-bottom-20">
+										<div class="span6 booking-blocks">
+											<div class="pull-left booking-img">
+												<img src="img/product/31.jpg" alt="">
+												<!--ul class="unstyled">
+													<li><i class="icon-money"></i>时长：2.4小时</li>
+													<li><i class="icon-map-marker"></i> 关键词：关键词1，关键词2</li>
+												</ul-->
+											</div>
+											<div style="overflow:hidden;">
+												<h2><a href="#"><strong>高效LED节能照明的供电方式</strong></a></h2>
+												<!--ul class="unstyled inline">评分：
+													<li><i class="icon-star"></i></li>
+													<li><i class="icon-star"></i></li>
+													<li><i class="icon-star"></i></li>
+													<li><i class="icon-star"></i></li>
+													<li><i class="icon-star-empty"></i></li>
+												</ul-->
+												<h6><a href="#">作者：</a>刘桥；苏小布</h6>
+												<h6><a href="#">发表时间：</a>2013-04-13</h6>
+												<h6><a href="#"></a><strong>关键词：</strong>LED； CRD； 稳定电流； 节能； 功率因数；</h6>
+												<p><strong>摘要：</strong>这阐述了高效LED节能照明的供电方式。根据LED的特性,提出采用高压、小电流的交、直流LED负载,交流恒流、全波恒流、脉动恒流供电方法。使得LED节能灯具有功率因数高,供电效率高,温升慢,散热条件改善,电路简单,成本低,安全可靠的优点。该方法适用...<a href="#">更多</a></p>
+												
+											</div>
+										</div>
+										<div class="span6 booking-blocks">
+											<div class="pull-left booking-img">
+												<img src="img/product/32.jpg" alt="">
+												<!--ul class="unstyled">
+													<li><i class="icon-money"></i>时长：2.4小时</li>
+													<li><i class="icon-map-marker"></i> 关键词：关键词1，关键词2</li>
+												</ul-->
+											</div>
+											<div style="overflow:hidden;">
+												<h2><a href="#"><strong>关于低消耗船舶之节能灯的应用</strong></a></h2>
+												<!--ul class="unstyled inline">评分：
+													<li><i class="icon-star"></i></li>
+													<li><i class="icon-star"></i></li>
+													<li><i class="icon-star"></i></li>
+													<li><i class="icon-star"></i></li>
+													<li><i class="icon-star"></i></li>
+												</ul-->
+												<h6><a href="#">作者：</a>沈涛</h6>
+												<h6><a href="#">发表时间：</a>2012-05-21</h6>
+													<h6><a href="#"></a><strong>关键词：</strong>关键词：节能； 低消耗； 照明</h6>
+												<p><strong>摘要：</strong>在国际上倡导低碳生活的今天,船舶界追求的是低消耗低低排放的双低船舶。虽然使用节能的LED灯具在整个船舶的节能降耗上作用很小,通过对某船型的比较,分析应用LES照明可能节省的电力消耗,与大家一起探讨。></p>
+											
+											</div>
+										</div>
+									</div>
+									<div class="row-fluid margin-bottom-20">
+										<div class="span6 booking-blocks">
+											<div class="pull-left booking-img">
+												<img src="img/product/33.jpg" alt="">
+												<!--ul class="unstyled">
+													<li><i class="icon-money"></i>时长：2.4小时</li>
+													<li><i class="icon-map-marker"></i> 关键词：关键词1，关键词2</li>
+												</ul-->
+											</div>
+											<div style="overflow:hidden;">
+												<h2><a href="#"><strong>崇尚绿色照明促进节能灯应用</strong></a></h2>
+												<!--ul class="unstyled inline">评分：
+													<li><i class="icon-star"></i></li>
+													<li><i class="icon-star"></i></li>
+													<li><i class="icon-star"></i></li>
+													<li><i class="icon-star"></i></li>
+													<li><i class="icon-star-empty"></i></li>
+												</ul-->
+												<h6><a href="#">作者：</a>温晓红</h6>
+												<h6><a href="#">发表时间：</a>2013-01-21</h6>
+												<h6><a href="#">关键词：</a>绿色照明； 白炽灯； 节能灯</h6>
+												<p><strong>摘要：</strong>让绿色照明的理念走进日常的工作环境、生活环境。用节能灯更广泛的取代传统的白炽灯。</p>
+											</div>
+										</div>
+										<div class="span6 booking-blocks">
+											<div class="pull-left booking-img">
+												<img src="img/product/34.jpg" alt="">
+												<!--ul class="unstyled">
+													<li><i class="icon-money"></i>时长：2.4小时</li>
+													<li><i class="icon-map-marker"></i> 关键词：关键词1，关键词2</li>
+												</ul-->
+											</div>
+											<div style="overflow:hidden;">
+												<h2><a href="#"><strong>绿色照明与节能灯的应用</strong></a></h2>
+												<!--ul class="unstyled inline">评分：
+													<li><i class="icon-star"></i></li>
+													<li><i class="icon-star"></i></li>
+													<li><i class="icon-star"></i></li>
+													<li><i class="icon-star"></i></li>
+													<li><i class="icon-star"></i></li>
+												</ul-->
+												<h6><a href="#">作者：</a>兰天一</h6>
+												<h6><a href="#">发表时间：</a>2013-04-27</h6>
+												<h6><a href="#">关键词：</a>夜景照明； 定位； 内涵； 构架； 实施； 管理； 注意事项</h6>
+												<p><strong>摘要：</strong>绿色照明迄今为止已经成为国际社会公认的实施可持续发展战略的成功范例。我国照明用电量在终端用电中仅次于电机,居第二位。照明用电负荷属于高峰用电负荷,1990年初,我国照明电光源仍是以传统的低效白炽灯，和光效低、材料消耗大、寿命短的自镇流... <a href="#">更多</a></p>
+											</div>
+										</div>
+									</div>
+									<div class="row-fluid margin-bottom-20">
+										<div class="span6 booking-blocks">
+											<div class="pull-left booking-img">
+												<img src="img/product/35.jpg" alt="">
+												<!--ul class="unstyled">
+													<li><i class="icon-money"></i>时长：2.4小时</li>
+													<li><i class="icon-map-marker"></i> 关键词：关键词1，关键词2</li>
+												</ul-->
+											</div>
+											<div style="overflow:hidden;">
+												<h2><a href="#"><strong>高压强分子泵在节能灯制作工艺中的应用</strong></a></h2>
+												<!--ul class="unstyled inline">评分：
+													<li><i class="icon-star"></i></li>
+													<li><i class="icon-star"></i></li>
+													<li><i class="icon-star"></i></li>
+													<li><i class="icon-star"></i></li>
+													<li><i class="icon-star-empty"></i></li>
+												</ul-->
+												<h6><a href="#">作者：</a>董涌法； 刘爱民； </h6>
+												<h6><a href="#">发表时间：</a>2012-10-22</h6>
+												<h6><a href="#">关键词：</a>高压强； 分子泵； 节能灯</h6>
+												<p><strong>摘要：</strong>照明行业前景无限,相关产品种类及其制造技术发展迅速,设备制造上存在许多创新的空间。政府在节能灯的推广应用上给予相应的补贴和政策支持。相关设备制造企业也在积极寻找途径和方法,在制造节能灯的生产过程上挖掘降耗潜能,采取新工艺新产品实现生... <a href="#">更多</a></p>
+											</div>
+										</div>
+										<div class="span6 booking-blocks">
+											<div class="pull-left booking-img">
+												<img src="img/product/36.jpg" alt="">
+												<!--ul class="unstyled">
+													<li><i class="icon-money"></i>时长：2.4小时</li>
+													<li><i class="icon-map-marker"></i> 关键词：关键词1，关键词2</li>
+												</ul-->
+											</div>
+											<div style="overflow:hidden;">
+												<h2><a href="#"><strong>为了节约能源大力发展白光LED和新型节能灯</strong></a></h2>
+												<!--ul class="unstyled inline">评分：
+													<li><i class="icon-star"></i></li>
+													<li><i class="icon-star"></i></li>
+													<li><i class="icon-star"></i></li>
+													<li><i class="icon-star"></i></li>
+													<li><i class="icon-star"></i></li>
+												</ul-->
+												<h6><a href="#">作者：</a>陈元灯； 黄德森</h6>
+												<h6><a href="#">发表时间：</a>2013-5-29</h6>
+												<h6><a href="#">关键词：</a>LED；节能灯；照明光源</h6>
+												<p><strong>摘要：</strong>当前节约能源,保护环境是世界各国必须考虑的问题。我们是能源消耗大国,也是石油进口大国,2004年原油进口将突破1亿吨。石油资源已成我国战略物质,节能是我们长期国策。发展高学效的节能灯和新兴的白光LED半导体照明光源具有重大的意义。所以大力推...<a href="#">更多</a></p>
+											</div>
+										</div>
+									</div>
+									<div class="row-fluid margin-bottom-20">
+										<div class="span6 booking-blocks">
+											<div class="pull-left booking-img">
+												<img src="img/product/37.jpg" alt="">
+												<!--ul class="unstyled">
+													<li><i class="icon-money"></i>时长：2.4小时</li>
+													<li><i class="icon-map-marker"></i> 关键词：关键词1，关键词2</li>
+												</ul-->
+											</div>
+											<div style="overflow:hidden;">
+												<h2><a href="#"></a><strong>调光节能灯</strong></h2>
+												<!--ul class="unstyled inline">评分：
+													<li><i class="icon-star"></i></li>
+													<li><i class="icon-star"></i></li>
+													<li><i class="icon-star"></i></li>
+													<li><i class="icon-star"></i></li>
+													<li><i class="icon-star-empty"></i></li>
+												</ul-->
+												<h6><a href="#">作者：</a>张弘； 赵志峰； 陈欣平</h6>
+												<h6><a href="#">发表时间：</a>2013-06-21</h6>
+													<h6><a href="#">关键词：</a>节能灯；照明灯；调光器</h6>
+												<p><strong>摘要：</strong>目前,普通的电子节能灯不适用于通用的斩波式调光器。在实际使用中,会出现闪烁、不能调光、镇流器工作状态恶化,甚至导致烧毁等后果。主要原因是这种调光器仅适合于电压型负载,如白炽灯;电子节能灯是电流型器件。</p>
+											</div>
+										</div>
+										<div class="span6 booking-blocks">
+											<div class="pull-left booking-img">
+												<img src="img/product/38.jpg" alt="">
+												<!--ul class="unstyled">
+													<li><i class="icon-money"></i>时长：2.4小时</li>
+													<li><i class="icon-map-marker"></i> 关键词：关键词1，关键词2</li>
+												</ul-->
+											</div>
+											<div style="overflow:hidden;">
+												<h2><a href="#"><strong>提高荧光粉使用效率——节能灯生产厂家与稀土行业共谋可持续性发展</strong></a></h2>
+												<!--ul class="unstyled inline">评分：
+													<li><i class="icon-star"></i></li>
+													<li><i class="icon-star"></i></li>
+													<li><i class="icon-star"></i></li>
+													<li><i class="icon-star"></i></li>
+													<li><i class="icon-star"></i></li>
+												</ul-->
+												<h6><a href="#">作者：</a>周红</h6>
+												<h6><a href="#">发表时间：</a>2012-8-12</h6>
+												<h6><a href="#">荧光粉；节能灯；稀土</h6>
+												<p><strong>摘要：</a></strong>稀土荧光粉因为具有发光谱带窄,色纯度高,色彩鲜艳,吸收激发能量的能力较强,转换率较高,发射光谱范围比较广,从紫外线到红外线;荧光材料的物理化学性质稳定,能够承受大功率的电子束,高能射线和强紫外线的作用这些特点,而被广泛的用于显像、光源... <a href="#">更多</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="spac40"></div>
+								<div class="pagination pagination-centered">
+									<ul>
+										<li><a href="#">Prev</a></li>
+										<li><a href="#">1</a></li>
+										<li><a href="#">2</a></li>
+										<li class="active"><a href="#">3</a></li>
+										<li><a href="#">4</a></li>
+										<li><a href="#">5</a></li>
+										<li><a href="#">Next</a></li>
+									</ul>
+								</div>
+							</div>
+							<!--end tab-pane-->
+							<!--<div id="tab_1_5" class="tab-pane">
+								<div class="row-fluid portfolio-block">
+									<div class="span12 portfolio-text">
+									
+										  <div class="portfolio-text-info">
+											<h5><strong>主题：</strong>审计财政科述职述廉工作报告</h5>
+											<h5><strong>报告人：</strong><a href="#">张三</a></h5>
+											<h5><strong>日期：</strong>2013年9月3日</h5>
+											<h5><strong>内容：</strong>一年来，在局党组的正确领导和省厅财政审计处指导和支持下，全科人员认真学习贯彻党的十七大精神，深入落实科学发展观，树立审计为发展服务意识，坚持实事求是，廉洁从审，较好地完成了全年的工作任务，审计财政科述职述廉工作报告。现就全科今年工作完成情况及廉政建设情况作如下报告：......<a href="#">更多</a></h5>
+										</div><hr>
+										  <div class="portfolio-text-info">
+											<h5><strong>主题：</strong>审计财政科述职述廉工作报告</h5>
+											<h5><strong>报告人：</strong><a href="#">张三</a></h5>
+											<h5><strong>日期：</strong>2013年9月3日</h5>
+											<h5><strong>内容：</strong>一年来，在局党组的正确领导和省厅财政审计处指导和支持下，全科人员认真学习贯彻党的十七大精神，深入落实科学发展观，树立审计为发展服务意识，坚持实事求是，廉洁从审，较好地完成了全年的工作任务，审计财政科述职述廉工作报告。现就全科今年工作完成情况及廉政建设情况作如下报告：......<a href="#">更多</a></h5>
+										</div><hr>
+										  <div class="portfolio-text-info">
+											<h5><strong>主题：</strong>审计财政科述职述廉工作报告</h5>
+											<h5><strong>报告人：</strong><a href="#">张三</a></h5>
+											<h5><strong>日期：</strong>2013年9月3日</h5>
+											<h5><strong>内容：</strong>一年来，在局党组的正确领导和省厅财政审计处指导和支持下，全科人员认真学习贯彻党的十七大精神，深入落实科学发展观，树立审计为发展服务意识，坚持实事求是，廉洁从审，较好地完成了全年的工作任务，审计财政科述职述廉工作报告。现就全科今年工作完成情况及廉政建设情况作如下报告：......<a href="#">更多</a></h5>
+										</div><hr>
+										
+										  <div class="portfolio-text-info">
+											<h5><strong>主题：</strong>审计财政科述职述廉工作报告</h5>
+											<h5><strong>报告人：</strong><a href="#">张三</a></h5>
+											<h5><strong>日期：</strong>2013年9月3日</h5>
+											<h5><strong>内容：</strong>一年来，在局党组的正确领导和省厅财政审计处指导和支持下，全科人员认真学习贯彻党的十七大精神，深入落实科学发展观，树立审计为发展服务意识，坚持实事求是，廉洁从审，较好地完成了全年的工作任务，审计财政科述职述廉工作报告。现就全科今年工作完成情况及廉政建设情况作如下报告：......<a href="#">更多</a></h5>
+										</div><hr>
+										
+										  <div class="portfolio-text-info">
+											<h5><strong>主题：</strong>审计财政科述职述廉工作报告</h5>
+											<h5><strong>报告人：</strong><a href="#">张三</a></h5>
+											<h5><strong>日期：</strong>2013年9月3日</h5>
+											<h5><strong>内容：</strong>一年来，在局党组的正确领导和省厅财政审计处指导和支持下，全科人员认真学习贯彻党的十七大精神，深入落实科学发展观，树立审计为发展服务意识，坚持实事求是，廉洁从审，较好地完成了全年的工作任务，审计财政科述职述廉工作报告。现就全科今年工作完成情况及廉政建设情况作如下报告：......<a href="#">更多</a></h5>
+										</div><hr>
+									</div>
+									
+								</div>
+							
+								<div class="space5"></div>
+								<div class="pagination pagination-right">
+									<ul>
+										<li><a href="#">Prev</a></li>
+										<li><a href="#">1</a></li>
+										<li><a href="#">2</a></li>
+										<li class="active"><a href="#">3</a></li>
+										<li><a href="#">4</a></li>
+										<li><a href="#">5</a></li>
+										<li><a href="#">Next</a></li>
+									</ul>
+								</div>
+							</div>
+					<!--end tabbable-->           
+				
+				 
+				</div>
+					
+                </div>
+				
+					</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /span9 -->
+      </div>
+      <!-- /row -->
+    </div>
+    <!-- /container -->
+
+<div class="extra">
+  <div class="extra-inner">
+    <div class="container">
+      <div class="row-fluid">
+        <div class="span4">
+          <h4>
+            <p class="text-center">关于</p>
+          </h4>
+          <ul>
+            <li><a href="javascript:;">
+              <p class="text-center">关于我们</p>
+              </a></li>
+            <li><a href="javascript:;">
+              <p class="text-center">中国工程院</p>
+              </a></li>
+            <li><a href="javascript:;">
+              <p class="text-center">清华大学</p>
+              </a></li>
+            <li><a href="javascript:;">
+              <p class="text-center">联系我们</p>
+              </a></li>
+          </ul>
+        </div>
+        <!-- /span4 -->
+        <div class="span4">
+          <h4>
+            <p class="text-center">支持</p>
+          </h4>
+          <ul>
+            <li><a href="javascript:;">
+              <p class="text-center">常见问题</p>
+              </a></li>
+            <li><a href="javascript:;">
+              <p class="text-center">提问</p>
+              </a></li>
+            <li><a href="javascript:;">
+              <p class="text-center">视频教程</p>
+              </a></li>
+            <li><a href="javascript:;">
+              <p class="text-center">发送反馈</p>
+              </a></li>
+          </ul>
+        </div>
+        <!-- /span4 -->
+        <div class="span4">
+          <h4>
+            <p class="text-center">法律</p>
+          </h4>
+          <ul>
+            <li><a href="javascript:;">
+              <p class="text-center">客户隐私政策</p>
+              </a></li>
+            <li><a href="javascript:;">
+              <p class="text-center">适用条款</p>
+              </a></li>
+            <li><a href="javascript:;">
+              <p class="text-center">安全</p>
+              </a></li>
+          </ul>
+        </div>
+        <!-- /span4 -->
+      </div>
+      <!-- /row -->
+    </div>
+    <!-- /container -->
+  </div>
+  <!-- /extra-inner -->
+</div>
+<!-- /extra -->
+<div class="footer">
+  <div class="footer-inner">
+    <div class="container">
+      <div class="row-fluid">
+        <div class="span12">
+          <p class="text-center">&copy; 2013&nbsp;&nbsp;<a href="./首页.html">战略性新兴产业专业知识服务系统</a>.</p>
+        </div>
+        <!-- /span12 -->
+      </div>
+      <!-- /row -->
+    </div>
+    <!-- /container -->
+  </div>
+  <!-- /footer-inner -->
+</div>
+<!-- /footer -->
+<!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<!-- <script src="./js/jquery-1.7.2.min.js"></script> -->
+<script src="./js/bootstrap.js"></script>
+<script src="./js/base.js"></script>
+<script src="./js/faq.js"></script>
+
+
+	<!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
+	<!-- BEGIN CORE PLUGINS -->
+	<script src="js/searchResult/jquery-1.10.1.min.js" type="text/javascript"></script>
+	<script src="js/searchResult/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+	<!-- IMPORTANT! Load jquery-ui-1.10.1.custom.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip -->
+	<script src="js/searchResult/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>      
+	<script src="js/searchResult/bootstrap.min.js" type="text/javascript"></script>
+	<!--[if lt IE 9]>
+	<script src="js/searchResult/excanvas.min.js"></script>
+	<script src="js/searchResult/respond.min.js"></script>  
+	<![endif]-->   
+	<script src="js/searchResult/jquery.slimscroll.min.js" type="text/javascript"></script>
+	<script src="js/searchResult/jquery.blockui.min.js" type="text/javascript"></script>  
+	<script src="js/searchResult/jquery.cookie.min.js" type="text/javascript"></script>
+	<script src="js/searchResult/uniform/jquery.uniform.min.js" type="text/javascript" ></script>
+	<!-- END CORE PLUGINS -->
+	<script type="text/javascript" src="js/searchResult/bootstrap-datepicker.js"></script>
+	<script src="js/searchResult/jquery.fancybox.pack.js"></script>
+	<script src="js/searchResult/app.js"></script>
+	<script src="js/searchResult/search.js"></script>      
+	<script>
+		jQuery(document).ready(function() {    
+		   App.init();
+		   Search.init();
+		});
+	</script>
+
+<script>
+
+/*$(function () {
+	
+	$('.faq-list').goFaq ();
+
+});*/
+
+</script>
+</body>
+</html>

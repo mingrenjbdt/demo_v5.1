@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>战略性新兴产业专业知识服务系统</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<link href="./css/bootstrap.min.css" rel="stylesheet" />
+<link href="./css/bootstrap-responsive.min.css" rel="stylesheet" />
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600" rel="stylesheet" />
+<link href="./css/font-awesome.css" rel="stylesheet" />
+<link href="./css/global.css" rel="stylesheet" />
+<link href="./css/base-admin-responsive.css" rel="stylesheet" />
+<link href="./css/pages/faq.css" rel="stylesheet" />
+<link href="./css/datetimepicker.css" rel="stylesheet" />
+<link href="./css/zhengce/1.css" rel="stylesheet" />
+
+
+
+<!-- daterangepicker 2013/9/18L -->
+<link href="./css/daterangepicker/daterangepicker-bs3.css" rel="stylesheet" />
+
+
+<!-- Tree 2013/8/31LMR -->
+<link rel="stylesheet" href="./css/zTreeStyle/zTreeStyle.css" type="text/css">
+<script type="text/javascript" src="./js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="./js/zTreeJs/jquery.ztree.core-3.5.min.js"></script>
+<script type="text/javascript" src="./js/zTreeJs/jquery.ztree.excheck-3.5.min.js"></script>
+
+<!-- daterangepicker 2013/9/17ZYB -->
+<script type="text/javascript" src="./js/daterangepicker/moment.min.js"></script>
+<script type="text/javascript" src="./js/daterangepicker/daterangepicker.js"></script>
+<SCRIPT type="text/javascript">
+
+
+</script>
+<SCRIPT type="text/javascript">
+		var setting = {
+			check: {
+				enable: true
+			},		
+			chkboxType:{
+				"Y" : "ps", 
+				"N" : "ps" 
+			},
+			view: {
+				showIcon: false,
+			},
+			data: {
+				simpleData: {
+					enable: true
+				}
+			}
+		};
+
+		var zNodes =[
+			{ id:01, pId:0, name:"国别", open:true},//根节点
+			
+			
+			{ id:011, pId:01, name:"中国(china)", open:true},
+			 { id:0111, pId:011, name:"中央", open:true},
+			  { id:01111, pId:0111, name:"人大常委"},
+			  { id:01112, pId:0111, name:"国务院"},
+			  { id:01113, pId:0111, name:"国资院"},
+			  { id:01114, pId:0111, name:"证监会"},
+			
+			 { id:0112, pId:011, name:"省市"},
+			  { id:011201, pId:0112, name:"北京"},
+			  { id:011202, pId:0112, name:"天津"},
+			  { id:011203, pId:0112, name:"成都"},
+			  { id:011204, pId:0112, name:"大连"},
+			  { id:011205, pId:0112, name:"深圳"},
+			  { id:011206, pId:0112, name:"上海"},
+			  { id:011207, pId:0112, name:"重庆"},
+			  { id:011208, pId:0112, name:"广东"},
+			  { id:011209, pId:0112, name:"安徽"},
+			    { id:01120901, pId:011209, name:"合肥"},
+				{ id:01120902, pId:011209, name:"马鞍山"},
+				{ id:01120903, pId:011209, name:"芜湖"},
+				{ id:01120904, pId:011209, name:"蚌埠"},
+				{ id:01120905, pId:011209, name:"淮南"},
+				{ id:01120906, pId:011209, name:"淮北"},
+				{ id:01120907, pId:011209, name:"安庆"},
+				{ id:01120908, pId:011209, name:"黄山"},
+				{ id:01120909, pId:011209, name:"阜阳"},
+				{ id:01120910, pId:011209, name:"六安"},
+			  { id:011210, pId:0112, name:"河北"},
+			  { id:011211, pId:0112, name:"成都"},
+			  { id:011212, pId:0112, name:"四川"},
+			  { id:011213, pId:0112, name:"内蒙古"},
+			  { id:011214, pId:0112, name:"黑龙江"},
+			  { id:011215, pId:0112, name:"浙江"},
+			  { id:011216, pId:0112, name:"江苏"},
+			  { id:011217, pId:0112, name:"吉林"},
+			  { id:011218, pId:0112, name:"山东"},
+			  { id:011219, pId:0112, name:"新疆"},
+			  { id:011220, pId:0112, name:"福建"},
+			  { id:011221, pId:0112, name:"湖南"},
+			  { id:011222, pId:0112, name:"湖北"},
+			
+			
+			
+			{ id:0113, pId:011, name:"港澳特别行政区"},
+			
+			
+			
+			{ id:0114, pId:011, name:"其他"},
+			
+			
+			{ id:012, pId:01, name:"美国(America)", open:true},
+			{ id:0121, pId:012, name:"审计署"},
+			{ id:0122, pId:012, name:"海关总署"},
+			{ id:0122, pId:012, name:"新闻出版总署"},
+			
+			{ id:013, pId:1, name:"英国(England)", open:true},
+			{ id:0131, pId:013, name:"审计署"},
+			{ id:0132, pId:013, name:"外汇管理局"},
+			{ id:0133, pId:013, name:"工商管理总局"},
+			{ id:0134, pId:013, name:"统计局"},
+			{ id:0135, pId:013, name:"海关总署"},
+			{ id:0136, pId:013, name:"证券与投资协会"},
+			
+			{ id:014, pId:01, name:"日本(Japen)", open:false},
+			{ id:0141, pId:014, name:"日本政府"},
+			{ id:0142, pId:014, name:"日本市财政局"},
+			
+			{ id:015, pId:01, name:"瑞士(Switzerland)", open:true},
+			{ id:0151, pId:015, name:"瑞士联邦审计署"},
+			{ id:0152, pId:015, name:"瑞士联邦统计局"},
+			{ id:0153, pId:015, name:"瑞士联邦政府"},
+			{ id:0154, pId:015, name:"瑞士联邦海关总署"},
+			
+			{ id:016, pId:01, name:"俄罗斯(Russia)", open:false},
+			{ id:0161, pId:016, name:"俄罗斯政府"},
+			{ id:0162, pId:016, name:"俄罗斯地税局"},
+			{ id:0163, pId:016, name:"俄罗斯房屋租赁办"},
+	
+			
+		];
+
+		$(document).ready(function(){
+			var ccc=$("#treeDemo"),
+			ddd=$("#treeInfoClass");
+			$.fn.zTree.init($("#treeDemo"), setting, zNodes);
+		});
+
+		//输入提示
+		$(document).ready(function(){
+			$('#prependedInput').typeahead(
+				{
+					source:["1111","222","333","444","aaa","555"], 
+					items:8,
+					minLength:1,
+
+				}
+			);
+		});
+		
+		//日期
+		$(document).ready(function() {
+		  $('#reservation').daterangepicker();
+		});
+		
+	</SCRIPT>
+<!-- Tree 2013/8/31LMR/end -->
+<!-- Tree 2013/8/31ZYB/end -->
+<!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+<script type="text/javascript" src="http://images.webofknowledge.com/WOKRS511B5P1.01/javascript/Async.js"></script>
+
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+<div class="container">
+<div class="header"></div>
+<div class="navbar">
+  <div class="navbar-inner">
+    <ul class="nav">
+      <li> <a href="./首页.html"> <i class="icon-home"></i> <span>首页</span> </a> </li>
+      <li class="dropdown" > <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"> <i class="icon-share-alt"></i> <span>知识中心</span> <b class="caret"></b> </a>
+        <ul class="dropdown-menu">
+          <li><a href="./政策法规.html">政策法规</a></li>
+          <li><a href="./专利标准.html">专利标准</a></li>
+          <li><a href="./统计数据.html">统计数据</a></li>
+        </ul>
+      </li>
+      <li  class="active"> <a href="./产品中心.html" class="dropdown-toggle"> <i class="icon-th-large"></i> <span>产品中心</span> </a> </li>
+      <li> <a href="./专家圈.html"> <i class="icon-fire"></i> <span>专家圈</span> </a> </li>
+      <li> <a href="./知识搜索.html"> <i class="icon-search"></i> <span>知识搜索</span> </a> </li>
+      <li> <a href="./用户平台.html"> <i class="icon-user"></i> <span>用户平台</span> </a> </li>
+    </ul>
+  </div>
+</div>
+      <div class="row-fluid">
+        <div class="span12">
+          <ul class="breadcrumb">
+            <li><a href="./产品中心.html">产品中心</a> <span class="divider">/</span></li>	
+			<li><a href="./产品列表.html">LED节能灯</a> <span class="divider">/</span></li>	
+            <li class="active">政策法规 </li>
+          </ul>
+        </div>
+        <!-- /span12 -->
+      </div>
+      
+      <!-- /row -->
+<div class="row-fluid">
+  <div class="span3">
+    <div class="widget widget-box">
+      <div class="widget-header">
+        <h3>政策法规精炼</h3>
+      </div>
+      <!-- /widget-header -->
+      <div class="widget-content">
+        <div class="accordion" id="accordion-432917">
+          <div class="accordion-group">
+            <div class="accordion-heading"> <a class="accordion-toggle" data-parent="#accordion-432917" data-toggle="collapse" href="#accordion-element-969346"><i class="icon-th-list"></i>&nbsp;&nbsp;地区选择</a> </div>
+            <div class="accordion-body in collapse" id="accordion-element-969346" style="height: auto;" >
+              <div class="accordion-inner">
+                <div>
+                  <ul id="treeDemo" class="ztree" onclick="go()">
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /accordion-group -->
+              
+        </div>
+        <!-- /accordion -->
+      </div>
+      <!-- /widget-content -->
+    </div>
+    <!-- /widget -->
+  </div>
+  <!-- /span3 -->
+  <div class="span9">
+    <div class="widget">
+      <div class="widget-header"> <i class="icon-pushpin"></i>
+        <h3>政策法规专业知识</h3>
+      </div>
+      <!-- /widget-header -->
+      <div class="widget-content text-center">
+	  
+	  
+	  
+										    
+											
+						    <form class="form-inline">
+    标题包含：<input type="text" class="input-small" placeholder="标题">
+    关键字：<input type="text" class="input-small" placeholder="关键字">
+	起止日期：
+												
+											
+    </label>
+	
+
+<div class="input-append date form_datetime"><span class="input-prepend">
+  <input type="text" name="reservation" id="reservation" style="width:145px;"/>
+</span><span class="add-on"><i class="icon-th"></i></span></div>
+
+
+
+    <button type="submit" class="btn">查询</button>
+    </form>
+									
+	  
+	  
+	  
+	    
+					<div style="width:100%">
+						<div class="alert alert-info">
+						
+						</div>
+						<!-- BEGIN SAMPLE TABLE PORTLET-->
+						<div class="portlet box green" style="  text-align: left;">
+							<div class="portlet-title">
+								<div class="tools">
+									<a href="javascript:;" class="collapse"></a>
+									<a href="#portlet-config" data-toggle="modal" class="config"></a>
+									<a href="javascript:;" class="reload"></a>
+									<a href="javascript:;" class="remove"></a>
+								</div>
+							</div>
+							<div class="portlet-body flip-scroll">
+								<table class="table-bordered table-striped table-condensed flip-content" style="width:100%">
+									<thead class="flip-content">
+										<tr>
+											<th width="15%">发布机构</th>
+                                            <th width="15%">国家(地区)</th>
+											<th width="60%">信息列表</th>
+											<th width="10%" class="numeric">日期</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>审计署</td>
+                                            <td>英国</td>
+											<td><a href="#">About release the pledge type quotation repo transactions and the measures for the registration and settlement business of inform...</a></td>
+											<td class="numeric" style="padding-right:40px;">2013/8/23</td>
+										</tr>
+										<tr>
+											<td>审计署</td>
+                                            <td>英国</td>
+											<td><a href="#">Stock exchange asset securitization business guide...</a></td>
+											<td class="numeric" style="padding-right:40px;">2013/6/12</td>
+										</tr>
+										<tr>
+											<td>审计署</td>
+                                            <td>英国</td>
+											<td><a href="#">Stock exchange listed company information disclosure work assessment method (revised in 2013)...</a></td>
+											<td class="numeric" style="padding-right:40px;">2013/6/12</td>
+										</tr>
+										<tr>
+											<td>工商管理局</td>
+                                            <td>英国</td>
+											<td><a href="#">About release the pledge type quotation repo transactions and the measures for the registration and settlement business of inform... </a></td>
+											<td class="numeric" style="padding-right:40px;">2013/6/11</td>
+										</tr>
+										<tr>
+											<td>工商管理局</td>
+                                            <td>英国</td>
+											<td><a href="#">Stock exchange listed company information disclosure... </a></td>
+											<td class="numeric" style="padding-right:40px;">2013/6/11</td>
+										</tr>
+										<tr>
+											<td>审计署</td>
+                                            <td>英国</td>
+											<td><a href="#">Stock exchange disciplinary hearing procedure rules...</a></td>
+											<td class="numeric" style="padding-right:40px;">2013/6/11</td>
+										</tr>
+										<tr>
+											<td>统计局</td>
+                                            <td>英国</td>
+											<td><a href="#">Measures for the implementation of stock exchange delisted company listed again...</a></td>
+											<td class="numeric" style="padding-right:40px;">2013/6/11</td>
+										</tr>
+										<tr>
+											<td>统计局</td>
+                                            <td>英国</td>
+											<td><a href="#">Released. About the agreed to buy back securities trading and the measures for the registration and settlement business of inform...</a></td>
+											<td class="numeric" style="padding-right:40px;">2013/6/11</td>
+										</tr>
+										<tr>
+											<td>审计署</td>
+                                            <td>英国</td>
+											<td><a href="#">On further do a good job in the listed company general meeting of shareholders network vote for service to inform... </a>
+</td>
+											<td class="numeric" style="padding-right:40px;">2013/6/11</td>
+										</tr>
+										
+										<tr>
+											<td>统计局</td>
+                                            <td>英国</td>
+											<td><a href="#">The stock exchange trading rules...</a> </td>
+											<td class="numeric" style="padding-right:40px;">2013/6/11</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<!-- END SAMPLE TABLE PORTLET-->
+					</div>
+				
+          
+      </div>
+      <div class="text-left" style="padding-left:40px;">  </div>
+               
+            
+             
+    
+      </div>
+      <!-- /widget -->
+    </div>
+    <!-- /span9 -->
+  </div>
+  <!-- /row-fluid -->
+</div>
+<!-- /container -->
+<div class="extra">
+  <div class="extra-inner">
+    <div class="container">
+      <div class="row-fluid">
+        <div class="span4">
+          <h4>
+            <p class="text-center">关于</p>
+          </h4>
+          <ul>
+            <li><a href="javascript:;">
+              <p class="text-center">关于我们</p>
+              </a></li>
+            <li><a href="javascript:;">
+              <p class="text-center">中国工程院</p>
+              </a></li>
+            <li><a href="javascript:;">
+              <p class="text-center">清华大学</p>
+              </a></li>
+            <li><a href="javascript:;">
+              <p class="text-center">联系我们</p>
+              </a></li>
+          </ul>
+        </div>
+        <!-- /span4 -->
+        <div class="span4">
+          <h4>
+            <p class="text-center">支持</p>
+          </h4>
+          <ul>
+            <li><a href="javascript:;">
+              <p class="text-center">常见问题</p>
+              </a></li>
+            <li><a href="javascript:;">
+              <p class="text-center">提问</p>
+              </a></li>
+            <li><a href="javascript:;">
+              <p class="text-center">视频教程</p>
+              </a></li>
+            <li><a href="javascript:;">
+              <p class="text-center">发送反馈</p>
+              </a></li>
+          </ul>
+        </div>
+        <!-- /span4 -->
+        <div class="span4">
+          <h4>
+            <p class="text-center">法律</p>
+          </h4>
+          <ul>
+            <li><a href="javascript:;">
+              <p class="text-center">客户隐私政策</p>
+              </a></li>
+            <li><a href="javascript:;">
+              <p class="text-center">适用条款</p>
+              </a></li>
+            <li><a href="javascript:;">
+              <p class="text-center">安全</p>
+              </a></li>
+          </ul>
+        </div>
+        <!-- /span4 -->
+      </div>
+      <!-- /row -->
+    </div>
+    <!-- /container -->
+  </div>
+  <!-- /extra-inner -->
+</div>
+<!-- /extra -->
+<div class="footer">
+  <div class="footer-inner">
+    <div class="container">
+      <div class="row-fluid">
+        <div class="span12">
+          <p class="text-center">&copy; 2013&nbsp;&nbsp;<a href="./首页.html">战略性新兴产业专业知识服务系统</a>.</p>
+        </div>
+        <!-- /span12 -->
+      </div>
+      <!-- /row -->
+    </div>
+    <!-- /container -->
+  </div>
+  <!-- /footer-inner -->
+</div>
+<!-- /footer -->
+<script src="./js/bootstrap.js"></script>
+<script src="./js/base.js"></script>
+<script src="./js/faq.js"></script>
+<script>
+
+/*$(function () {
+	
+	$('.faq-list').goFaq ();
+
+});*/
+
+</script>
+</body>
+</html>

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Account - Base Admin</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<link href="./css/bootstrap.min.css" rel="stylesheet" />
+<link href="./css/bootstrap-responsive.min.css" rel="stylesheet" />
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600" rel="stylesheet" />
+<link href="./css/font-awesome.css" rel="stylesheet" />
+<link href="./css/global.css" rel="stylesheet" />
+<link href="./css/base-admin-responsive.css" rel="stylesheet" />
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+<div class="container">
+	<div class="header"></div>
+	<div class="navbar">
+	  <div class="navbar-inner">
+		<ul class="nav">
+		  <li class="active"> <a href="./首页.html"> <i class="icon-home"></i> <span>首页</span> </a> </li>
+		  <li class="dropdown"> <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"> <i class="icon-share-alt"></i> <span>知识中心</span> <b class="caret"></b> </a>
+			<ul class="dropdown-menu">
+			  <li><a href="./政策法规.html">政策法规</a></li>
+			  <li><a href="./专利标准.html">专利标准</a></li>
+			  <li><a href="./统计数据.html">统计数据</a></li>
+			</ul>
+		  </li>
+		  <li> <a href="./产品中心.html" class="dropdown-toggle"> <i class="icon-th-large"></i> <span>产品中心</span> </a> </li>
+		  <li> <a href="./专家圈.html"> <i class="icon-fire"></i> <span>专家圈</span> </a> </li>
+		  <li> <a href="./知识搜索.html"> <i class="icon-search"></i> <span>知识搜索</span> </a> </li>
+		  <li> <a href="./用户平台.html"> <i class="icon-user"></i> <span>用户平台</span> </a> </li>
+		
+			</ul>
+			<ul class="nav pull-right">		
+				<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">账号登陆 </a>
+				<div class="dropdown-menu  menu">
+					<form class="form-horizontal ">
+						<div class="control-group  ">
+							<div class="controls admin1">注册账号：<input id="inputEmail" placeholder="Administration" type="text" /></div>
+						</div>
+
+						<div class="control-group">
+							<div class="controls admin1">密   码：<input id="inputPassword" placeholder="Password" type="password" /></div>
+						</div>
+
+						<div class="control-group">
+							<div class="controls admin1"><label class="checkbox"><input type="checkbox" /> 记住密码 </label><button class="btn btn-large btn-block btn-primary" type="button">登陆</button>
+
+							<!--<h3 class="text-center">or</h3>-->
+							<button class="btn btn-large btn-block btn-primary" type="submit">注册</button><button class="btn btn-large btn-block btn-primary" type="submit">忘记密码</button>
+						</div>
+					</div>
+				</form>
+			</div>
+			</li>
+		</ul>
+	  </div>
+	</div>
+      <div class="row-fluid">
+        <div class="span8">
+          <div class="widget ">
+            <div class="widget-header"> <i class="icon-user"></i>
+              <h3>赵彦宾 的账户</h3>
+            </div>
+            <!-- /widget-header -->
+            <div class="widget-content">
+              <div class="tabbable">
+                <ul class="nav nav-tabs">
+                  <li class="active"> <a href="#profile" data-toggle="tab">信息</a> </li>
+                  <li><a href="#settings" data-toggle="tab">设置</a></li>
+                </ul>
+                <br />
+                <div class="tab-content">
+                  <div class="tab-pane active" id="profile">
+                    <form id="edit-profile" class="form-horizontal" />
+                    <fieldset>
+                    <div class="control-group">
+                      <label class="control-label" for="username">用户名</label>
+                      <div class="controls">
+                        <input type="text" class="input-medium disabled" id="username" value="赵彦宾" disabled="" />
+                        <p class="help-block">Your username is for logging in and cannot be changed.</p>
+                      </div>
+                      <!-- /controls -->
+                    </div>
+                    <!-- /control-group -->
+                    <div class="control-group">
+                      <label class="control-label" for="firstname">姓：</label>
+                      <div class="controls">
+                        <input type="text" class="input-medium" id="firstname" value="赵" />
+                      </div>
+                      <!-- /controls -->
+                    </div>
+                    <!-- /control-group -->
+                    <div class="control-group">
+                      <label class="control-label" for="lastname">名：</label>
+                      <div class="controls">
+                        <input type="text" class="input-medium" id="lastname" value="彦宾" />
+                      </div>
+                      <!-- /controls -->
+                    </div>
+                    <!-- /control-group -->
+                    <div class="control-group">
+                      <label class="control-label" for="email">Email Address</label>
+                      <div class="controls">
+                        <input type="text" class="input-large" id="email" value="zhaoyanbin@example.com" />
+                      </div>
+                      <!-- /controls -->
+                    </div>
+                    <!-- /control-group -->
+                    <br />
+                    <br />
+                    <div class="control-group">
+                      <label class="control-label" for="password1">Password</label>
+                      <div class="controls">
+                        <input type="password" class="input-medium" id="password1" value="password" />
+                      </div>
+                      <!-- /controls -->
+                    </div>
+                    <!-- /control-group -->
+                    <div class="control-group">
+                      <label class="control-label" for="password2">Confirm</label>
+                      <div class="controls">
+                        <input type="password" class="input-medium" id="password2" value="password" />
+                      </div>
+                      <!-- /controls -->
+                    </div>
+                    <!-- /control-group -->
+                    <br />
+                    <div class="form-actions">
+                      <button type="submit" class="btn btn-primary">Save</button>
+                      <button class="btn">Cancel</button>
+                    </div>
+                    <!-- /form-actions -->
+                    </fieldset>
+                    </form>
+                  </div>
+                  <div class="tab-pane" id="settings">
+                    <form id="edit-profile2" class="form-horizontal" />
+                    <fieldset>
+                    <div class="control-group">
+                      <label class="control-label" for="accounttype">接收推送</label>
+                      <div class="controls">
+                        <label class="radio">
+                        <input type="radio" name="accounttype" value="option1" checked="checked" id="accounttype" />
+                        是 </label>
+                        <label class="radio">
+                        <input type="radio" name="accounttype" value="option2" />
+                        否 </label>
+                      </div>
+                    </div>
+                    <div class="control-group">
+                      <label class="control-label" for="accountusername">推送邮箱</label>
+                      <div class="controls">
+                        <input type="text" class="input-large" id="accountusername" value="zhaoyanbin@example.com" />
+                        <p class="help-block">该邮箱用于接收推送信息.</p>
+                      </div>
+                    </div>
+                    <div class="control-group">
+                      <label class="control-label" for="emailserver">用户名</label>
+                      <div class="controls">
+                        <input type="text" class="input-large" id="emailserver" value="zhaoyanbin" />
+                      </div>
+                    </div>
+                    <div class="control-group">
+                      <label class="control-label" for="accountpassword">密码</label>
+                      <div class="controls">
+                        <input type="password" class="input-large" id="accountpassword" value="password" />
+                      </div>
+                    </div>
+                    <div class="control-group">
+                      <label class="control-label" for="accountadvanced">高级设置</label>
+                      <div class="controls">
+                        <label class="checkbox">
+                        <input type="checkbox" name="accountadvanced" value="option1" checked="checked" id="accountadvanced" />
+                        邮箱传输加密 </label>
+                        <label class="checkbox">
+                        <input type="checkbox" name="accounttype" value="option2" />
+                        下载所有邮件内容 </label>
+                      </div>
+                    </div>
+                    <br />
+                    <div class="form-actions">
+                      <button type="submit" class="btn btn-primary">Save</button>
+                      <button class="btn">Cancel</button>
+                    </div>
+                    </fieldset>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /widget-content -->
+          </div>
+          <!-- /widget -->
+        </div>
+        <!-- /span8 -->
+        <div class="span4">
+          <div class="widget widget-box">
+            <div class="widget-header">
+              <h3>Extra Info</h3>
+            </div>
+            <!-- /widget-header -->
+            <div class="widget-content">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            <!-- /widget-content -->
+          </div>
+          <!-- /widget-box -->
+        </div>
+        <!-- /span4 -->
+      </div>
+      <!-- /row -->
+    </div>
+    <!-- /container -->
+
+<div class="extra">
+  <div class="extra-inner">
+    <div class="container">
+      <div class="row-fluid">
+        <div class="span4">
+          <h4>
+            <p class="text-center">关于</p>
+          </h4>
+          <ul>
+            <li><a href="javascript:;">
+              <p class="text-center">关于我们</p>
+              </a></li>
+            <li><a href="javascript:;">
+              <p class="text-center">中国工程院</p>
+              </a></li>
+            <li><a href="javascript:;">
+              <p class="text-center">清华大学</p>
+              </a></li>
+            <li><a href="javascript:;">
+              <p class="text-center">联系我们</p>
+              </a></li>
+          </ul>
+        </div>
+        <!-- /span4 -->
+        <div class="span4">
+          <h4>
+            <p class="text-center">支持</p>
+          </h4>
+          <ul>
+            <li><a href="javascript:;">
+              <p class="text-center">常见问题</p>
+              </a></li>
+            <li><a href="javascript:;">
+              <p class="text-center">提问</p>
+              </a></li>
+            <li><a href="javascript:;">
+              <p class="text-center">视频教程</p>
+              </a></li>
+            <li><a href="javascript:;">
+              <p class="text-center">发送反馈</p>
+              </a></li>
+          </ul>
+        </div>
+        <!-- /span4 -->
+        <div class="span4">
+          <h4>
+            <p class="text-center">法律</p>
+          </h4>
+          <ul>
+            <li><a href="javascript:;">
+              <p class="text-center">客户隐私政策</p>
+              </a></li>
+            <li><a href="javascript:;">
+              <p class="text-center">适用条款</p>
+              </a></li>
+            <li><a href="javascript:;">
+              <p class="text-center">安全</p>
+              </a></li>
+          </ul>
+        </div>
+        <!-- /span4 -->
+      </div>
+      <!-- /row-fluid -->
+    </div>
+    <!-- /container -->
+  </div>
+  <!-- /extra-inner -->
+</div>
+<!-- /extra -->
+<div class="footer">
+  <div class="footer-inner">
+    <div class="container">
+      <div class="row-fluid">
+        <div class="span12">
+          <p class="text-center">&copy; 2013&nbsp;&nbsp;<a href="./首页.html">战略性新兴产业专业知识服务系统</a>.</p>
+        </div>
+        <!-- /span12 -->
+      </div>
+      <!-- /row-fluid -->
+    </div>
+    <!-- /container -->
+  </div>
+  <!-- /footer-inner -->
+</div>
+<!-- /footer -->
+<script src="./js/jquery-1.7.2.min.js"></script>
+<script src="./js/bootstrap.js"></script>
+<script src="./js/base.js"></script>
+</body>
+</html>

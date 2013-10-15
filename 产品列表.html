@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>战略性新兴产业专业知识服务系统</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<link href="./css/bootstrap.min.css" rel="stylesheet" />
+<link href="./css/bootstrap-responsive.min.css" rel="stylesheet" />
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600" rel="stylesheet" />
+<link href="./css/font-awesome.css" rel="stylesheet" />
+<link href="./css/global.css" rel="stylesheet" />
+<link href="./css/base-admin-responsive.css" rel="stylesheet" />
+
+<link href="css/searchResult/style-metro.css" rel="stylesheet" type="text/css"/>
+<link href="css/searchResult/style.css" rel="stylesheet" type="text/css"/>
+<link href="css/searchResult/style-responsive.css" rel="stylesheet" type="text/css"/>
+<link href="css/searchResult/default.css" rel="stylesheet" type="text/css" id="style_color"/>
+<link href="css/searchResult/uniform.default.css" rel="stylesheet" type="text/css"/>
+	<!-- END GLOBAL MANDATORY STYLES -->
+	<!-- BEGIN PAGE LEVEL STYLES --> 
+<link rel="stylesheet" type="text/css" href="css/searchResult/datepicker.css" />
+<link href="css/searchResult/jquery.fancybox.css" rel="stylesheet" />
+<link href="css/searchResult/search.css" rel="stylesheet" type="text/css"/>
+<link href="css/searchResult/style.css" rel="stylesheet" type="text/css"/>
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<style type="text/css">
+a:hover,a:focus{color:#0088cc;text-decoration:underline}
+</style>
+
+</head>
+<body>
+<div class="container">
+
+	<div class="header"></div>
+	
+	<div class="navbar">
+    
+		<div class="navbar-inner"> <!--a class="brand" href="#">Title</a-->
+      
+			<ul class="nav">
+			
+				<li> <a href="./首页.html"> <i class="icon-home"></i> <span>首页</span> </a> </li>
+			
+				<li class="dropdown"> <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"> <i class="icon-share-alt"></i> <span>知识中心</span> <b class="caret"></b> </a>
+          
+					<ul class="dropdown-menu">
+			
+						<li><a href="./政策法规1.html">政策法规</a></li>
+				
+						<li><a href="./专利标准.html">专利标准</a></li>
+				
+						<li><a href="./统计数据.html">统计数据</a></li>
+				
+					</ul>
+				
+				</li>
+			
+				<li class="active"> <a href="./产品中心.html" class="dropdown-toggle"> <i class="icon-th-large"></i> <span>产品中心</span> </a> </li>
+			
+				<li> <a href="./专家圈.html"> <i class="icon-fire"></i> <span>专家圈</span> </a> </li>
+			
+				<li> <a href="./知识搜索.html"> <i class="icon-search"></i> <span>知识搜索</span> </a> </li>
+			
+				<li> <a href="./用户平台.html"> <i class="icon-user"></i> <span>用户平台</span> </a> </li>
+		
+			</ul>
+			
+			<ul class="nav pull-right">
+			
+				<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">	登陆 </a>
+				
+					<div class="dropdown-menu  menu">
+				
+						<form class="form-horizontal ">
+					
+							<div class="control-group  ">
+						
+								<div class="controls admin1">注册账号：<input id="inputEmail" placeholder="Administration" type="text" /></div>
+							
+							</div>
+
+							<div class="control-group">
+						
+								<div class="controls admin1">密   码：<input id="inputPassword" placeholder="Password" type="password" /></div>
+							
+							</div>
+
+							<div class="control-group">
+						
+								<div class="controls admin1">
+							
+									<label class="checkbox"><input type="checkbox" /> 记住密码 </label>
+							
+									<button class="btn btn-large btn-block btn-primary" type="button">登陆</button>
+
+									<!--<h3 class="text-center">or</h3>-->
+									<button class="btn btn-large btn-block btn-primary" type="submit">注册</button>
+								
+									<button class="btn btn-large btn-block btn-primary" type="submit">忘记密码</button>
+								
+								</div>
+						
+							</div>
+					
+						</form>
+				
+					</div>
+			
+				</li>
+			
+			</ul>
+			
+		</div><!-- navbar-inner -->
+		
+	</div><!-- navbar -->
+	
+	<div class="row-fluid">
+	
+        <div class="span12">
+		
+          <ul class="breadcrumb">
+		  
+            <li><a href="./产品中心.html">产品中心</a> <span class="divider">/</span></li>
+			
+            <li class="active">LED节能灯 </li>
+			
+          </ul>
+		  
+		</div><!-- /span12 -->
+		
+    </div><!-- /row -->
+	
+	<div class="row-fluid">
+		<div class="span12">
+		  <div class="widget ">
+			<div class="widget-header"> <i class="icon-search"></i>
+			  <h3>LED节能灯</h3>
+			</div>
+			<!-- /widget-header -->
+			<div class="widget-content">
+			  <div class="input-append">
+				<input class="span6" id="appendedInputButton" type="text" value="LED节能灯">&nbsp;&nbsp;
+				<select  style="margin-left:10px;">
+				  <option>按产品</option>
+				  <option>按公司</option>
+				</select>&nbsp;&nbsp;
+				<select  style="margin-left:10px;">
+				  <option>所有目录</option>
+				  <option>生物领域</option>
+				</select>
+				<button class="btn  btn-primary" type="button" style="border:1px solid #999999;margin-left:10px;padding: 4px 14px;">搜&nbsp;&nbsp;&nbsp;&nbsp;索</button>
+			  </div>
+			</div>
+			<!-- /widget-content -->
+		  </div>
+		  <!-- /widget -->
+		</div><!-- /span12 -->
+	</div><!-- /row -->
+	
+	<div class="row-fluid">
+		<div class="span9">
+		  <div class="widget">
+			<div class="widget-content">
+			  <div class="tabbable">
+				<ul class="nav nav-tabs">
+				  <li class="active"><a href="#profile" data-toggle="tab">产品列表</a></li>
+				  <li class=""><a href="#settings" data-toggle="tab">公司列表</a></li>
+				</ul>
+				<br>
+				<div class="tab-content">
+				  <div class="tab-pane active" id="profile">
+					<form id="edit-profile" class="form-horizontal">
+					  <fieldset>
+						<div class="row-fluid">
+							<div class="booking-blocks">
+								<div class="pull-left booking-img">
+									<img src="img/product/51.jpg" alt="">
+									<!--ul class="unstyled">
+										<li><i class="icon-money"></i> 大小：64k</li>
+										<li><i class="icon-map-marker"></i> 关键词：关键词1，关键词2</li>
+									</ul-->
+								</div>
+								<div style="overflow:hidden;">
+									<h2><Strong></Strong><a href="./产品列表.html">超大功率LED节能灯</a></h2>
+									<ul class="unstyled inline"><strong>日期：</strong>[2012-03-13]</ul><br>
+									<ul class="unstyled inline"><strong>厂商：</strong>浙江正辉照明工程有限公司 </ul><br>
+									<ul class="unstyled inline"><strong>描述：</strong>防震功能 灯体内部结构和材料双重减震，整体抗震性能好。选用轻质合金材料和高科技喷涂技术，外壳永不生锈，永不腐蚀。 光效节能 选用超大功率固态LED光源，节能、环保， 使用寿命高达10000小时以上。特别适合户外大面积无人看守照明。 适用环境 具有良好的电磁兼容性，不会对周边环境造成电磁干扰。灯具整体温升低，散热性好，性能 稳定。选用滚边等新技术，确保外壳整体性能好，密封可靠，防水防尘。 安全环保 人性化外观设计和淡绿色的环保颜色搭配，与自然景观充分和谐，融为一体。 安装方式 可选用座式、壁挂式、吸顶式等方式安装，操作简单方便...  <a href="#">更多</a></ul><br>
+									<ul class="unstyled inline"><strong>关键词：</strong>安装方式;和谐;自然景观;颜色搭配;环保</ul><br>
+									<ul class="unstyled inline"><strong>地图：</strong><span><a href="产业链.html"><i class="icon-map-marker">产品上下游</i></a>&nbsp;&nbsp;<a href="领军企业.html"><i class="icon-upload">领军企业</i></a>&nbsp;&nbsp;<a href="政策法规1.html"><i class="icon-book">政策法规</i></a>&nbsp;&nbsp;<a href="专利页面.html"><i class="icon-ok-circle">专利</i></a>&nbsp;&nbsp;<a href="标准.html"><i class="icon-align-justify">标准</i></a>&nbsp;&nbsp;<a href="行业地图1.html"><i class="icon-map-marker">统计知识地图</i></a>&nbsp;&nbsp;<a href="发展历程.html"><i class="icon-book">发展历程</i></a>&nbsp;&nbsp;<span></ul><br>
+								</div>
+							</div>
+						</div>
+						<hr>
+						<div class="row-fluid">
+							<div class="booking-blocks">
+								<div class="pull-left booking-img">
+									<img src="img/product/52.jpg" alt="">
+									<!--ul class="unstyled">
+										<li><i class="icon-money"></i> 大小：64k</li>
+										<li><i class="icon-map-marker"></i> 关键词：关键词1，关键词2</li>
+									</ul-->
+								</div>
+								<div style="overflow:hidden;">
+									<h2><Strong></Strong><a href="./产品列表.html">LED低顶应急灯</a></h2>
+									<ul class="unstyled inline"><strong>日期：</strong>[2013-09-03]</ul><br>
+									<ul class="unstyled inline"><strong>厂商：</strong>浙江正辉照明工程有限公司 </ul><br>
+									<ul class="unstyled inline"><strong>描述：</strong>目录：1)公司概况 2)公司资质 3)工程照明使用现场 4)照明产品 5)高效节能专业油站灯 6)长寿节能防眩平面灯 7)变焦灯 8)防眩通路灯 9)防眩应急路灯 10)防眩通路无极灯 11)节能型广场灯 12)大功率LED节能灯 13)节能灯 14)防眩应急节能泛光灯 15)防眩泛光灯 16)防震高亮度投光灯 17)超大功率LED节能灯 18)长寿无极顶灯 19)防震防水无极顶灯 20)圆形固态节能长寿灯 21)长寿顶灯 22)固态节能长寿灯 23)应急照明灯 24)大功率节能高顶灯 25)LED应急低顶灯 26)隧道灯 27)防眩棚顶灯 28)大功率外场投光灯 29)高亮度长寿无极灯 30)长寿无极高顶灯  <a href="#">更多</a></ul><br>
+									
+										<ul class="unstyled inline"><strong>关键词：</strong>低顶 应急 LED </ul><br>
+									
+									<ul class="unstyled inline"><strong>地图：</strong><span><a href="产业链.html"><i class="icon-map-marker">产品上下游</i></a>&nbsp;&nbsp;<a href="领军企业.html"><i class="icon-upload">领军企业</i></a>&nbsp;&nbsp;<a href="政策法规1.html"><i class="icon-book">政策法规</i></a>&nbsp;&nbsp;<a href="专利页面.html"><i class="icon-ok-circle">专利</i></a>&nbsp;&nbsp;<a href="标准.html"><i class="icon-align-justify">标准</i></a>&nbsp;&nbsp;<a href="行业地图1.html"><i class="icon-map-marker">统计知识地图</i></a>&nbsp;&nbsp;<a href="发展历程.html"><i class="icon-book">发展历程</i></a>&nbsp;&nbsp;<span></ul><br>
+								</div>
+							</div>
+						</div>
+						<hr>
+						<div class="row-fluid">
+							<div class="booking-blocks">
+								<div class="pull-left booking-img">
+									<img src="img/product/53.jpg" alt="">
+									<!--ul class="unstyled">
+										<li><i class="icon-money"></i> 大小：64k</li>
+										<li><i class="icon-map-marker"></i> 关键词：关键词1，关键词2</li>
+									</ul-->
+								</div>
+								<div style="overflow:hidden;">
+									<h2><Strong></Strong><a href="./产品列表.html">固态节能长寿灯</a></h2>
+									<ul class="unstyled inline"><strong>日期：</strong>[2012-03-13]</ul><br>
+									<ul class="unstyled inline"><strong>厂商：</strong>浙江正辉照明工程有限公司 </ul><br>
+									<ul class="unstyled inline"><strong>描述：</strong>目录：1)公司概况 2)公司资质 3)工程照明使用现场 4)照明产品 5)高效节能专业油站灯 6)长寿节能防眩平面灯 7)变焦灯 8)防眩通路灯 9)防眩应急路灯 10)防眩通路无极灯 11)节能型广场灯 12)大功率LED节能灯 13)节能灯 14)防眩应急节能泛光灯 15)防眩泛光灯 16)防震高亮度投光灯 17)超大功率LED节能灯 18)长寿无极顶灯 19)防震防水无极顶灯 20)圆形固态节能长寿灯 21)长寿顶灯 22)固态节能长寿灯 23)应急照明灯 24)大功率节能高顶灯 25)LED应急低顶灯 26)隧道灯 27)防眩棚顶灯 28)大功率外场投光灯 29)高亮度长寿无极灯 30)长寿无极高顶灯  <a href="#">更多</a></ul><br>
+									
+									
+									
+									
+										<ul class="unstyled inline"><strong>关键词：</strong>高效；节能、照明</ul><br>
+									<ul class="unstyled inline"><strong>地图：</strong><span><a href="产业链.html"><i class="icon-map-marker">产品上下游</i></a>&nbsp;&nbsp;<a href="领军企业.html"><i class="icon-upload">领军企业</i></a>&nbsp;&nbsp;<a href="政策法规1.html"><i class="icon-book">政策法规</i></a>&nbsp;&nbsp;<a href="专利页面.html"><i class="icon-ok-circle">专利</i></a>&nbsp;&nbsp;<a href="标准.html"><i class="icon-align-justify">标准</i></a>&nbsp;&nbsp;<a href="行业地图1.html"><i class="icon-map-marker">统计知识地图</i></a>&nbsp;&nbsp;<a href="发展历程.html"><i class="icon-book">发展历程</i></a>&nbsp;&nbsp;<span></ul><br>
+								</div>
+							</div>
+						</div>
+						<hr>
+						<div class="row-fluid">
+							<div class="booking-blocks">
+								<div class="pull-left booking-img">
+									<img src="img/product/54.jpg" alt="">
+									<!--ul class="unstyled">
+										<li><i class="icon-money"></i> 大小：64k</li>
+										<li><i class="icon-map-marker"></i> 关键词：关键词1，关键词2</li>
+									</ul-->
+								</div>
+								<div style="overflow:hidden;">
+									<h2><Strong>产品名称：</Strong><a href="./产品列表.html">防眩应急路灯</a></h2>
+									<ul class="unstyled inline"><strong>日期：</strong>[2013-6-14]</ul><br>
+									<ul class="unstyled inline"><strong>厂商：</strong>江正辉照明工程有限公司 </ul><br>
+									<ul class="unstyled inline"><strong>描述：</strong>	目录：1)公司概况 2)公司资质 3)工程照明使用现场 4)照明产品 5)高效节能专业油站灯 6)长寿节能防眩平面灯 7)变焦灯 8)防眩通路灯 9)防眩应急路灯 10)防眩通路无极灯 11)节能型广场灯 12)大功率LED节能灯 13)节能灯 14)防眩应急节能泛光灯 15)防眩泛光灯 16)防震高亮度投光灯 17)超大功率LED节能灯 18)长寿无极顶灯 19)防震防水无极顶灯 20)圆形固态节能长寿灯 21)长寿顶灯 22)固态节能长寿灯 23)应急照明灯 24)大功率节能高顶灯 25)LED应急低顶灯 26)隧道灯 27)防眩棚顶灯 28)大功率外场投光灯 29)高亮度长寿无极灯 30)长寿无极高顶灯 <a href="#">更多</a></ul><br>
+										<ul class="unstyled inline"><strong>关键词：</strong>防眩；高亮度；节能灯</ul><br>
+									
+									<ul class="unstyled inline"><strong>地图：</strong><span><a href="产业链.html"><i class="icon-map-marker">产品上下游</i></a>&nbsp;&nbsp;<a href="领军企业.html"><i class="icon-upload">领军企业</i></a>&nbsp;&nbsp;<a href="政策法规1.html"><i class="icon-book">政策法规</i></a>&nbsp;&nbsp;<a href="专利页面.html"><i class="icon-ok-circle">专利</i></a>&nbsp;&nbsp;<a href="标准.html"><i class="icon-align-justify">标准</i></a>&nbsp;&nbsp;<a href="行业地图1.html"><i class="icon-map-marker">统计知识地图</i></a>&nbsp;&nbsp;<a href="发展历程.html"><i class="icon-book">发展历程</i></a>&nbsp;&nbsp;<span></ul><br>
+								</div>
+							</div>
+						</div>
+						<hr>
+					  </fieldset>
+					</form>
+				  </div>
+				  <div class="tab-pane" id="settings">
+					<form id="edit-profile2" class="form-horizontal">
+					  <fieldset>
+					  <div class="widget">
+						<div class="widget widget-table">
+						  <div class="widget-header"> <span class="icon-eye-open"></span>
+							<h3>节能环保领域</h3>
+						  </div>
+						  <!-- .widget-header -->
+						  <div class="widget-content">
+							<table class="table table-bordered table-striped" style="">
+							  <thead>
+								<tr>
+								  <th style="width:90%">企业</th>
+								  <th style="width:10%">发布日期</th>
+								</tr>
+							  </thead>
+							  <tbody>
+								<tr>
+								  <td class="description"><a href="企业详情页.html">天津创业环保集团股份有限公司</a></td>
+								  <td class="value"><span>2013-08-11</span></td>
+								</tr>
+								<tr>
+								  <td class="description"><a href="企业详情页.html">北京碧水源科技股份有限公司</a></td>
+								  <td class="value"><span>2013-08-11</span></td>
+								</tr>
+								<tr>
+								  <td class="description"><a href="企业详情页.html">龙净环保股份有限公司</a></td>
+								  <td class="value"><span>2013-08-11</span></td>
+								</tr>
+								<tr>
+								  <td class="description"><a href="企业详情页.html">天立环保工程股份有限公司</a></td>
+								  <td class="value"><span>2013-08-11</span></td>
+								</tr>
+							  </tbody>
+							</table>
+						  </div>
+						  <!-- .widget-content -->
+						</div>
+						<!-- /widget -->
+						<div class="widget widget-table">
+						  <div class="widget-header"> <span class="icon-eye-open"></span>
+							<h3>新一代信息技术领域</h3>
+						  </div>
+						  <!-- .widget-header -->
+						  <div class="widget-content">
+							<table class="table table-bordered table-striped" style="">
+							  <thead>
+								<tr>
+								  <th style="width:90%">企业</th>
+								  <th style="width:10%">发布日期</th>
+								</tr>
+							  </thead>
+							  <tbody>
+								<tr>
+								  <td class="description"><a href="">中兴通讯股份有限公司</a></td>
+								  <td class="value"><span>2013-08-11</span></td>
+								</tr>
+								<tr>
+								  <td class="description"><a href="">华为技术有限公司</a></td>
+								  <td class="value"><span>2013-08-11</span></td>
+								</tr>
+								<tr>
+								  <td class="description"><a href="">远望谷信息技术股份有限公司</a></td>
+								  <td class="value"><span>2013-08-11</span></td>
+								</tr>
+								<tr>
+								  <td class="description"><a href="">大唐电信科技产业集团</a></td>
+								  <td class="value"><span>2013-08-11</span></td>
+								</tr>
+							  </tbody>
+							</table>
+						  </div>
+						  <!-- .widget-content -->
+						</div>
+						<!-- /widget -->
+						<div class="widget widget-table">
+						  <div class="widget-header"> <span class="icon-eye-open"></span>
+							<h3>生物产业领域</h3>
+						  </div>
+						  <!-- .widget-header -->
+						  <div class="widget-content">
+							<table class="table table-bordered table-striped" style="">
+							  <thead>
+								<tr>
+								  <th style="width:90%">企业</th>
+								  <th style="width:10%">发布日期</th>
+								</tr>
+							  </thead>
+							  <tbody>
+								<tr>
+								  <td class="description"><a href="">华兰生物工程股份有限公司</a></td>
+								  <td class="value"><span>2013-08-11</span></td>
+								</tr>
+								<tr>
+								  <td class="description"><a href="">天坛生物制品股份有限公司</a></td>
+								  <td class="value"><span>2013-08-11</span></td>
+								</tr>
+								<tr>
+								  <td class="description"><a href="">东方海洋集团有限公司</a></td>
+								  <td class="value"><span>2013-08-11</span></td>
+								</tr>
+								<tr>
+								  <td class="description"><a href="">华神集团股份有限公司</a></td>
+								  <td class="value"><span>2013-08-11</span></td>
+								</tr>
+							  </tbody>
+							</table>
+						  </div>
+						  <!-- .widget-content -->
+						</div>
+						<!-- /widget -->
+						<div class="widget widget-table">
+						  <div class="widget-header"> <span class="icon-eye-open"></span>
+							<h3>高端制造领域</h3>
+						  </div>
+						  <!-- .widget-header -->
+						  <div class="widget-content">
+							<table class="table table-bordered table-striped" style="">
+							  <thead>
+								<tr>
+								  <th style="width:90%">企业</th>
+								  <th style="width:10%">发布日期</th>
+								</tr>
+							  </thead>
+							  <tbody>
+								<tr>
+								  <td class="description"><a href="">中国商用飞机有限责任公司</a></td>
+								  <td class="value"><span>2013-08-11</span></td>
+								</tr>
+								<tr>
+								  <td class="description"><a href="">中国航天科技集团公司</a></td>
+								  <td class="value"><span>2013-08-11</span></td>
+								</tr>
+								<tr>
+								  <td class="description"><a href="">中国南车集团公司</a></td>
+								  <td class="value"><span>2013-08-11</span></td>
+								</tr>
+								<tr>
+								  <td class="description"><a href="">中国北方机车车辆工业集团公司</a></td>
+								  <td class="value"><span>2013-08-11</span></td>
+								</tr>
+							  </tbody>
+							</table>
+						  </div>
+						  <!-- .widget-content -->
+						</div>
+						<!-- /widget -->
+						<div class="widget widget-table">
+						  <div class="widget-header"> <span class="icon-eye-open"></span>
+							<h3>新能源领域</h3>
+						  </div>
+						  <!-- .widget-header -->
+						  <div class="widget-content">
+							<table class="table table-bordered table-striped" style="">
+							  <thead>
+								<tr>
+								  <th style="width:90%">企业</th>
+								  <th style="width:10%">发布日期</th>
+								</tr>
+							  </thead>
+							  <tbody>
+								<tr>
+								  <td class="description"><a href="">尚德太阳能电力有限公司</a></td>
+								  <td class="value"><span>2013-08-11</span></td>
+								</tr>
+								<tr>
+								  <td class="description"><a href="">英利集团有限公司</a></td>
+								  <td class="value"><span>2013-08-11</span></td>
+								</tr>
+								<tr>
+								  <td class="description"><a href="">华锐风电科技股份有限公司</a></td>
+								  <td class="value"><span>2013-08-11</span></td>
+								</tr>
+								<tr>
+								  <td class="description"><a href="">东方电气集团有限公司</a></td>
+								  <td class="value"><span>2013-08-11</span></td>
+								</tr>
+							  </tbody>
+							</table>
+						  </div>
+						  <!-- .widget-content -->
+						</div>
+						<!-- /widget -->
+						<div class="widget widget-table">
+						  <div class="widget-header"> <span class="icon-eye-open"></span>
+							<h3>新材料领域</h3>
+						  </div>
+						  <!-- .widget-header -->
+						  <div class="widget-content">
+							<table class="table table-bordered table-striped" style="">
+							  <thead>
+								<tr>
+								  <th style="width:90%">企业</th>
+								  <th style="width:10%">发布日期</th>
+								</tr>
+							  </thead>
+							  <tbody>
+								<tr>
+								  <td class="description"><a href="">康得新公司</a></td>
+								  <td class="value"><span>2013-08-11</span></td>
+								</tr>
+								<tr>
+								  <td class="description"><a href="">正海磁材股份有限公司</a></td>
+								  <td class="value"><span>2013-08-11</span></td>
+								</tr>
+								<tr>
+								  <td class="description"><a href="">安泰科技股份有限公司</a></td>
+								  <td class="value"><span>2013-08-11</span></td>
+								</tr>
+								<tr>
+								  <td class="description"><a href="">泰和新材料股份有限公司</a></td>
+								  <td class="value"><span>2013-08-11</span></td>
+								</tr>
+							  </tbody>
+							</table>
+						  </div>
+						  <!-- .widget-content -->
+						</div>
+						<!-- /widget -->
+						<div class="widget widget-table">
+						  <div class="widget-header"> <span class="icon-eye-open"></span>
+							<h3>新能源汽车领域</h3>
+						  </div>
+						  <!-- .widget-header -->
+						  <div class="widget-content">
+							<table class="table table-bordered table-striped" style="">
+							  <thead>
+								<tr>
+								  <th style="width:90%">企业</th>
+								  <th style="width:10%">发布日期</th>
+								</tr>
+							  </thead>
+							  <tbody>
+								<tr>
+								  <td class="description"><a href="">比亚迪股份有限公司</a></td>
+								  <td class="value"><span>2013-08-11</span></td>
+								</tr>
+								<tr>
+								  <td class="description"><a href="">上海汽车工业（集团）总公司</a></td>
+								  <td class="value"><span>2013-08-11</span></td>
+								</tr>
+								<tr>
+								  <td class="description"><a href="">中国宝安集团股份有限公司</a></td>
+								  <td class="value"><span>2013-08-11</span></td>
+								</tr>
+								<tr>
+								  <td class="description"><a href="">浙江吉利控股集团有限公司</a></td>
+								  <td class="value"><span>2013-08-11</span></td>
+								</tr>
+							  </tbody>
+							</table>
+						  </div>
+						  <!-- .widget-content -->
+						</div>
+						<!-- /widget -->
+					  </div>
+					  <!-- /widget -->
+					  </fieldset>
+					</form>
+				  </div>
+				</div>
+			  </div>
+			</div>
+			<!-- /widget content -->
+		  </div>
+		  <!-- /widget -->
+		</div><!-- /span9 -->
+		<div class="span3">
+		  <div class="widget widget-plain" >
+			<div class="widget-content" > <a class="btn btn-large btn-warning btn-support-ask" href="javascript:;" style="width:100%;padding:17px 0;">加入目录收藏夹</a> </div>
+			<!-- /widget-content -->
+		  </div>
+		  <div class="widget widget-box">
+			<div class="widget-header">
+			  <h3>热门产品</h3>
+			</div>
+			<!-- /widget-header -->
+			<div class="widget-content">
+			  <p><a><i class="icon-star">led节能灯</i></a></p>
+			  <p><a><i class="icon-star">温湿度独立调节系统</i></a></p>
+			  <p><a><i class="icon-star">无极变速器</i></a></p>
+			  <p><a><i class="icon-star">缸内汽油直喷发动机</i></a></p>
+			  <p><a><i class="icon-star">中低热值燃气轮机</i></a></p>
+			  <p><a><i class="icon-star">非晶合金变压器</i></a></p>
+			  <p><a><i class="icon-star">多肽药物</i></a></p>
+			  <p><a><i class="icon-star">新型抗感染药物</i></a></p>
+			  <p><a><i class="icon-star">新型长效药物</i></a></p>
+			  <p><a><i class="icon-star">植入式脑起搏器</i></a></p>
+			</div>
+			<!-- /widget-content -->
+		  </div><!--/ widget -->
+		</div>
+	</div>
+      <!-- /row -->
+    </div>
+</div><!-- /container -->
+
+<div class="extra">
+  <div class="extra-inner">
+    <div class="container">
+      <div class="row-fluid">
+        <div class="span4">
+          <h4>
+            <p class="text-center">关于</p>
+          </h4>
+          <ul>
+            <li><a href="javascript:;">
+              <p class="text-center">关于我们</p>
+              </a></li>
+            <li><a href="javascript:;">
+              <p class="text-center">中国工程院</p>
+              </a></li>
+            <li><a href="javascript:;">
+              <p class="text-center">清华大学</p>
+              </a></li>
+            <li><a href="javascript:;">
+              <p class="text-center">联系我们</p>
+              </a></li>
+          </ul>
+        </div>
+        <!-- /span4 -->
+        <div class="span4">
+          <h4>
+            <p class="text-center">支持</p>
+          </h4>
+          <ul>
+            <li><a href="javascript:;">
+              <p class="text-center">常见问题</p>
+              </a></li>
+            <li><a href="javascript:;">
+              <p class="text-center">提问</p>
+              </a></li>
+            <li><a href="javascript:;">
+              <p class="text-center">视频教程</p>
+              </a></li>
+            <li><a href="javascript:;">
+              <p class="text-center">发送反馈</p>
+              </a></li>
+          </ul>
+        </div>
+        <!-- /span4 -->
+        <div class="span4">
+          <h4>
+            <p class="text-center">法律</p>
+          </h4>
+          <ul>
+            <li><a href="javascript:;">
+              <p class="text-center">客户隐私政策</p>
+              </a></li>
+            <li><a href="javascript:;">
+              <p class="text-center">适用条款</p>
+              </a></li>
+            <li><a href="javascript:;">
+              <p class="text-center">安全</p>
+              </a></li>
+          </ul>
+        </div>
+        <!-- /span4 -->
+      </div>
+      <!-- /row-fluid -->
+    </div>
+    <!-- /container -->
+  </div>
+  <!-- /extra-inner -->
+</div>
+<!-- /extra -->
+<div class="footer">
+  <div class="footer-inner">
+    <div class="container">
+      <div class="row-fluid">
+        <div class="span12">
+          <p class="text-center">&copy; 2013&nbsp;&nbsp;<a href="./首页.html">战略性新兴产业专业知识服务系统</a>.</p>
+        </div>
+        <!-- /span12 -->
+      </div>
+      <!-- /row-fluid -->
+    </div>
+    <!-- /container -->
+  </div>
+  <!-- /footer-inner -->
+</div>
+<!-- /footer -->
+<script src="./js/jquery-1.7.2.min.js"></script>
+<script src="./js/bootstrap.js"></script>
+<script src="./js/base.js"></script>
+</body>
+</html>
